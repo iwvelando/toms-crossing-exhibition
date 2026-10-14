@@ -1,0 +1,4305 @@
+{
+  "version": 1,
+  "rooms": [
+    {
+      "id": "chamber-1",
+      "title": "Chamber 1",
+      "subtitle": "Through Wednesday",
+      "bounds": [
+        -16,
+        16,
+        -19.5,
+        8.5
+      ],
+      "spawn": [
+        0,
+        1.7,
+        6.7
+      ],
+      "look": [
+        0,
+        1.7,
+        -9
+      ],
+      "tone": "dark",
+      "number": "1"
+    },
+    {
+      "id": "chamber-2",
+      "title": "Chamber 2",
+      "subtitle": "Thursday",
+      "bounds": [
+        20,
+        46,
+        -19.5,
+        8.5
+      ],
+      "spawn": [
+        22,
+        1.7,
+        -6
+      ],
+      "look": [
+        35,
+        1.7,
+        -6
+      ],
+      "tone": "dark",
+      "number": "2"
+    },
+    {
+      "id": "chamber-3",
+      "title": "Chamber 3",
+      "subtitle": "Friday",
+      "bounds": [
+        20,
+        46,
+        -51.5,
+        -25.5
+      ],
+      "spawn": [
+        33,
+        1.7,
+        -27
+      ],
+      "look": [
+        33,
+        1.7,
+        -40
+      ],
+      "tone": "light",
+      "number": "3"
+    },
+    {
+      "id": "chamber-4",
+      "title": "Chamber 4",
+      "subtitle": "Saturday \u00b7 collection in progress",
+      "bounds": [
+        -12,
+        14,
+        -51.5,
+        -25.5
+      ],
+      "spawn": [
+        11,
+        1.7,
+        -39
+      ],
+      "look": [
+        -4,
+        1.7,
+        -39
+      ],
+      "tone": "dark",
+      "number": "4"
+    },
+    {
+      "id": "chamber-5",
+      "title": "Chamber 5",
+      "subtitle": "Reserved \u00b7 details awaiting evidence",
+      "bounds": [
+        -44,
+        -18,
+        -51.5,
+        -25.5
+      ],
+      "spawn": [
+        -21,
+        1.7,
+        -39
+      ],
+      "look": [
+        -33,
+        1.7,
+        -39
+      ],
+      "tone": "dark",
+      "number": "5"
+    },
+    {
+      "id": "across-moments",
+      "title": "Across moments",
+      "subtitle": "An interpretation annex",
+      "bounds": [
+        -34,
+        -20,
+        -11.5,
+        8.5
+      ],
+      "spawn": [
+        -22,
+        1.7,
+        -1
+      ],
+      "look": [
+        -30,
+        2,
+        -5
+      ],
+      "tone": "dark",
+      "number": "A"
+    },
+    {
+      "id": "ancillary",
+      "title": "Side collection",
+      "subtitle": "Ancillary display \u00b7 proposed space",
+      "bounds": [
+        -34,
+        -20,
+        12.5,
+        22.5
+      ],
+      "spawn": [
+        -27,
+        1.7,
+        14.5
+      ],
+      "look": [
+        -27,
+        1.7,
+        20
+      ],
+      "tone": "dark",
+      "number": "B"
+    }
+  ],
+  "floors": [
+    {
+      "id": "chamber-1",
+      "bounds": [
+        -16,
+        16,
+        -19.5,
+        8.5
+      ],
+      "tone": "dark"
+    },
+    {
+      "id": "chamber-2",
+      "bounds": [
+        20,
+        46,
+        -19.5,
+        8.5
+      ],
+      "tone": "dark"
+    },
+    {
+      "id": "chamber-3",
+      "bounds": [
+        20,
+        46,
+        -51.5,
+        -25.5
+      ],
+      "tone": "light"
+    },
+    {
+      "id": "chamber-4",
+      "bounds": [
+        -12,
+        14,
+        -51.5,
+        -25.5
+      ],
+      "tone": "dark"
+    },
+    {
+      "id": "chamber-5",
+      "bounds": [
+        -44,
+        -18,
+        -51.5,
+        -25.5
+      ],
+      "tone": "dark"
+    },
+    {
+      "id": "across-moments",
+      "bounds": [
+        -34,
+        -20,
+        -11.5,
+        8.5
+      ],
+      "tone": "dark"
+    },
+    {
+      "id": "ancillary",
+      "bounds": [
+        -34,
+        -20,
+        12.5,
+        22.5
+      ],
+      "tone": "dark"
+    },
+    {
+      "id": "foyer",
+      "bounds": [
+        -5,
+        5,
+        8.5,
+        18.5
+      ],
+      "tone": "dark"
+    },
+    {
+      "id": "passage-1-2",
+      "bounds": [
+        16,
+        20,
+        -8,
+        -4
+      ],
+      "tone": "dark"
+    },
+    {
+      "id": "passage-2-3",
+      "bounds": [
+        31,
+        35,
+        -25.5,
+        -19.5
+      ],
+      "tone": "passage"
+    },
+    {
+      "id": "passage-3-4",
+      "bounds": [
+        14,
+        20,
+        -41,
+        -37
+      ],
+      "tone": "dark"
+    },
+    {
+      "id": "passage-4-5",
+      "bounds": [
+        -18,
+        -12,
+        -41,
+        -37
+      ],
+      "tone": "dark"
+    },
+    {
+      "id": "passage-annex",
+      "bounds": [
+        -20,
+        -16,
+        -3,
+        1
+      ],
+      "tone": "dark"
+    },
+    {
+      "id": "passage-side",
+      "bounds": [
+        -29,
+        -25,
+        8.5,
+        12.5
+      ],
+      "tone": "dark"
+    },
+    {
+      "id": "projection-alcove",
+      "bounds": [
+        15,
+        20,
+        -34.5,
+        -28.5
+      ],
+      "tone": "light"
+    }
+  ],
+  "walls": [
+    {
+      "a": [
+        -16,
+        -19.5
+      ],
+      "b": [
+        16,
+        -19.5
+      ],
+      "room": "chamber-1",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        16,
+        -19.5
+      ],
+      "b": [
+        16,
+        -8
+      ],
+      "room": "chamber-1",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        16,
+        -4
+      ],
+      "b": [
+        16,
+        8.5
+      ],
+      "room": "chamber-1",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -16,
+        8.5
+      ],
+      "b": [
+        -2.2,
+        8.5
+      ],
+      "room": "chamber-1",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        2.2,
+        8.5
+      ],
+      "b": [
+        16,
+        8.5
+      ],
+      "room": "chamber-1",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -16,
+        -19.5
+      ],
+      "b": [
+        -16,
+        -3
+      ],
+      "room": "chamber-1",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -16,
+        1
+      ],
+      "b": [
+        -16,
+        8.5
+      ],
+      "room": "chamber-1",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        20,
+        -19.5
+      ],
+      "b": [
+        31,
+        -19.5
+      ],
+      "room": "chamber-2",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        35,
+        -19.5
+      ],
+      "b": [
+        46,
+        -19.5
+      ],
+      "room": "chamber-2",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        46,
+        -19.5
+      ],
+      "b": [
+        46,
+        8.5
+      ],
+      "room": "chamber-2",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        20,
+        8.5
+      ],
+      "b": [
+        46,
+        8.5
+      ],
+      "room": "chamber-2",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        20,
+        -19.5
+      ],
+      "b": [
+        20,
+        -8
+      ],
+      "room": "chamber-2",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        20,
+        -4
+      ],
+      "b": [
+        20,
+        8.5
+      ],
+      "room": "chamber-2",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        20,
+        -51.5
+      ],
+      "b": [
+        46,
+        -51.5
+      ],
+      "room": "chamber-3",
+      "tone": "light",
+      "partition": false
+    },
+    {
+      "a": [
+        46,
+        -51.5
+      ],
+      "b": [
+        46,
+        -25.5
+      ],
+      "room": "chamber-3",
+      "tone": "light",
+      "partition": false
+    },
+    {
+      "a": [
+        20,
+        -25.5
+      ],
+      "b": [
+        31,
+        -25.5
+      ],
+      "room": "chamber-3",
+      "tone": "light",
+      "partition": false
+    },
+    {
+      "a": [
+        35,
+        -25.5
+      ],
+      "b": [
+        46,
+        -25.5
+      ],
+      "room": "chamber-3",
+      "tone": "light",
+      "partition": false
+    },
+    {
+      "a": [
+        20,
+        -51.5
+      ],
+      "b": [
+        20,
+        -41
+      ],
+      "room": "chamber-3",
+      "tone": "light",
+      "partition": false
+    },
+    {
+      "a": [
+        20,
+        -37
+      ],
+      "b": [
+        20,
+        -34.5
+      ],
+      "room": "chamber-3",
+      "tone": "light",
+      "partition": false
+    },
+    {
+      "a": [
+        20,
+        -28.5
+      ],
+      "b": [
+        20,
+        -25.5
+      ],
+      "room": "chamber-3",
+      "tone": "light",
+      "partition": false
+    },
+    {
+      "a": [
+        -12,
+        -51.5
+      ],
+      "b": [
+        14,
+        -51.5
+      ],
+      "room": "chamber-4",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        14,
+        -51.5
+      ],
+      "b": [
+        14,
+        -41
+      ],
+      "room": "chamber-4",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        14,
+        -37
+      ],
+      "b": [
+        14,
+        -25.5
+      ],
+      "room": "chamber-4",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -12,
+        -25.5
+      ],
+      "b": [
+        14,
+        -25.5
+      ],
+      "room": "chamber-4",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -12,
+        -51.5
+      ],
+      "b": [
+        -12,
+        -41
+      ],
+      "room": "chamber-4",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -12,
+        -37
+      ],
+      "b": [
+        -12,
+        -25.5
+      ],
+      "room": "chamber-4",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -44,
+        -51.5
+      ],
+      "b": [
+        -18,
+        -51.5
+      ],
+      "room": "chamber-5",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -18,
+        -51.5
+      ],
+      "b": [
+        -18,
+        -41
+      ],
+      "room": "chamber-5",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -18,
+        -37
+      ],
+      "b": [
+        -18,
+        -25.5
+      ],
+      "room": "chamber-5",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -44,
+        -25.5
+      ],
+      "b": [
+        -18,
+        -25.5
+      ],
+      "room": "chamber-5",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -44,
+        -51.5
+      ],
+      "b": [
+        -44,
+        -25.5
+      ],
+      "room": "chamber-5",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -34,
+        -11.5
+      ],
+      "b": [
+        -20,
+        -11.5
+      ],
+      "room": "across-moments",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -20,
+        -11.5
+      ],
+      "b": [
+        -20,
+        -3
+      ],
+      "room": "across-moments",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -20,
+        1
+      ],
+      "b": [
+        -20,
+        8.5
+      ],
+      "room": "across-moments",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -34,
+        8.5
+      ],
+      "b": [
+        -29,
+        8.5
+      ],
+      "room": "across-moments",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -25,
+        8.5
+      ],
+      "b": [
+        -20,
+        8.5
+      ],
+      "room": "across-moments",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -34,
+        -11.5
+      ],
+      "b": [
+        -34,
+        8.5
+      ],
+      "room": "across-moments",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -34,
+        12.5
+      ],
+      "b": [
+        -29,
+        12.5
+      ],
+      "room": "ancillary",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -25,
+        12.5
+      ],
+      "b": [
+        -20,
+        12.5
+      ],
+      "room": "ancillary",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -20,
+        12.5
+      ],
+      "b": [
+        -20,
+        22.5
+      ],
+      "room": "ancillary",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -34,
+        22.5
+      ],
+      "b": [
+        -20,
+        22.5
+      ],
+      "room": "ancillary",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -34,
+        12.5
+      ],
+      "b": [
+        -34,
+        22.5
+      ],
+      "room": "ancillary",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -12.391538521987725,
+        -9.017966696136089
+      ],
+      "b": [
+        -3.6084614780122752,
+        -10.982033303863911
+      ],
+      "room": "chamber-1",
+      "tone": "dark",
+      "partition": true
+    },
+    {
+      "a": [
+        3.6084614780122752,
+        -10.982033303863911
+      ],
+      "b": [
+        12.391538521987725,
+        -9.017966696136089
+      ],
+      "room": "chamber-1",
+      "tone": "dark",
+      "partition": true
+    },
+    {
+      "a": [
+        -12.391538521987725,
+        0.017966696136088034
+      ],
+      "b": [
+        -3.6084614780122752,
+        1.982033303863912
+      ],
+      "room": "chamber-1",
+      "tone": "dark",
+      "partition": true
+    },
+    {
+      "a": [
+        3.6084614780122752,
+        1.982033303863912
+      ],
+      "b": [
+        12.391538521987725,
+        0.017966696136088034
+      ],
+      "room": "chamber-1",
+      "tone": "dark",
+      "partition": true
+    },
+    {
+      "a": [
+        33.0,
+        2.0
+      ],
+      "b": [
+        33.0,
+        -12.0
+      ],
+      "room": "chamber-2",
+      "tone": "dark",
+      "partition": true
+    },
+    {
+      "a": [
+        36.24250914861049,
+        -0.37159122982180537
+      ],
+      "b": [
+        43.75749085138951,
+        2.3715912298218056
+      ],
+      "room": "chamber-2",
+      "tone": "dark",
+      "partition": true
+    },
+    {
+      "a": [
+        -5,
+        8.5
+      ],
+      "b": [
+        -5,
+        18.5
+      ],
+      "room": "foyer",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        5,
+        8.5
+      ],
+      "b": [
+        5,
+        18.5
+      ],
+      "room": "foyer",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -5,
+        18.5
+      ],
+      "b": [
+        5,
+        18.5
+      ],
+      "room": "foyer",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        16,
+        -8
+      ],
+      "b": [
+        20,
+        -8
+      ],
+      "room": "passage-1-2",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        16,
+        -4
+      ],
+      "b": [
+        20,
+        -4
+      ],
+      "room": "passage-1-2",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        31,
+        -25.5
+      ],
+      "b": [
+        31,
+        -19.5
+      ],
+      "room": "passage-2-3",
+      "tone": "passage",
+      "partition": false
+    },
+    {
+      "a": [
+        35,
+        -25.5
+      ],
+      "b": [
+        35,
+        -19.5
+      ],
+      "room": "passage-2-3",
+      "tone": "passage",
+      "partition": false
+    },
+    {
+      "a": [
+        14,
+        -41
+      ],
+      "b": [
+        20,
+        -41
+      ],
+      "room": "passage-3-4",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        14,
+        -37
+      ],
+      "b": [
+        20,
+        -37
+      ],
+      "room": "passage-3-4",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -18,
+        -41
+      ],
+      "b": [
+        -12,
+        -41
+      ],
+      "room": "passage-4-5",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -18,
+        -37
+      ],
+      "b": [
+        -12,
+        -37
+      ],
+      "room": "passage-4-5",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -20,
+        -3
+      ],
+      "b": [
+        -16,
+        -3
+      ],
+      "room": "passage-annex",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -20,
+        1
+      ],
+      "b": [
+        -16,
+        1
+      ],
+      "room": "passage-annex",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -29,
+        8.5
+      ],
+      "b": [
+        -29,
+        12.5
+      ],
+      "room": "passage-side",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -25,
+        8.5
+      ],
+      "b": [
+        -25,
+        12.5
+      ],
+      "room": "passage-side",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        15,
+        -34.5
+      ],
+      "b": [
+        20,
+        -34.5
+      ],
+      "room": "projection-alcove",
+      "tone": "light",
+      "partition": false
+    },
+    {
+      "a": [
+        15,
+        -28.5
+      ],
+      "b": [
+        20,
+        -28.5
+      ],
+      "room": "projection-alcove",
+      "tone": "light",
+      "partition": false
+    },
+    {
+      "a": [
+        15,
+        -34.5
+      ],
+      "b": [
+        15,
+        -28.5
+      ],
+      "room": "projection-alcove",
+      "tone": "light",
+      "partition": false
+    }
+  ],
+  "reservations": [
+    {
+      "id": "reserve-001",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        -14.0,
+        2.2,
+        -19.34
+      ],
+      "angle": 0.0,
+      "camera": [
+        -14.0,
+        1.7,
+        -16.24
+      ]
+    },
+    {
+      "id": "reserve-002",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        -10.0,
+        2.2,
+        -19.34
+      ],
+      "angle": 0.0,
+      "camera": [
+        -10.0,
+        1.7,
+        -16.24
+      ]
+    },
+    {
+      "id": "reserve-003",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        -6.0,
+        2.2,
+        -19.34
+      ],
+      "angle": 0.0,
+      "camera": [
+        -6.0,
+        1.7,
+        -16.24
+      ]
+    },
+    {
+      "id": "reserve-004",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        -2.0,
+        2.2,
+        -19.34
+      ],
+      "angle": 0.0,
+      "camera": [
+        -2.0,
+        1.7,
+        -16.24
+      ],
+      "workId": "canyon-meeting"
+    },
+    {
+      "id": "reserve-005",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        2.0,
+        2.2,
+        -19.34
+      ],
+      "angle": 0.0,
+      "camera": [
+        2.0,
+        1.7,
+        -16.24
+      ]
+    },
+    {
+      "id": "reserve-006",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        21.833,
+        2.2,
+        -19.34
+      ],
+      "angle": 0.0,
+      "camera": [
+        21.833,
+        1.7,
+        -16.24
+      ]
+    },
+    {
+      "id": "reserve-007",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        25.5,
+        2.2,
+        -19.34
+      ],
+      "angle": 0.0,
+      "camera": [
+        25.5,
+        1.7,
+        -16.24
+      ]
+    },
+    {
+      "id": "reserve-008",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        29.167,
+        2.2,
+        -19.34
+      ],
+      "angle": 0.0,
+      "camera": [
+        29.167,
+        1.7,
+        -16.24
+      ]
+    },
+    {
+      "id": "reserve-009",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        36.833,
+        2.2,
+        -19.34
+      ],
+      "angle": 0.0,
+      "camera": [
+        36.833,
+        1.7,
+        -16.24
+      ]
+    },
+    {
+      "id": "reserve-010",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        40.5,
+        2.2,
+        -19.34
+      ],
+      "angle": 0.0,
+      "camera": [
+        40.5,
+        1.7,
+        -16.24
+      ]
+    },
+    {
+      "id": "reserve-011",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        44.167,
+        2.2,
+        -19.34
+      ],
+      "angle": 0.0,
+      "camera": [
+        44.167,
+        1.7,
+        -16.24
+      ]
+    },
+    {
+      "id": "reserve-012",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        45.84,
+        2.2,
+        -17.5
+      ],
+      "angle": -1.570796,
+      "camera": [
+        42.74,
+        1.7,
+        -17.5
+      ]
+    },
+    {
+      "id": "reserve-013",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        45.84,
+        2.2,
+        -13.5
+      ],
+      "angle": -1.570796,
+      "camera": [
+        42.74,
+        1.7,
+        -13.5
+      ],
+      "workId": "comfort-in-company"
+    },
+    {
+      "id": "reserve-014",
+      "room": "chamber-3",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        21.857,
+        2.2,
+        -51.34
+      ],
+      "angle": 0.0,
+      "camera": [
+        21.857,
+        1.7,
+        -48.24
+      ]
+    },
+    {
+      "id": "reserve-015",
+      "room": "chamber-3",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        25.571,
+        2.2,
+        -51.34
+      ],
+      "angle": 0.0,
+      "camera": [
+        25.571,
+        1.7,
+        -48.24
+      ]
+    },
+    {
+      "id": "reserve-016",
+      "room": "chamber-3",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        29.286,
+        2.2,
+        -51.34
+      ],
+      "angle": 0.0,
+      "camera": [
+        29.286,
+        1.7,
+        -48.24
+      ]
+    },
+    {
+      "id": "reserve-017",
+      "room": "chamber-3",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        33.0,
+        2.2,
+        -51.34
+      ],
+      "angle": 0.0,
+      "camera": [
+        33.0,
+        1.7,
+        -48.24
+      ]
+    },
+    {
+      "id": "reserve-018",
+      "room": "chamber-3",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        36.714,
+        2.2,
+        -51.34
+      ],
+      "angle": 0.0,
+      "camera": [
+        36.714,
+        1.7,
+        -48.24
+      ]
+    },
+    {
+      "id": "reserve-019",
+      "room": "chamber-3",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        40.429,
+        2.2,
+        -51.34
+      ],
+      "angle": 0.0,
+      "camera": [
+        40.429,
+        1.7,
+        -48.24
+      ]
+    },
+    {
+      "id": "reserve-020",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        -10.143,
+        2.2,
+        -51.34
+      ],
+      "angle": 0.0,
+      "camera": [
+        -10.143,
+        1.7,
+        -48.24
+      ]
+    },
+    {
+      "id": "reserve-021",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        -6.429,
+        2.2,
+        -51.34
+      ],
+      "angle": 0.0,
+      "camera": [
+        -6.429,
+        1.7,
+        -48.24
+      ]
+    },
+    {
+      "id": "reserve-022",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        -2.714,
+        2.2,
+        -51.34
+      ],
+      "angle": 0.0,
+      "camera": [
+        -2.714,
+        1.7,
+        -48.24
+      ]
+    },
+    {
+      "id": "reserve-023",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        1.0,
+        2.2,
+        -51.34
+      ],
+      "angle": 0.0,
+      "camera": [
+        1.0,
+        1.7,
+        -48.24
+      ]
+    },
+    {
+      "id": "reserve-024",
+      "room": "across-moments",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        -31.667,
+        2.2,
+        -11.34
+      ],
+      "angle": 0.0,
+      "camera": [
+        -31.667,
+        1.7,
+        -8.24
+      ]
+    },
+    {
+      "id": "reserve-025",
+      "room": "across-moments",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        -27.0,
+        2.2,
+        -11.34
+      ],
+      "angle": 0.0,
+      "camera": [
+        -27.0,
+        1.7,
+        -8.24
+      ]
+    },
+    {
+      "id": "reserve-026",
+      "room": "across-moments",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        -22.333,
+        2.2,
+        -11.34
+      ],
+      "angle": 0.0,
+      "camera": [
+        -22.333,
+        1.7,
+        -8.24
+      ],
+      "workId": "where-the-words-were"
+    },
+    {
+      "id": "reserve-027",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        6.0,
+        2.2,
+        -19.34
+      ],
+      "angle": 0.0,
+      "camera": [
+        6.0,
+        1.7,
+        -16.24
+      ]
+    },
+    {
+      "id": "reserve-028",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        10.0,
+        2.2,
+        -19.34
+      ],
+      "angle": 0.0,
+      "camera": [
+        10.0,
+        1.7,
+        -16.24
+      ]
+    },
+    {
+      "id": "reserve-029",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        14.0,
+        2.2,
+        -19.34
+      ],
+      "angle": 0.0,
+      "camera": [
+        14.0,
+        1.7,
+        -16.24
+      ]
+    },
+    {
+      "id": "reserve-030",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        15.84,
+        2.2,
+        -17.583
+      ],
+      "angle": -1.570796,
+      "camera": [
+        12.74,
+        1.7,
+        -17.583
+      ]
+    },
+    {
+      "id": "reserve-031",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        15.84,
+        2.2,
+        -13.75
+      ],
+      "angle": -1.570796,
+      "camera": [
+        12.74,
+        1.7,
+        -13.75
+      ]
+    },
+    {
+      "id": "reserve-032",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        15.84,
+        2.2,
+        -9.917
+      ],
+      "angle": -1.570796,
+      "camera": [
+        12.74,
+        1.7,
+        -9.917
+      ]
+    },
+    {
+      "id": "reserve-033",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        15.84,
+        2.2,
+        -1.917
+      ],
+      "angle": -1.570796,
+      "camera": [
+        12.74,
+        1.7,
+        -1.917
+      ]
+    },
+    {
+      "id": "reserve-034",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        15.84,
+        2.2,
+        2.25
+      ],
+      "angle": -1.570796,
+      "camera": [
+        12.74,
+        1.7,
+        2.25
+      ]
+    },
+    {
+      "id": "reserve-035",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        15.84,
+        2.2,
+        6.417
+      ],
+      "angle": -1.570796,
+      "camera": [
+        12.74,
+        1.7,
+        6.417
+      ]
+    },
+    {
+      "id": "reserve-036",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        -13.7,
+        2.2,
+        8.34
+      ],
+      "angle": 3.141593,
+      "camera": [
+        -13.7,
+        1.7,
+        5.24
+      ]
+    },
+    {
+      "id": "reserve-037",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        -9.1,
+        2.2,
+        8.34
+      ],
+      "angle": 3.141593,
+      "camera": [
+        -9.1,
+        1.7,
+        5.24
+      ]
+    },
+    {
+      "id": "reserve-038",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        -4.5,
+        2.2,
+        8.34
+      ],
+      "angle": 3.141593,
+      "camera": [
+        -4.5,
+        1.7,
+        5.24
+      ]
+    },
+    {
+      "id": "reserve-039",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        4.5,
+        2.2,
+        8.34
+      ],
+      "angle": 3.141593,
+      "camera": [
+        4.5,
+        1.7,
+        5.24
+      ]
+    },
+    {
+      "id": "reserve-040",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        9.1,
+        2.2,
+        8.34
+      ],
+      "angle": 3.141593,
+      "camera": [
+        9.1,
+        1.7,
+        5.24
+      ]
+    },
+    {
+      "id": "reserve-041",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        13.7,
+        2.2,
+        8.34
+      ],
+      "angle": 3.141593,
+      "camera": [
+        13.7,
+        1.7,
+        5.24
+      ],
+      "workId": "rear-view"
+    },
+    {
+      "id": "reserve-042",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        -15.84,
+        2.2,
+        -17.438
+      ],
+      "angle": 1.570796,
+      "camera": [
+        -12.74,
+        1.7,
+        -17.438
+      ]
+    },
+    {
+      "id": "reserve-043",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        -15.84,
+        2.2,
+        -13.312
+      ],
+      "angle": 1.570796,
+      "camera": [
+        -12.74,
+        1.7,
+        -13.312
+      ]
+    },
+    {
+      "id": "reserve-044",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        -15.84,
+        2.2,
+        -9.188
+      ],
+      "angle": 1.570796,
+      "camera": [
+        -13.74,
+        1.7,
+        -9.188
+      ]
+    },
+    {
+      "id": "reserve-045",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        -15.84,
+        2.2,
+        -5.062
+      ],
+      "angle": 1.570796,
+      "camera": [
+        -12.74,
+        1.7,
+        -5.062
+      ]
+    },
+    {
+      "id": "reserve-046",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        -15.84,
+        2.2,
+        2.875
+      ],
+      "angle": 1.570796,
+      "camera": [
+        -12.74,
+        1.7,
+        2.875
+      ]
+    },
+    {
+      "id": "reserve-047",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        -15.84,
+        2.2,
+        6.625
+      ],
+      "angle": 1.570796,
+      "camera": [
+        -12.74,
+        1.7,
+        6.625
+      ]
+    },
+    {
+      "id": "reserve-048",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        -10.161,
+        2.2,
+        -9.353
+      ],
+      "angle": 0.22,
+      "camera": [
+        -9.484,
+        1.7,
+        -6.328
+      ]
+    },
+    {
+      "id": "reserve-049",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        -5.769,
+        2.2,
+        -10.335
+      ],
+      "angle": 0.22,
+      "camera": [
+        -5.093,
+        1.7,
+        -7.31
+      ]
+    },
+    {
+      "id": "reserve-050",
+      "room": "chamber-1",
+      "kind": "object",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "footprint": [
+        1.4,
+        1.6,
+        1.4
+      ],
+      "position": [
+        0,
+        0,
+        0
+      ],
+      "angle": 0,
+      "camera": [
+        0,
+        1.7,
+        3.4
+      ],
+      "workId": "syrup-glass"
+    },
+    {
+      "id": "reserve-051",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        -10.231,
+        2.2,
+        -9.665
+      ],
+      "angle": -2.921593,
+      "camera": [
+        -10.907,
+        1.7,
+        -12.69
+      ]
+    },
+    {
+      "id": "reserve-052",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        -5.839,
+        2.2,
+        -10.647
+      ],
+      "angle": -2.921593,
+      "camera": [
+        -6.516,
+        1.7,
+        -13.672
+      ]
+    },
+    {
+      "id": "reserve-053",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        5.769,
+        2.2,
+        -10.335
+      ],
+      "angle": -0.22,
+      "camera": [
+        5.093,
+        1.7,
+        -7.31
+      ]
+    },
+    {
+      "id": "reserve-054",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        10.161,
+        2.2,
+        -9.353
+      ],
+      "angle": -0.22,
+      "camera": [
+        9.484,
+        1.7,
+        -6.328
+      ]
+    },
+    {
+      "id": "reserve-055",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        5.839,
+        2.2,
+        -10.647
+      ],
+      "angle": 2.921593,
+      "camera": [
+        6.516,
+        1.7,
+        -13.672
+      ]
+    },
+    {
+      "id": "reserve-056",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        10.231,
+        2.2,
+        -9.665
+      ],
+      "angle": 2.921593,
+      "camera": [
+        10.907,
+        1.7,
+        -12.69
+      ]
+    },
+    {
+      "id": "reserve-057",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        -10.231,
+        2.2,
+        0.665
+      ],
+      "angle": -0.22,
+      "camera": [
+        -10.907,
+        1.7,
+        3.69
+      ]
+    },
+    {
+      "id": "reserve-058",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        -5.839,
+        2.2,
+        1.647
+      ],
+      "angle": -0.22,
+      "camera": [
+        -6.516,
+        1.7,
+        4.672
+      ]
+    },
+    {
+      "id": "reserve-059",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        -10.161,
+        2.2,
+        0.353
+      ],
+      "angle": 2.921593,
+      "camera": [
+        -9.484,
+        1.7,
+        -2.672
+      ]
+    },
+    {
+      "id": "reserve-060",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        -5.769,
+        2.2,
+        1.335
+      ],
+      "angle": 2.921593,
+      "camera": [
+        -5.093,
+        1.7,
+        -1.69
+      ]
+    },
+    {
+      "id": "reserve-061",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        5.839,
+        2.2,
+        1.647
+      ],
+      "angle": 0.22,
+      "camera": [
+        6.516,
+        1.7,
+        4.672
+      ]
+    },
+    {
+      "id": "reserve-062",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        10.231,
+        2.2,
+        0.665
+      ],
+      "angle": 0.22,
+      "camera": [
+        10.907,
+        1.7,
+        3.69
+      ]
+    },
+    {
+      "id": "reserve-063",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        5.769,
+        2.2,
+        1.335
+      ],
+      "angle": -2.921593,
+      "camera": [
+        5.093,
+        1.7,
+        -1.69
+      ]
+    },
+    {
+      "id": "reserve-064",
+      "room": "chamber-1",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        10.161,
+        2.2,
+        0.353
+      ],
+      "angle": -2.921593,
+      "camera": [
+        9.484,
+        1.7,
+        -2.672
+      ]
+    },
+    {
+      "id": "reserve-065",
+      "room": "chamber-2",
+      "kind": "object",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        1.4,
+        1.6,
+        1.4
+      ],
+      "position": [
+        26,
+        0,
+        1
+      ],
+      "angle": 0,
+      "camera": [
+        26,
+        1.7,
+        4.4
+      ]
+    },
+    {
+      "id": "reserve-066",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        45.84,
+        2.2,
+        -9.5
+      ],
+      "angle": -1.570796,
+      "camera": [
+        42.74,
+        1.7,
+        -9.5
+      ]
+    },
+    {
+      "id": "reserve-067",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        45.84,
+        2.2,
+        -5.5
+      ],
+      "angle": -1.570796,
+      "camera": [
+        42.74,
+        1.7,
+        -5.5
+      ]
+    },
+    {
+      "id": "reserve-068",
+      "room": "chamber-2",
+      "kind": "object",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        1.4,
+        1.6,
+        1.4
+      ],
+      "position": [
+        40,
+        0,
+        -12
+      ],
+      "angle": 0,
+      "camera": [
+        40,
+        1.7,
+        -8.6
+      ]
+    },
+    {
+      "id": "reserve-069",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        45.84,
+        2.2,
+        -1.5
+      ],
+      "angle": -1.570796,
+      "camera": [
+        42.74,
+        1.7,
+        -1.5
+      ]
+    },
+    {
+      "id": "reserve-070",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        45.84,
+        2.2,
+        2.5
+      ],
+      "angle": -1.570796,
+      "camera": [
+        42.74,
+        1.7,
+        2.5
+      ]
+    },
+    {
+      "id": "reserve-071",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        45.84,
+        2.2,
+        6.5
+      ],
+      "angle": -1.570796,
+      "camera": [
+        42.74,
+        1.7,
+        6.5
+      ]
+    },
+    {
+      "id": "reserve-072",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        21.857,
+        2.2,
+        8.34
+      ],
+      "angle": 3.141593,
+      "camera": [
+        21.857,
+        1.7,
+        5.24
+      ]
+    },
+    {
+      "id": "reserve-073",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        25.571,
+        2.2,
+        8.34
+      ],
+      "angle": 3.141593,
+      "camera": [
+        25.571,
+        1.7,
+        5.24
+      ]
+    },
+    {
+      "id": "reserve-074",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        29.286,
+        2.2,
+        8.34
+      ],
+      "angle": 3.141593,
+      "camera": [
+        29.286,
+        1.7,
+        5.24
+      ]
+    },
+    {
+      "id": "reserve-075",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        33.0,
+        2.2,
+        8.34
+      ],
+      "angle": 3.141593,
+      "camera": [
+        33.0,
+        1.7,
+        5.24
+      ]
+    },
+    {
+      "id": "reserve-076",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        36.714,
+        2.2,
+        8.34
+      ],
+      "angle": 3.141593,
+      "camera": [
+        36.714,
+        1.7,
+        5.24
+      ]
+    },
+    {
+      "id": "reserve-077",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        40.429,
+        2.2,
+        8.34
+      ],
+      "angle": 3.141593,
+      "camera": [
+        40.429,
+        1.7,
+        5.24
+      ]
+    },
+    {
+      "id": "reserve-078",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        44.143,
+        2.2,
+        8.34
+      ],
+      "angle": 3.141593,
+      "camera": [
+        44.143,
+        1.7,
+        5.24
+      ]
+    },
+    {
+      "id": "reserve-079",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        20.16,
+        2.2,
+        -17.583
+      ],
+      "angle": 1.570796,
+      "camera": [
+        23.26,
+        1.7,
+        -17.583
+      ]
+    },
+    {
+      "id": "reserve-080",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        20.16,
+        2.2,
+        -13.75
+      ],
+      "angle": 1.570796,
+      "camera": [
+        23.26,
+        1.7,
+        -13.75
+      ]
+    },
+    {
+      "id": "reserve-081",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        20.16,
+        2.2,
+        -9.917
+      ],
+      "angle": 1.570796,
+      "camera": [
+        23.26,
+        1.7,
+        -9.917
+      ]
+    },
+    {
+      "id": "reserve-082",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        20.16,
+        2.2,
+        -1.917
+      ],
+      "angle": 1.570796,
+      "camera": [
+        23.26,
+        1.7,
+        -1.917
+      ]
+    },
+    {
+      "id": "reserve-083",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        20.16,
+        2.2,
+        2.25
+      ],
+      "angle": 1.570796,
+      "camera": [
+        23.26,
+        1.7,
+        2.25
+      ]
+    },
+    {
+      "id": "reserve-084",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        20.16,
+        2.2,
+        6.417
+      ],
+      "angle": 1.570796,
+      "camera": [
+        23.26,
+        1.7,
+        6.417
+      ]
+    },
+    {
+      "id": "reserve-085",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        33.16,
+        2.2,
+        -0.333
+      ],
+      "angle": 1.570796,
+      "camera": [
+        35.26,
+        1.7,
+        -0.333
+      ]
+    },
+    {
+      "id": "reserve-086",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        33.16,
+        2.2,
+        -5.0
+      ],
+      "angle": 1.570796,
+      "camera": [
+        36.26,
+        1.7,
+        -5.0
+      ]
+    },
+    {
+      "id": "reserve-087",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        33.16,
+        2.2,
+        -9.667
+      ],
+      "angle": 1.570796,
+      "camera": [
+        36.26,
+        1.7,
+        -9.667
+      ]
+    },
+    {
+      "id": "reserve-088",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        32.84,
+        2.2,
+        -0.333
+      ],
+      "angle": -1.570796,
+      "camera": [
+        29.74,
+        1.7,
+        -0.333
+      ]
+    },
+    {
+      "id": "reserve-089",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        32.84,
+        2.2,
+        -5.0
+      ],
+      "angle": -1.570796,
+      "camera": [
+        29.74,
+        1.7,
+        -5.0
+      ]
+    },
+    {
+      "id": "reserve-090",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        32.84,
+        2.2,
+        -9.667
+      ],
+      "angle": -1.570796,
+      "camera": [
+        29.74,
+        1.7,
+        -9.667
+      ]
+    },
+    {
+      "id": "reserve-091",
+      "room": "chamber-2",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        38.066,
+        2.2,
+        0.465
+      ],
+      "angle": -0.35,
+      "camera": [
+        37.003,
+        1.7,
+        3.377
+      ]
+    },
+    {
+      "id": "reserve-092",
+      "room": "passage-2-3",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        31.16,
+        2.2,
+        -22.5
+      ],
+      "angle": 1.570796,
+      "camera": [
+        34.26,
+        1.7,
+        -22.5
+      ]
+    },
+    {
+      "id": "reserve-093",
+      "room": "passage-2-3",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        34.84,
+        2.2,
+        -22.5
+      ],
+      "angle": -1.570796,
+      "camera": [
+        31.74,
+        1.7,
+        -22.5
+      ]
+    },
+    {
+      "id": "reserve-094",
+      "room": "chamber-3",
+      "kind": "object",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        1.4,
+        1.6,
+        1.4
+      ],
+      "position": [
+        25,
+        0,
+        -45
+      ],
+      "angle": 0,
+      "camera": [
+        25,
+        1.7,
+        -41.6
+      ]
+    },
+    {
+      "id": "reserve-095",
+      "room": "chamber-3",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        44.143,
+        2.2,
+        -51.34
+      ],
+      "angle": 0.0,
+      "camera": [
+        44.143,
+        1.7,
+        -48.24
+      ]
+    },
+    {
+      "id": "reserve-096",
+      "room": "chamber-3",
+      "kind": "object",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        1.4,
+        1.6,
+        1.4
+      ],
+      "position": [
+        40,
+        0,
+        -45
+      ],
+      "angle": 0,
+      "camera": [
+        40,
+        1.7,
+        -41.6
+      ]
+    },
+    {
+      "id": "reserve-097",
+      "room": "chamber-3",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        45.84,
+        2.2,
+        -49.643
+      ],
+      "angle": -1.570796,
+      "camera": [
+        42.74,
+        1.7,
+        -49.643
+      ]
+    },
+    {
+      "id": "reserve-098",
+      "room": "chamber-3",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        45.84,
+        2.2,
+        -45.929
+      ],
+      "angle": -1.570796,
+      "camera": [
+        42.74,
+        1.7,
+        -45.929
+      ]
+    },
+    {
+      "id": "reserve-099",
+      "room": "chamber-3",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        45.84,
+        2.2,
+        -42.214
+      ],
+      "angle": -1.570796,
+      "camera": [
+        42.74,
+        1.7,
+        -42.214
+      ]
+    },
+    {
+      "id": "reserve-100",
+      "room": "chamber-3",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        45.84,
+        2.2,
+        -38.5
+      ],
+      "angle": -1.570796,
+      "camera": [
+        42.74,
+        1.7,
+        -38.5
+      ]
+    },
+    {
+      "id": "reserve-101",
+      "room": "chamber-3",
+      "kind": "installation",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        3.2,
+        0.03,
+        3.2
+      ],
+      "position": [
+        25,
+        0,
+        -30
+      ],
+      "angle": 0,
+      "camera": [
+        25,
+        1.7,
+        -26.7
+      ]
+    },
+    {
+      "id": "reserve-102",
+      "room": "chamber-3",
+      "kind": "installation",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        3.2,
+        0.03,
+        3.2
+      ],
+      "position": [
+        40,
+        0,
+        -30
+      ],
+      "angle": 0,
+      "camera": [
+        40,
+        1.7,
+        -26.7
+      ]
+    },
+    {
+      "id": "reserve-103",
+      "room": "chamber-3",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        45.84,
+        2.2,
+        -34.786
+      ],
+      "angle": -1.570796,
+      "camera": [
+        42.74,
+        1.7,
+        -34.786
+      ]
+    },
+    {
+      "id": "reserve-104",
+      "room": "chamber-3",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        45.84,
+        2.2,
+        -31.071
+      ],
+      "angle": -1.570796,
+      "camera": [
+        42.74,
+        1.7,
+        -31.071
+      ]
+    },
+    {
+      "id": "reserve-105",
+      "room": "chamber-3",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        45.84,
+        2.2,
+        -27.357
+      ],
+      "angle": -1.570796,
+      "camera": [
+        42.74,
+        1.7,
+        -27.357
+      ]
+    },
+    {
+      "id": "reserve-106",
+      "room": "chamber-3",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        21.833,
+        2.2,
+        -25.66
+      ],
+      "angle": 3.141593,
+      "camera": [
+        21.833,
+        1.7,
+        -28.76
+      ]
+    },
+    {
+      "id": "reserve-107",
+      "room": "chamber-3",
+      "kind": "object",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        1.4,
+        1.6,
+        1.4
+      ],
+      "position": [
+        25,
+        0,
+        -36
+      ],
+      "angle": 0,
+      "camera": [
+        25,
+        1.7,
+        -32.6
+      ]
+    },
+    {
+      "id": "reserve-108",
+      "room": "chamber-3",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        25.5,
+        2.2,
+        -25.66
+      ],
+      "angle": 3.141593,
+      "camera": [
+        25.5,
+        1.7,
+        -28.76
+      ]
+    },
+    {
+      "id": "reserve-109",
+      "room": "chamber-3",
+      "kind": "installation",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        3.2,
+        0.03,
+        3.2
+      ],
+      "position": [
+        33,
+        0,
+        -45
+      ],
+      "angle": 0,
+      "camera": [
+        33,
+        1.7,
+        -41.7
+      ]
+    },
+    {
+      "id": "reserve-110",
+      "room": "chamber-3",
+      "kind": "installation",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        3.2,
+        0.03,
+        3.2
+      ],
+      "position": [
+        17.5,
+        0,
+        -31.5
+      ],
+      "angle": 1.5707963267948966,
+      "camera": [
+        22,
+        1.7,
+        -31.5
+      ]
+    },
+    {
+      "id": "reserve-111",
+      "room": "chamber-3",
+      "kind": "object",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        1.4,
+        1.6,
+        1.4
+      ],
+      "position": [
+        40,
+        0,
+        -36
+      ],
+      "angle": 0,
+      "camera": [
+        40,
+        1.7,
+        -32.6
+      ]
+    },
+    {
+      "id": "reserve-112",
+      "room": "chamber-3",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        29.167,
+        2.2,
+        -25.66
+      ],
+      "angle": 3.141593,
+      "camera": [
+        29.167,
+        1.7,
+        -28.76
+      ]
+    },
+    {
+      "id": "reserve-113",
+      "room": "chamber-3",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        36.833,
+        2.2,
+        -25.66
+      ],
+      "angle": 3.141593,
+      "camera": [
+        36.833,
+        1.7,
+        -28.76
+      ]
+    },
+    {
+      "id": "reserve-114",
+      "room": "chamber-3",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        40.5,
+        2.2,
+        -25.66
+      ],
+      "angle": 3.141593,
+      "camera": [
+        40.5,
+        1.7,
+        -28.76
+      ]
+    },
+    {
+      "id": "reserve-115",
+      "room": "chamber-3",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        44.167,
+        2.2,
+        -25.66
+      ],
+      "angle": 3.141593,
+      "camera": [
+        44.167,
+        1.7,
+        -28.76
+      ]
+    },
+    {
+      "id": "reserve-116",
+      "room": "chamber-3",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        20.16,
+        2.2,
+        -48.875
+      ],
+      "angle": 1.570796,
+      "camera": [
+        23.26,
+        1.7,
+        -48.875
+      ]
+    },
+    {
+      "id": "reserve-117",
+      "room": "chamber-3",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        20.16,
+        2.2,
+        -43.625
+      ],
+      "angle": 1.570796,
+      "camera": [
+        23.26,
+        1.7,
+        -43.625
+      ]
+    },
+    {
+      "id": "reserve-118",
+      "room": "passage-3-4",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        17.0,
+        2.2,
+        -40.84
+      ],
+      "angle": 0.0,
+      "camera": [
+        17.0,
+        1.7,
+        -37.74
+      ]
+    },
+    {
+      "id": "reserve-119",
+      "room": "chamber-4",
+      "kind": "object",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        1.4,
+        1.6,
+        1.4
+      ],
+      "position": [
+        -5,
+        0,
+        -32
+      ],
+      "angle": 0,
+      "camera": [
+        -5,
+        1.7,
+        -28.6
+      ]
+    },
+    {
+      "id": "reserve-120",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        4.714,
+        2.2,
+        -51.34
+      ],
+      "angle": 0.0,
+      "camera": [
+        4.714,
+        1.7,
+        -48.24
+      ]
+    },
+    {
+      "id": "reserve-121",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        8.429,
+        2.2,
+        -51.34
+      ],
+      "angle": 0.0,
+      "camera": [
+        8.429,
+        1.7,
+        -48.24
+      ]
+    },
+    {
+      "id": "reserve-122",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        12.143,
+        2.2,
+        -51.34
+      ],
+      "angle": 0.0,
+      "camera": [
+        12.143,
+        1.7,
+        -48.24
+      ]
+    },
+    {
+      "id": "reserve-123",
+      "room": "chamber-4",
+      "kind": "object",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        1.4,
+        1.6,
+        1.4
+      ],
+      "position": [
+        5,
+        0,
+        -44
+      ],
+      "angle": 0,
+      "camera": [
+        5,
+        1.7,
+        -40.6
+      ]
+    },
+    {
+      "id": "reserve-124",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        13.84,
+        2.2,
+        -48.875
+      ],
+      "angle": -1.570796,
+      "camera": [
+        10.74,
+        1.7,
+        -48.875
+      ]
+    },
+    {
+      "id": "reserve-125",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        13.84,
+        2.2,
+        -43.625
+      ],
+      "angle": -1.570796,
+      "camera": [
+        10.74,
+        1.7,
+        -43.625
+      ]
+    },
+    {
+      "id": "reserve-126",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        13.84,
+        2.2,
+        -35.083
+      ],
+      "angle": -1.570796,
+      "camera": [
+        10.74,
+        1.7,
+        -35.083
+      ]
+    },
+    {
+      "id": "reserve-127",
+      "room": "chamber-4",
+      "kind": "object",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        1.4,
+        1.6,
+        1.4
+      ],
+      "position": [
+        -5,
+        0,
+        -44
+      ],
+      "angle": 0,
+      "camera": [
+        -5,
+        1.7,
+        -40.6
+      ]
+    },
+    {
+      "id": "reserve-128",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        13.84,
+        2.2,
+        -31.25
+      ],
+      "angle": -1.570796,
+      "camera": [
+        10.74,
+        1.7,
+        -31.25
+      ]
+    },
+    {
+      "id": "reserve-129",
+      "room": "ancillary",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        -31.5,
+        2.2,
+        12.66
+      ],
+      "angle": 0.0,
+      "camera": [
+        -31.5,
+        1.7,
+        15.76
+      ]
+    },
+    {
+      "id": "reserve-130",
+      "room": "ancillary",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "planned",
+      "placementStatus": "candidate",
+      "footprint": [
+        2.4,
+        1.65,
+        0.08
+      ],
+      "position": [
+        -22.5,
+        2.2,
+        12.66
+      ],
+      "angle": 0.0,
+      "camera": [
+        -22.5,
+        1.7,
+        15.76
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "title": "Tom’s Crossing",
+  "author": "Mark Z. Danielewski",
+  "works": [
+    {
+      "id": "rear-view",
+      "title": "Rear View",
+      "collection": "exhibition",
+      "medium": "Charcoal, reimagined as a digital image",
+      "description": "A view over a black horse toward a darker bay horse. Vertical marks leave the setting unsettled: rain, bars, or something the viewer cannot quite place.",
+      "attribution": "Thane Moon (name as transcribed)",
+      "credit": "Generated image, selected by Isaac.",
+      "note": "A reconstruction of a described exhibition work. The dark walnut frame belongs to the description; this existing generation includes it within the image. Composition, proportions, and precise marks remain interpretive.",
+      "alt": "A charcoal image of two horses, viewed over the nearer horse, inside a dark wooden frame.",
+      "placement": {
+        "room": "chamber-1",
+        "label": "Chamber 1 · Through Wednesday",
+        "note": "The book groups events up to and including October 27, 1982 in this chamber."
+      },
+      "image": "assets/rear-view-b47803ed6b3a80b8.png"
+    },
+    {
+      "id": "syrup-glass",
+      "title": "Syrup glass",
+      "collection": "exhibition",
+      "medium": "Glass and red syrup · digital object",
+      "description": "A scotch glass smeared and filled with a thick red substance. The passage identifies the substance as sugary syrup prepared by the gallery assistants.",
+      "attribution": "No individual maker securely assigned in the reviewed passage.",
+      "credit": "Procedural 3D model created for this exhibition.",
+      "note": "The descriptive title, glass profile, dimensions, lighting, and display plinth are choices made for this reconstruction. The object is presented as syrup rather than evidence of actual blood.",
+      "alt": "A scotch glass containing thick red syrup on a dark display plinth.",
+      "object": "syrup-glass",
+      "placement": {
+        "room": "chamber-1",
+        "label": "Chamber 1 · Through Wednesday",
+        "note": "The book groups events up to and including October 27, 1982 in this chamber."
+      }
+    },
+    {
+      "id": "canyon-meeting",
+      "title": "At the canyon mouth",
+      "collection": "interpretation",
+      "medium": "Generated digital painting",
+      "description": "Two mounted figures meet beneath rain-darkened cliffs. The opening of the canyon holds the last pale light.",
+      "attribution": "Isaac’s personal collection",
+      "credit": "Generated image, selected by Isaac.",
+      "note": "The composition places the viewer just behind the nearer rider. Rain, distance, and the small exchange between figures carry this visual interpretation. It is a personal scene image, not a reconstruction of an in-book exhibition work.",
+      "alt": "Two riders on horses meet in a wet canyon at dusk.",
+      "placement": {
+        "room": "chamber-1",
+        "label": "Chamber 1 · Through Wednesday",
+        "note": "A personal interpretation of the Wednesday canyon meeting, grouped alongside that day’s exhibition works."
+      },
+      "image": "assets/canyon-meeting-0ef161d013d198f5.png"
+    },
+    {
+      "id": "comfort-in-company",
+      "title": "Comfort in company",
+      "collection": "interpretation",
+      "medium": "Generated digital painting",
+      "description": "Two women share a table beneath a warm lamp. Tea, cake, and a sleeping dog occupy the quiet space between them.",
+      "attribution": "Isaac’s personal collection",
+      "credit": "Generated image, selected by Isaac.",
+      "note": "Golden light gathers around the table while the window remains cold and dark. The image gives companionship a physical center. Its staging and visual details are interpretive.",
+      "alt": "Two women with tea and cake in a warmly lit kitchen, with a large dog asleep beneath the table.",
+      "placement": {
+        "room": "chamber-2",
+        "label": "Chamber 2 · Thursday",
+        "note": "Curatorial placement with Thursday’s scenes, following the Chapter Nine narrative. This reader-made image joins the day’s collection; it is not an in-book exhibition piece."
+      },
+      "image": "assets/comfort-in-company-d90633f5647a83b6.png"
+    },
+    {
+      "id": "where-the-words-were",
+      "title": "Where the words were",
+      "collection": "interpretation",
+      "medium": "Generated digital image in a stained-glass idiom",
+      "description": "Landry burns her diary to help start the fire that shelters her and her companions on the mountain. Kalen grieves for the record of her father and brothers; Landry tells him it is no longer all she has of them. This image brings that sacrifice together with the later lookout scene: she stands exposed with binoculars, blood fills the air around her, and a rifle report follows. It depicts the fear and grief of her apparent shooting without declaring her dead or identifying the shooter.",
+      "attribution": "Isaac’s personal collection",
+      "credit": "Generated image, selected by Isaac.",
+      "note": "A symbolic composite of two separate moments. The journal held as an impossible remnant of ash gives form to Isaac’s reading of it as memory and legacy. Closed eyes, red glass, and fractured panes express threatened loss; they are artistic choices, not a literal scene or a resolution of Landry’s fate. The stained-glass surface is simulated within a generated image.",
+      "alt": "A stained-glass-style portrait of a bowed girl holding fragments, surrounded by mountain and fire imagery.",
+      "placement": {
+        "room": "across-moments",
+        "label": "Across moments · Composite",
+        "note": "The image joins the diary fire and the later lookout in one symbolic portrait."
+      },
+      "image": "assets/where-the-words-were-79c57debfbc25200.png"
+    }
+  ]
+}

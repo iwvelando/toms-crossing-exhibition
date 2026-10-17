@@ -5,10 +5,11 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1",
-    "build": "tsc --noEmit && vite build",
+    "build": "node scripts/check-scene-previews.mjs && tsc --noEmit && vite build",
     "preview": "vite preview --host 127.0.0.1",
     "test": "node --test scripts/*.test.mjs && playwright test",
-    "check": "npm run build && npm test"
+    "check": "npm run build && npm test",
+    "prepare-art": "node scripts/build-scene-previews.mjs"
   },
   "dependencies": {
     "react": "19.3.0",

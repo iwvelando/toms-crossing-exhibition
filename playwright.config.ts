@@ -5,6 +5,7 @@ export default defineConfig({
   workers: 2,
   use: {
     baseURL: "http://127.0.0.1:4187",
+    channel: process.env.EXHIBITION_BROWSER_CHANNEL || undefined,
     trace: "retain-on-failure",
     launchOptions: { args: ["--use-angle=swiftshader"] },
   },

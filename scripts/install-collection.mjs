@@ -3,7 +3,8 @@ import { resolve, dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createHash } from "node:crypto";
 const root=resolve(dirname(fileURLToPath(import.meta.url)),"..");
-const fields=new Set(["id","title","collection","medium","description","attribution","credit","note","alt","placement","image","object"]);
+const fields=new Set(["id","title","collection","medium","description","attribution","credit","note","alt","placement","image","object","referenceImage","frame","panels","wallText","presentation"]);
+const objects=new Set(["syrup-glass", "diorama", "horse-sculpture", "wax-rider", "boxed-gear", "relic-case", "film-screen", "stump-case", "shard-case", "scree-relief", "stone-boxes", "geology", "ropes", "screen-installation", "bronze-figure", "marble-figure", "hologram-figure", "broken-bowl", "scroll-case", "bone-cliffs", "mesh-cloth", "ash-bin", "plastic-bag", "cartridge-cases", "tin-can", "snowball", "revolver-case", "audio-station"]);
 const required=["id","title","collection","medium","description","attribution","credit","note","alt"];
 const json=async path=>JSON.parse(await readFile(path,"utf8"));
 export async function prepareInstall(bundle, destination=join(root,"public/collection"), placements={}) {
@@ -21,15 +22,31 @@ export async function prepareInstall(bundle, destination=join(root,"public/colle
     seen.add(work.id);
     if (work.placement && (Object.keys(work.placement).some(k=>!["room","label","note"].includes(k)) || ["room","label","note"].some(k=>typeof work.placement[k]!=="string")))
       throw new Error(`Invalid placement: ${work.id}`);
-    if (work.object && work.object!=="syrup-glass" || work.image && work.object) throw new Error(`Unsupported visual asset combination: ${work.id}`);
-    if (work.image) {
-      const match=/^assets\/([a-z0-9-]+)-([a-f0-9]{16})\.png$/.exec(work.image);
-      if (!match || match[1]!==work.id) throw new Error(`Invalid asset path: ${work.id}`);
-      const bytes=await readFile(join(bundle,work.image));
+    if (work.object !== undefined && !objects.has(work.object) || work.image && work.object || work.referenceImage && !work.object || work.frame && work.object) throw new Error(`Unsupported visual asset combination: ${work.id}`);
+    if (work.frame !== undefined && !["gallery","none","walnut","aluminum","fence-slats"].includes(work.frame)) throw new Error(`Unsupported frame: ${work.id}`);
+    if (work.wallText !== undefined && (typeof work.wallText!=="string" || !work.wallText.trim() || work.wallText.trim().length>200 || !work.image || work.object || work.panels || work.referenceImage || work.frame!=="none"))
+      throw new Error(`Invalid wall text display: ${work.id}`);
+    if (work.presentation!==undefined && (!["sequence","variants"].includes(work.presentation) || !work.panels)) throw new Error(`Invalid panel presentation: ${work.id}`);
+    const panels=work.panels;
+    if (panels !== undefined && (!Array.isArray(panels) || panels.length<2 || panels.length>24 || work.object || work.referenceImage || work.image!==panels[0]?.image))
+      throw new Error(`Invalid ordered montage: ${work.id}`);
+    const images=[];
+    if (panels) for (let i=0;i<panels.length;i++) {
+      const panel=panels[i];
+      if (!panel || Object.keys(panel).some(k=>!["title","alt","image"].includes(k)) || ["title","alt","image"].some(k=>typeof panel[k]!=="string" || !panel[k].trim()))
+        throw new Error(`Invalid public panel fields: ${work.id}`);
+      images.push({image:panel.image,id:`${work.id}-panel-${String(i+1).padStart(2,"0")}`});
+    }
+    else if (work.image || work.referenceImage) images.push({image:work.image ?? work.referenceImage,id:work.id});
+    else if (!objects.has(work.object)) throw new Error(`Unsupported or missing visual asset: ${work.id}`);
+    for (const {image,id} of images) {
+      const match=/^assets\/([a-z0-9-]+)-([a-f0-9]{16})\.png$/.exec(image);
+      if (!match || match[1]!==id) throw new Error(`Invalid asset path: ${work.id}`);
+      const bytes=await readFile(join(bundle,image));
       if (bytes.subarray(0,8).toString("hex")!=="89504e470d0a1a0a" || createHash("sha256").update(bytes).digest("hex").slice(0,16)!==match[2])
         throw new Error(`Image checksum or PNG signature mismatch: ${work.id}`);
-      assets.push({source:join(bundle,work.image),destination:join(destination,work.image)});
-    } else if (work.object!=="syrup-glass") throw new Error(`Unsupported or missing visual asset: ${work.id}`);
+      assets.push({source:join(bundle,image),destination:join(destination,image)});
+    }
     const existing=layout.reservations.filter(r=>r.workId===work.id);
     if (existing.length>1) throw new Error(`Duplicate position: ${work.id}`);
     if (placements[work.id] && existing.length && placements[work.id]!==existing[0].id) throw new Error(`Move ${work.id} explicitly in the room plan; an import preserves its position.`);

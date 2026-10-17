@@ -73,7 +73,7 @@
     {
       "id": "chamber-4",
       "title": "Chamber 4",
-      "subtitle": "Saturday \u00b7 collection in progress",
+      "subtitle": "Saturday \u00b7 Cirque Wall",
       "bounds": [
         -12,
         14,
@@ -96,7 +96,7 @@
     {
       "id": "chamber-5",
       "title": "Chamber 5",
-      "subtitle": "Reserved \u00b7 details awaiting evidence",
+      "subtitle": "Sunday \u00b7 October 31, 1982",
       "bounds": [
         -44,
         -18,
@@ -161,6 +161,75 @@
       ],
       "tone": "dark",
       "number": "B"
+    },
+    {
+      "id": "recollections",
+      "title": "Recollections",
+      "subtitle": "Remembered works \u00b7 uncertain inventory",
+      "bounds": [
+        -76,
+        -50,
+        -51.5,
+        -25.5
+      ],
+      "number": "R",
+      "spawn": [
+        -63,
+        1.7,
+        -48.5
+      ],
+      "look": [
+        -63,
+        2.2,
+        -39.5
+      ],
+      "tone": "dark"
+    },
+    {
+      "id": "afterimages",
+      "title": "Afterimages",
+      "subtitle": "The 2031 exhibition \u00b7 New Hampshire",
+      "bounds": [
+        -76,
+        -50,
+        -19.5,
+        6.5
+      ],
+      "number": "D",
+      "spawn": [
+        -63,
+        1.7,
+        -16.5
+      ],
+      "look": [
+        -63,
+        2.2,
+        -7.5
+      ],
+      "tone": "dark"
+    },
+    {
+      "id": "reader-responses",
+      "title": "Reader responses",
+      "subtitle": "Scenes, metaphors and possible lives",
+      "bounds": [
+        -76,
+        -50,
+        12.5,
+        38.5
+      ],
+      "number": "I",
+      "spawn": [
+        -63,
+        1.7,
+        15.5
+      ],
+      "look": [
+        -63,
+        2.2,
+        24.5
+      ],
+      "tone": "dark"
     }
   ],
   "floors": [
@@ -202,7 +271,8 @@
         -51.5,
         -25.5
       ],
-      "tone": "dark"
+      "tone": "dark",
+      "ceilingHeight": 11.7
     },
     {
       "id": "chamber-5",
@@ -313,6 +383,66 @@
         -28.5
       ],
       "tone": "light"
+    },
+    {
+      "id": "recollections",
+      "bounds": [
+        -76,
+        -50,
+        -51.5,
+        -25.5
+      ],
+      "tone": "dark"
+    },
+    {
+      "id": "afterimages",
+      "bounds": [
+        -76,
+        -50,
+        -19.5,
+        6.5
+      ],
+      "tone": "dark"
+    },
+    {
+      "id": "reader-responses",
+      "bounds": [
+        -76,
+        -50,
+        12.5,
+        38.5
+      ],
+      "tone": "dark"
+    },
+    {
+      "id": "passage-memory",
+      "bounds": [
+        -50,
+        -44,
+        -41,
+        -37
+      ],
+      "tone": "passage"
+    },
+    {
+      "id": "passage-return",
+      "bounds": [
+        -65,
+        -61,
+        -25.5,
+        -19.5
+      ],
+      "tone": "passage"
+    },
+    {
+      "id": "passage-response",
+      "bounds": [
+        -65,
+        -61,
+        6.5,
+        12.5
+      ],
+      "tone": "passage"
     }
   ],
   "walls": [
@@ -587,7 +717,8 @@
       ],
       "room": "chamber-4",
       "tone": "dark",
-      "partition": false
+      "partition": false,
+      "height": 11.6
     },
     {
       "a": [
@@ -600,7 +731,8 @@
       ],
       "room": "chamber-4",
       "tone": "dark",
-      "partition": false
+      "partition": false,
+      "height": 11.6
     },
     {
       "a": [
@@ -613,7 +745,8 @@
       ],
       "room": "chamber-4",
       "tone": "dark",
-      "partition": false
+      "partition": false,
+      "height": 11.6
     },
     {
       "a": [
@@ -626,7 +759,8 @@
       ],
       "room": "chamber-4",
       "tone": "dark",
-      "partition": false
+      "partition": false,
+      "height": 11.6
     },
     {
       "a": [
@@ -639,7 +773,8 @@
       ],
       "room": "chamber-4",
       "tone": "dark",
-      "partition": false
+      "partition": false,
+      "height": 11.6
     },
     {
       "a": [
@@ -652,7 +787,8 @@
       ],
       "room": "chamber-4",
       "tone": "dark",
-      "partition": false
+      "partition": false,
+      "height": 11.6
     },
     {
       "a": [
@@ -700,19 +836,6 @@
       ],
       "b": [
         -18,
-        -25.5
-      ],
-      "room": "chamber-5",
-      "tone": "dark",
-      "partition": false
-    },
-    {
-      "a": [
-        -44,
-        -51.5
-      ],
-      "b": [
-        -44,
         -25.5
       ],
       "room": "chamber-5",
@@ -916,12 +1039,12 @@
     },
     {
       "a": [
-        33.0,
-        2.0
+        33,
+        2
       ],
       "b": [
-        33.0,
-        -12.0
+        33,
+        -12
       ],
       "room": "chamber-2",
       "tone": "dark",
@@ -1173,6 +1296,357 @@
       "room": "projection-alcove",
       "tone": "light",
       "partition": false
+    },
+    {
+      "a": [
+        -2,
+        -45
+      ],
+      "b": [
+        -2,
+        -32
+      ],
+      "room": "chamber-4",
+      "tone": "dark",
+      "partition": true
+    },
+    {
+      "a": [
+        4,
+        -44.5
+      ],
+      "b": [
+        4,
+        -31.5
+      ],
+      "room": "chamber-4",
+      "tone": "dark",
+      "partition": true
+    },
+    {
+      "a": [
+        -44,
+        -51.5
+      ],
+      "b": [
+        -44,
+        -41
+      ],
+      "room": "chamber-5",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -44,
+        -37
+      ],
+      "b": [
+        -44,
+        -25.5
+      ],
+      "room": "chamber-5",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -76,
+        -51.5
+      ],
+      "b": [
+        -50,
+        -51.5
+      ],
+      "room": "recollections",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -76,
+        -25.5
+      ],
+      "b": [
+        -65,
+        -25.5
+      ],
+      "room": "recollections",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -61,
+        -25.5
+      ],
+      "b": [
+        -50,
+        -25.5
+      ],
+      "room": "recollections",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -76,
+        -51.5
+      ],
+      "b": [
+        -76,
+        -25.5
+      ],
+      "room": "recollections",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -50,
+        -51.5
+      ],
+      "b": [
+        -50,
+        -41
+      ],
+      "room": "recollections",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -50,
+        -37
+      ],
+      "b": [
+        -50,
+        -25.5
+      ],
+      "room": "recollections",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -76,
+        -19.5
+      ],
+      "b": [
+        -65,
+        -19.5
+      ],
+      "room": "afterimages",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -61,
+        -19.5
+      ],
+      "b": [
+        -50,
+        -19.5
+      ],
+      "room": "afterimages",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -76,
+        6.5
+      ],
+      "b": [
+        -65,
+        6.5
+      ],
+      "room": "afterimages",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -61,
+        6.5
+      ],
+      "b": [
+        -50,
+        6.5
+      ],
+      "room": "afterimages",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -76,
+        -19.5
+      ],
+      "b": [
+        -76,
+        6.5
+      ],
+      "room": "afterimages",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -50,
+        -19.5
+      ],
+      "b": [
+        -50,
+        6.5
+      ],
+      "room": "afterimages",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -76,
+        12.5
+      ],
+      "b": [
+        -65,
+        12.5
+      ],
+      "room": "reader-responses",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -61,
+        12.5
+      ],
+      "b": [
+        -50,
+        12.5
+      ],
+      "room": "reader-responses",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -76,
+        38.5
+      ],
+      "b": [
+        -50,
+        38.5
+      ],
+      "room": "reader-responses",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -76,
+        12.5
+      ],
+      "b": [
+        -76,
+        38.5
+      ],
+      "room": "reader-responses",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -50,
+        12.5
+      ],
+      "b": [
+        -50,
+        38.5
+      ],
+      "room": "reader-responses",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -50,
+        -41
+      ],
+      "b": [
+        -44,
+        -41
+      ],
+      "room": "passage-memory",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -50,
+        -37
+      ],
+      "b": [
+        -44,
+        -37
+      ],
+      "room": "passage-memory",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -65,
+        -25.5
+      ],
+      "b": [
+        -65,
+        -19.5
+      ],
+      "room": "passage-return",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -61,
+        -25.5
+      ],
+      "b": [
+        -61,
+        -19.5
+      ],
+      "room": "passage-return",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -65,
+        6.5
+      ],
+      "b": [
+        -65,
+        12.5
+      ],
+      "room": "passage-response",
+      "tone": "dark",
+      "partition": false
+    },
+    {
+      "a": [
+        -61,
+        6.5
+      ],
+      "b": [
+        -61,
+        12.5
+      ],
+      "room": "passage-response",
+      "tone": "dark",
+      "partition": false
     }
   ],
   "reservations": [
@@ -1181,7 +1655,7 @@
       "room": "chamber-1",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
         2.4,
@@ -1189,23 +1663,24 @@
         0.08
       ],
       "position": [
-        -14.0,
+        -14,
         2.2,
         -19.34
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
-        -14.0,
+        -14,
         1.7,
         -16.24
-      ]
+      ],
+      "workId": "study-1-the-firebrand"
     },
     {
       "id": "reserve-002",
       "room": "chamber-1",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
         2.4,
@@ -1213,23 +1688,24 @@
         0.08
       ],
       "position": [
-        -10.0,
+        -10,
         2.2,
         -19.34
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
-        -10.0,
+        -10,
         1.7,
         -16.24
-      ]
+      ],
+      "workId": "study-2-the-campfire-in-the-cliff-alcove"
     },
     {
       "id": "reserve-003",
       "room": "chamber-1",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
         2.4,
@@ -1237,16 +1713,17 @@
         0.08
       ],
       "position": [
-        -6.0,
+        -6,
         2.2,
         -19.34
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
-        -6.0,
+        -6,
         1.7,
         -16.24
-      ]
+      ],
+      "workId": "study-3-the-firebrand-charcoal-and-ink"
     },
     {
       "id": "reserve-004",
@@ -1261,13 +1738,13 @@
         0.08
       ],
       "position": [
-        -2.0,
+        -2,
         2.2,
         -19.34
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
-        -2.0,
+        -2,
         1.7,
         -16.24
       ],
@@ -1278,7 +1755,7 @@
       "room": "chamber-1",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
         2.4,
@@ -1286,23 +1763,24 @@
         0.08
       ],
       "position": [
-        2.0,
+        2,
         2.2,
         -19.34
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
-        2.0,
+        2,
         1.7,
         -16.24
-      ]
+      ],
+      "workId": "study-5-under-the-last-lamp"
     },
     {
       "id": "reserve-006",
       "room": "chamber-2",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
         2.4,
@@ -1314,19 +1792,20 @@
         2.2,
         -19.34
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
         21.833,
         1.7,
         -16.24
-      ]
+      ],
+      "workId": "study-6-there-she-goes"
     },
     {
       "id": "reserve-007",
       "room": "chamber-2",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
         2.4,
@@ -1338,19 +1817,20 @@
         2.2,
         -19.34
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
         25.5,
         1.7,
         -16.24
-      ]
+      ],
+      "workId": "study-7-lights-at-the-canyon-mouth"
     },
     {
       "id": "reserve-008",
       "room": "chamber-2",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
         2.4,
@@ -1362,19 +1842,20 @@
         2.2,
         -19.34
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
         29.167,
         1.7,
         -16.24
-      ]
+      ],
+      "workId": "study-8-the-race"
     },
     {
       "id": "reserve-009",
       "room": "chamber-2",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
         2.4,
@@ -1386,19 +1867,20 @@
         2.2,
         -19.34
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
         36.833,
         1.7,
         -16.24
-      ]
+      ],
+      "workId": "study-9-let-this-sofa-be-her-coffin"
     },
     {
       "id": "reserve-010",
       "room": "chamber-2",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
         2.4,
@@ -1410,19 +1892,20 @@
         2.2,
         -19.34
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
         40.5,
         1.7,
         -16.24
-      ]
+      ],
+      "workId": "study-10-i-m-his-mother"
     },
     {
       "id": "reserve-011",
       "room": "chamber-2",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
         2.4,
@@ -1434,19 +1917,20 @@
         2.2,
         -19.34
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
         44.167,
         1.7,
         -16.24
-      ]
+      ],
+      "workId": "study-11-the-real-horseradish"
     },
     {
       "id": "reserve-012",
       "room": "chamber-2",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
         2.4,
@@ -1463,7 +1947,8 @@
         42.74,
         1.7,
         -17.5
-      ]
+      ],
+      "workId": "study-12-gray-as-a-ghost"
     },
     {
       "id": "reserve-013",
@@ -1495,7 +1980,7 @@
       "room": "chamber-3",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
         2.4,
@@ -1507,19 +1992,20 @@
         2.2,
         -51.34
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
         21.857,
         1.7,
         -48.24
-      ]
+      ],
+      "workId": "study-14-the-bargain"
     },
     {
       "id": "reserve-015",
       "room": "chamber-3",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
         2.4,
@@ -1531,19 +2017,20 @@
         2.2,
         -51.34
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
         25.571,
         1.7,
         -48.24
-      ]
+      ],
+      "workId": "study-15-the-parade-of-the-dead"
     },
     {
       "id": "reserve-016",
       "room": "chamber-3",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
         2.4,
@@ -1555,19 +2042,20 @@
         2.2,
         -51.34
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
         29.286,
         1.7,
         -48.24
-      ]
+      ],
+      "workId": "study-16-the-two-rangers"
     },
     {
       "id": "reserve-017",
       "room": "chamber-3",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
         2.4,
@@ -1575,23 +2063,24 @@
         0.08
       ],
       "position": [
-        33.0,
+        33,
         2.2,
         -51.34
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
-        33.0,
+        33,
         1.7,
         -48.24
-      ]
+      ],
+      "workId": "study-17-borrow-my-faith"
     },
     {
       "id": "reserve-018",
       "room": "chamber-3",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
         2.4,
@@ -1603,19 +2092,20 @@
         2.2,
         -51.34
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
         36.714,
         1.7,
         -48.24
-      ]
+      ],
+      "workId": "study-18-ash-and-tom-together-again"
     },
     {
       "id": "reserve-019",
       "room": "chamber-3",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
         2.4,
@@ -1627,19 +2117,20 @@
         2.2,
         -51.34
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
         40.429,
         1.7,
         -48.24
-      ]
+      ],
+      "workId": "study-19-we-was-playing-poker"
     },
     {
       "id": "reserve-020",
       "room": "chamber-4",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
         2.4,
@@ -1651,19 +2142,20 @@
         2.2,
         -51.34
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
         -10.143,
         1.7,
         -48.24
-      ]
+      ],
+      "workId": "study-20-the-coffin-and-the-command"
     },
     {
       "id": "reserve-021",
       "room": "chamber-4",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
         2.4,
@@ -1675,19 +2167,20 @@
         2.2,
         -51.34
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
         -6.429,
         1.7,
         -48.24
-      ]
+      ],
+      "workId": "study-21-the-hand-before-the-fangs"
     },
     {
       "id": "reserve-022",
       "room": "chamber-4",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
         2.4,
@@ -1699,19 +2192,20 @@
         2.2,
         -51.34
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
         -2.714,
         1.7,
         -48.24
-      ]
+      ],
+      "workId": "study-22-two-mothers-against-the-town"
     },
     {
       "id": "reserve-023",
       "room": "chamber-4",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
         2.4,
@@ -1719,23 +2213,24 @@
         0.08
       ],
       "position": [
-        1.0,
+        1,
         2.2,
         -51.34
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
-        1.0,
+        1,
         1.7,
         -48.24
-      ]
+      ],
+      "workId": "study-23-the-prize-of-loneliness"
     },
     {
       "id": "reserve-024",
       "room": "across-moments",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
         2.4,
@@ -1747,19 +2242,20 @@
         2.2,
         -11.34
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
         -31.667,
         1.7,
         -8.24
-      ]
+      ],
+      "workId": "study-24-the-weight-of-goodbyes"
     },
     {
       "id": "reserve-025",
       "room": "across-moments",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
         2.4,
@@ -1767,16 +2263,17 @@
         0.08
       ],
       "position": [
-        -27.0,
+        -27,
         2.2,
         -11.34
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
-        -27.0,
+        -27,
         1.7,
         -8.24
-      ]
+      ],
+      "workId": "study-25-the-lives-they-might-have-made"
     },
     {
       "id": "reserve-026",
@@ -1795,7 +2292,7 @@
         2.2,
         -11.34
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
         -22.333,
         1.7,
@@ -1808,80 +2305,83 @@
       "room": "chamber-1",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
         0.08
       ],
       "position": [
-        6.0,
+        6,
         2.2,
         -19.34
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
-        6.0,
+        6,
         1.7,
         -16.24
-      ]
+      ],
+      "workId": "cloud-encroached-sky"
     },
     {
       "id": "reserve-028",
       "room": "chamber-1",
       "kind": "panel",
       "group": true,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
         0.08
       ],
       "position": [
-        10.0,
+        10,
         2.2,
         -19.34
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
-        10.0,
+        10,
         1.7,
         -16.24
-      ]
+      ],
+      "workId": "paddock-scraps"
     },
     {
       "id": "reserve-029",
       "room": "chamber-1",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
         0.08
       ],
       "position": [
-        14.0,
+        14,
         2.2,
         -19.34
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
-        14.0,
+        14,
         1.7,
         -16.24
-      ]
+      ],
+      "workId": "collapsing-barn"
     },
     {
       "id": "reserve-030",
       "room": "chamber-1",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -1897,15 +2397,16 @@
         12.74,
         1.7,
         -17.583
-      ]
+      ],
+      "workId": "hatless-boy-study-one"
     },
     {
       "id": "reserve-031",
       "room": "chamber-1",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -1921,15 +2422,16 @@
         12.74,
         1.7,
         -13.75
-      ]
+      ],
+      "workId": "hatless-boy-study-two"
     },
     {
       "id": "reserve-032",
       "room": "chamber-1",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -1945,14 +2447,15 @@
         12.74,
         1.7,
         -9.917
-      ]
+      ],
+      "workId": "boy-between-two-horses"
     },
     {
       "id": "reserve-033",
       "room": "chamber-1",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
         2.4,
@@ -1969,15 +2472,16 @@
         12.74,
         1.7,
         -1.917
-      ]
+      ],
+      "workId": "study-33-black-hat-a-generated-variation"
     },
     {
       "id": "reserve-034",
       "room": "chamber-1",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -1993,15 +2497,16 @@
         12.74,
         1.7,
         2.25
-      ]
+      ],
+      "workId": "flat-hospital-monitor"
     },
     {
       "id": "reserve-035",
       "room": "chamber-1",
       "kind": "panel",
       "group": true,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -2017,15 +2522,16 @@
         12.74,
         1.7,
         6.417
-      ]
+      ],
+      "workId": "boots"
     },
     {
       "id": "reserve-036",
       "room": "chamber-1",
       "kind": "panel",
       "group": true,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -2041,15 +2547,16 @@
         -13.7,
         1.7,
         5.24
-      ]
+      ],
+      "workId": "hats"
     },
     {
       "id": "reserve-037",
       "room": "chamber-1",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -2065,15 +2572,16 @@
         -9.1,
         1.7,
         5.24
-      ]
+      ],
+      "workId": "rodeo-belt-buckle"
     },
     {
       "id": "reserve-038",
       "room": "chamber-1",
       "kind": "panel",
       "group": true,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -2089,15 +2597,16 @@
         -4.5,
         1.7,
         5.24
-      ]
+      ],
+      "workId": "two-horses-study"
     },
     {
       "id": "reserve-039",
       "room": "chamber-1",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -2113,15 +2622,16 @@
         4.5,
         1.7,
         5.24
-      ]
+      ],
+      "workId": "between-paddocks"
     },
     {
       "id": "reserve-040",
       "room": "chamber-1",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -2137,7 +2647,8 @@
         9.1,
         1.7,
         5.24
-      ]
+      ],
+      "workId": "between-paddock-and-road"
     },
     {
       "id": "reserve-041",
@@ -2169,8 +2680,8 @@
       "room": "chamber-1",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -2186,7 +2697,8 @@
         -12.74,
         1.7,
         -17.438
-      ]
+      ],
+      "workId": "white-hatted-rider"
     },
     {
       "id": "reserve-043",
@@ -2241,8 +2753,8 @@
       "room": "chamber-1",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -2258,15 +2770,16 @@
         -12.74,
         1.7,
         -5.062
-      ]
+      ],
+      "workId": "men-on-the-stoop"
     },
     {
       "id": "reserve-046",
       "room": "chamber-1",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -2282,15 +2795,16 @@
         -12.74,
         1.7,
         2.875
-      ]
+      ],
+      "workId": "shine-in-their-eyes"
     },
     {
       "id": "reserve-047",
       "room": "chamber-1",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -2306,7 +2820,8 @@
         -12.74,
         1.7,
         6.625
-      ]
+      ],
+      "workId": "circus-bear-and-rattlesnake"
     },
     {
       "id": "reserve-048",
@@ -2337,8 +2852,8 @@
       "room": "chamber-1",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -2354,7 +2869,8 @@
         -5.093,
         1.7,
         -7.31
-      ]
+      ],
+      "workId": "campfire-empty-seat"
     },
     {
       "id": "reserve-050",
@@ -2506,8 +3022,8 @@
       "room": "chamber-1",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -2523,15 +3039,16 @@
         10.907,
         1.7,
         -12.69
-      ]
+      ],
+      "workId": "riders-dark-steep"
     },
     {
       "id": "reserve-057",
       "room": "chamber-1",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -2547,15 +3064,16 @@
         -10.907,
         1.7,
         3.69
-      ]
+      ],
+      "workId": "riders-bloodied-slope"
     },
     {
       "id": "reserve-058",
       "room": "chamber-1",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -2571,15 +3089,16 @@
         -6.516,
         1.7,
         4.672
-      ]
+      ],
+      "workId": "that-first-night"
     },
     {
       "id": "reserve-059",
       "room": "chamber-1",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -2595,15 +3114,16 @@
         -9.484,
         1.7,
         -2.672
-      ]
+      ],
+      "workId": "three-horses-darkness"
     },
     {
       "id": "reserve-060",
       "room": "chamber-1",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -2619,15 +3139,16 @@
         -5.093,
         1.7,
         -1.69
-      ]
+      ],
+      "workId": "journey-eyeliner"
     },
     {
       "id": "reserve-061",
       "room": "chamber-1",
       "kind": "panel",
       "group": true,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -2643,15 +3164,16 @@
         6.516,
         1.7,
         4.672
-      ]
+      ],
+      "workId": "gloomy-paths-pale-owls"
     },
     {
       "id": "reserve-062",
       "room": "chamber-1",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -2667,15 +3189,16 @@
         10.907,
         1.7,
         3.69
-      ]
+      ],
+      "workId": "gate-of-the-mountain"
     },
     {
       "id": "reserve-063",
       "room": "chamber-1",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -2691,15 +3214,16 @@
         5.093,
         1.7,
         -1.69
-      ]
+      ],
+      "workId": "allison-march-watercolor"
     },
     {
       "id": "reserve-064",
       "room": "chamber-1",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -2715,19 +3239,20 @@
         9.484,
         1.7,
         -2.672
-      ]
+      ],
+      "workId": "allison-march-pencil"
     },
     {
       "id": "reserve-065",
       "room": "chamber-2",
       "kind": "object",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
-        1.4,
-        1.6,
-        1.4
+        1.2,
+        2.2,
+        1.2
       ],
       "position": [
         26,
@@ -2738,16 +3263,17 @@
       "camera": [
         26,
         1.7,
-        4.4
-      ]
+        3.4
+      ],
+      "workId": "study-65-the-crayon-fire-and-the-fallen-tree"
     },
     {
       "id": "reserve-066",
       "room": "chamber-2",
       "kind": "panel",
       "group": true,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -2763,15 +3289,16 @@
         42.74,
         1.7,
         -9.5
-      ]
+      ],
+      "workId": "impossible-steep-drawing"
     },
     {
       "id": "reserve-067",
       "room": "chamber-2",
       "kind": "panel",
       "group": true,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -2787,19 +3314,20 @@
         42.74,
         1.7,
         -5.5
-      ]
+      ],
+      "workId": "impossible-steep-painting"
     },
     {
       "id": "reserve-068",
       "room": "chamber-2",
       "kind": "object",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
-        1.4,
-        1.6,
-        1.4
+        1.2,
+        2.2,
+        1.2
       ],
       "position": [
         40,
@@ -2810,16 +3338,17 @@
       "camera": [
         40,
         1.7,
-        -8.6
-      ]
+        -9.6
+      ],
+      "workId": "study-68-riders-on-the-impossible-steep"
     },
     {
       "id": "reserve-069",
       "room": "chamber-2",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -2835,15 +3364,16 @@
         42.74,
         1.7,
         -1.5
-      ]
+      ],
+      "workId": "mother-before-canyon"
     },
     {
       "id": "reserve-070",
       "room": "chamber-2",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -2858,16 +3388,17 @@
       "camera": [
         42.74,
         1.7,
-        2.5
-      ]
+        4.8
+      ],
+      "workId": "determined"
     },
     {
       "id": "reserve-071",
       "room": "chamber-2",
       "kind": "panel",
       "group": true,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -2883,15 +3414,16 @@
         42.74,
         1.7,
         6.5
-      ]
+      ],
+      "workId": "kelly-porch-study"
     },
     {
       "id": "reserve-072",
       "room": "chamber-2",
       "kind": "panel",
       "group": true,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -2907,15 +3439,16 @@
         21.857,
         1.7,
         5.24
-      ]
+      ],
+      "workId": "with-old-porch-pencil"
     },
     {
       "id": "reserve-073",
       "room": "chamber-2",
       "kind": "panel",
       "group": true,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -2931,15 +3464,16 @@
         25.571,
         1.7,
         5.24
-      ]
+      ],
+      "workId": "with-old-porch-ballpoint"
     },
     {
       "id": "reserve-074",
       "room": "chamber-2",
       "kind": "panel",
       "group": true,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -2955,38 +3489,40 @@
         29.286,
         1.7,
         5.24
-      ]
+      ],
+      "workId": "with-old-porch-crayon"
     },
     {
       "id": "reserve-075",
       "room": "chamber-2",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
         0.08
       ],
       "position": [
-        33.0,
+        33,
         2.2,
         8.34
       ],
       "angle": 3.141593,
       "camera": [
-        33.0,
+        33,
         1.7,
         5.24
-      ]
+      ],
+      "workId": "old-porch-splotched-ink"
     },
     {
       "id": "reserve-076",
       "room": "chamber-2",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
         2.4,
@@ -3003,15 +3539,16 @@
         36.714,
         1.7,
         5.24
-      ]
+      ],
+      "workId": "study-76-portrait-on-newsprint-a-generated-departure"
     },
     {
       "id": "reserve-077",
       "room": "chamber-2",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -3027,15 +3564,16 @@
         40.429,
         1.7,
         5.24
-      ]
+      ],
+      "workId": "landry-jojo-sunlight"
     },
     {
       "id": "reserve-078",
       "room": "chamber-2",
       "kind": "panel",
       "group": true,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -3051,15 +3589,16 @@
         44.143,
         1.7,
         5.24
-      ]
+      ],
+      "workId": "cavalry-unfinished-sketch"
     },
     {
       "id": "reserve-079",
       "room": "chamber-2",
       "kind": "panel",
       "group": true,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -3075,15 +3614,16 @@
         23.26,
         1.7,
         -17.583
-      ]
+      ],
+      "workId": "cavalry-watercolor"
     },
     {
       "id": "reserve-080",
       "room": "chamber-2",
       "kind": "panel",
       "group": true,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -3099,15 +3639,16 @@
         23.26,
         1.7,
         -13.75
-      ]
+      ],
+      "workId": "cavalry-ink"
     },
     {
       "id": "reserve-081",
       "room": "chamber-2",
       "kind": "panel",
       "group": true,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -3123,15 +3664,16 @@
         23.26,
         1.7,
         -9.917
-      ]
+      ],
+      "workId": "cavalry-pastel"
     },
     {
       "id": "reserve-082",
       "room": "chamber-2",
       "kind": "panel",
       "group": true,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -3147,15 +3689,16 @@
         23.26,
         1.7,
         -1.917
-      ]
+      ],
+      "workId": "cavalry-oil"
     },
     {
       "id": "reserve-083",
       "room": "chamber-2",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -3171,15 +3714,16 @@
         23.26,
         1.7,
         2.25
-      ]
+      ],
+      "workId": "unholy-us"
     },
     {
       "id": "reserve-084",
       "room": "chamber-2",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -3195,15 +3739,16 @@
         23.26,
         1.7,
         6.417
-      ]
+      ],
+      "workId": "saint-bernard"
     },
     {
       "id": "reserve-085",
       "room": "chamber-2",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -3219,7 +3764,8 @@
         35.26,
         1.7,
         -0.333
-      ]
+      ],
+      "workId": "old-porch-tells-his-truth"
     },
     {
       "id": "reserve-086",
@@ -3236,13 +3782,13 @@
       "position": [
         33.16,
         2.2,
-        -5.0
+        -5
       ],
       "angle": 1.570796,
       "camera": [
         36.26,
         1.7,
-        -5.0
+        -5
       ]
     },
     {
@@ -3274,8 +3820,8 @@
       "room": "chamber-2",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -3291,15 +3837,16 @@
         29.74,
         1.7,
         -0.333
-      ]
+      ],
+      "workId": "lemon-cake"
     },
     {
       "id": "reserve-089",
       "room": "chamber-2",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -3308,22 +3855,23 @@
       "position": [
         32.84,
         2.2,
-        -5.0
+        -5
       ],
       "angle": -1.570796,
       "camera": [
         29.74,
         1.7,
-        -5.0
-      ]
+        -5
+      ],
+      "workId": "mountain-range-cardboard"
     },
     {
       "id": "reserve-090",
       "room": "chamber-2",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -3339,15 +3887,16 @@
         29.74,
         1.7,
         -9.667
-      ]
+      ],
+      "workId": "mine-first"
     },
     {
       "id": "reserve-091",
       "room": "chamber-2",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -3363,7 +3912,8 @@
         37.003,
         1.7,
         3.377
-      ]
+      ],
+      "workId": "mine-second"
     },
     {
       "id": "reserve-092",
@@ -3394,8 +3944,8 @@
       "room": "passage-2-3",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -3411,19 +3961,20 @@
         31.74,
         1.7,
         -22.5
-      ]
+      ],
+      "workId": "door-into-the-dark"
     },
     {
       "id": "reserve-094",
       "room": "chamber-3",
       "kind": "object",
       "group": true,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
-        1.4,
-        1.6,
-        1.4
+        1.2,
+        2.2,
+        1.2
       ],
       "position": [
         25,
@@ -3434,16 +3985,17 @@
       "camera": [
         25,
         1.7,
-        -41.6
-      ]
+        -42.6
+      ],
+      "workId": "study-94-boxed-gear"
     },
     {
       "id": "reserve-095",
       "room": "chamber-3",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -3454,24 +4006,25 @@
         2.2,
         -51.34
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
         44.143,
         1.7,
         -48.24
-      ]
+      ],
+      "workId": "mountain-goat-ink"
     },
     {
       "id": "reserve-096",
       "room": "chamber-3",
       "kind": "object",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
-        1.4,
-        1.6,
-        1.4
+        1.2,
+        2.2,
+        1.2
       ],
       "position": [
         40,
@@ -3482,16 +4035,17 @@
       "camera": [
         40,
         1.7,
-        -41.6
-      ]
+        -42.6
+      ],
+      "workId": "study-96-old-porch-s-thumbnail"
     },
     {
       "id": "reserve-097",
       "room": "chamber-3",
       "kind": "panel",
       "group": true,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -3507,15 +4061,16 @@
         42.74,
         1.7,
         -49.643
-      ]
+      ],
+      "workId": "ice-study-canyon"
     },
     {
       "id": "reserve-098",
       "room": "chamber-3",
       "kind": "panel",
       "group": true,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -3531,15 +4086,16 @@
         42.74,
         1.7,
         -45.929
-      ]
+      ],
+      "workId": "ice-study-mountainside"
     },
     {
       "id": "reserve-099",
       "room": "chamber-3",
       "kind": "panel",
       "group": true,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -3555,43 +4111,45 @@
         42.74,
         1.7,
         -42.214
-      ]
+      ],
+      "workId": "ice-study-dead-leaves"
     },
     {
       "id": "reserve-100",
       "room": "chamber-3",
-      "kind": "panel",
+      "kind": "object",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
-        2.4,
-        1.65,
-        0.08
+        1.2,
+        2.2,
+        1.2
       ],
       "position": [
-        45.84,
-        2.2,
-        -38.5
+        43,
+        0,
+        -39
       ],
-      "angle": -1.570796,
+      "angle": 0,
       "camera": [
-        42.74,
+        43,
         1.7,
-        -38.5
-      ]
+        -36.6
+      ],
+      "workId": "study-100-ice-forming-around-a-branch"
     },
     {
       "id": "reserve-101",
       "room": "chamber-3",
-      "kind": "installation",
+      "kind": "object",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
-        3.2,
-        0.03,
-        3.2
+        1.2,
+        2.2,
+        1.2
       ],
       "position": [
         25,
@@ -3602,20 +4160,21 @@
       "camera": [
         25,
         1.7,
-        -26.7
-      ]
+        -27.6
+      ],
+      "workId": "study-101-the-refrigerated-stump"
     },
     {
       "id": "reserve-102",
       "room": "chamber-3",
-      "kind": "installation",
+      "kind": "object",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
-        3.2,
-        0.03,
-        3.2
+        1.2,
+        2.2,
+        1.2
       ],
       "position": [
         40,
@@ -3626,16 +4185,17 @@
       "camera": [
         40,
         1.7,
-        -26.7
-      ]
+        -27.6
+      ],
+      "workId": "study-102-the-box-of-shattered-glass"
     },
     {
       "id": "reserve-103",
       "room": "chamber-3",
       "kind": "panel",
       "group": true,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -3651,15 +4211,16 @@
         42.74,
         1.7,
         -34.786
-      ]
+      ],
+      "workId": "nine-screes-paper"
     },
     {
       "id": "reserve-104",
       "room": "chamber-3",
       "kind": "panel",
       "group": true,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -3675,15 +4236,16 @@
         42.74,
         1.7,
         -31.071
-      ]
+      ],
+      "workId": "nine-screes-canvas"
     },
     {
       "id": "reserve-105",
       "room": "chamber-3",
       "kind": "panel",
       "group": true,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -3699,43 +4261,45 @@
         42.74,
         1.7,
         -27.357
-      ]
+      ],
+      "workId": "nine-screes-concrete"
     },
     {
       "id": "reserve-106",
       "room": "chamber-3",
-      "kind": "panel",
+      "kind": "object",
       "group": true,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
-        2.4,
-        1.65,
-        0.08
+        1.2,
+        2.2,
+        1.2
       ],
       "position": [
-        21.833,
-        2.2,
-        -25.66
+        23,
+        0,
+        -27.5
       ],
-      "angle": 3.141593,
+      "angle": 0,
       "camera": [
-        21.833,
+        23,
         1.7,
-        -28.76
-      ]
+        -29.8
+      ],
+      "workId": "study-106-nine-screes-relief"
     },
     {
       "id": "reserve-107",
       "room": "chamber-3",
       "kind": "object",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
-        1.4,
-        1.6,
-        1.4
+        1.2,
+        2.2,
+        1.2
       ],
       "position": [
         25,
@@ -3746,44 +4310,46 @@
       "camera": [
         25,
         1.7,
-        -32.6
-      ]
+        -33.6
+      ],
+      "workId": "study-107-three-scree-boxes"
     },
     {
       "id": "reserve-108",
       "room": "chamber-3",
-      "kind": "panel",
+      "kind": "object",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
-        2.4,
-        1.65,
-        0.08
+        1.2,
+        2.2,
+        1.2
       ],
       "position": [
-        25.5,
-        2.2,
-        -25.66
+        28,
+        0,
+        -28.5
       ],
-      "angle": 3.141593,
+      "angle": 0,
       "camera": [
-        25.5,
+        28,
         1.7,
-        -28.76
-      ]
+        -31
+      ],
+      "workId": "study-108-right-before-the-fall"
     },
     {
       "id": "reserve-109",
       "room": "chamber-3",
-      "kind": "installation",
+      "kind": "object",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
-        3.2,
-        0.03,
-        3.2
+        1.2,
+        2.2,
+        1.2
       ],
       "position": [
         33,
@@ -3794,32 +4360,34 @@
       "camera": [
         33,
         1.7,
-        -41.7
-      ]
+        -42.6
+      ],
+      "workId": "study-109-there-ain-t-no-property-without-rope"
     },
     {
       "id": "reserve-110",
       "room": "chamber-3",
-      "kind": "installation",
+      "kind": "object",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
-        3.2,
-        0.03,
-        3.2
+        1.2,
+        2.2,
+        1.2
       ],
       "position": [
         17.5,
         0,
         -31.5
       ],
-      "angle": 1.5707963267948966,
+      "angle": 0,
       "camera": [
-        22,
+        17.5,
         1.7,
-        -31.5
-      ]
+        -29.1
+      ],
+      "workId": "study-110-down-through-clouds"
     },
     {
       "id": "reserve-111",
@@ -3848,34 +4416,35 @@
     {
       "id": "reserve-112",
       "room": "chamber-3",
-      "kind": "panel",
+      "kind": "object",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
-        2.4,
-        1.65,
-        0.08
+        1.2,
+        2.2,
+        1.2
       ],
       "position": [
-        29.167,
-        2.2,
-        -25.66
+        37,
+        0,
+        -33
       ],
-      "angle": 3.141593,
+      "angle": 0,
       "camera": [
-        29.167,
+        37,
         1.7,
-        -28.76
-      ]
+        -30.6
+      ],
+      "workId": "study-112-rider-descending-wax-version"
     },
     {
       "id": "reserve-113",
       "room": "chamber-3",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -3891,7 +4460,8 @@
         36.833,
         1.7,
         -28.76
-      ]
+      ],
+      "workId": "hatch-porch"
     },
     {
       "id": "reserve-114",
@@ -3970,8 +4540,8 @@
       "room": "chamber-3",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -3987,43 +4557,45 @@
         23.26,
         1.7,
         -43.625
-      ]
+      ],
+      "workId": "xanthos"
     },
     {
       "id": "reserve-118",
       "room": "passage-3-4",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
         0.08
       ],
       "position": [
-        17.0,
+        17,
         2.2,
         -40.84
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
-        17.0,
+        17,
         1.7,
         -37.74
-      ]
+      ],
+      "workId": "unlearn-the-constellations"
     },
     {
       "id": "reserve-119",
       "room": "chamber-4",
       "kind": "object",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
-        1.4,
-        1.6,
-        1.4
+        1.2,
+        2.2,
+        1.2
       ],
       "position": [
         -5,
@@ -4034,8 +4606,9 @@
       "camera": [
         -5,
         1.7,
-        -28.6
-      ]
+        -29.6
+      ],
+      "workId": "study-119-old-porch-in-the-rain"
     },
     {
       "id": "reserve-120",
@@ -4054,7 +4627,7 @@
         2.2,
         -51.34
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
         4.714,
         1.7,
@@ -4078,7 +4651,7 @@
         2.2,
         -51.34
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
         8.429,
         1.7,
@@ -4102,7 +4675,7 @@
         2.2,
         -51.34
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
         12.143,
         1.7,
@@ -4114,12 +4687,12 @@
       "room": "chamber-4",
       "kind": "object",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
-        1.4,
-        1.6,
-        1.4
+        1.2,
+        2.2,
+        1.2
       ],
       "position": [
         5,
@@ -4130,8 +4703,9 @@
       "camera": [
         5,
         1.7,
-        -40.6
-      ]
+        -41.6
+      ],
+      "workId": "study-123-the-marble-figure"
     },
     {
       "id": "reserve-124",
@@ -4210,12 +4784,12 @@
       "room": "chamber-4",
       "kind": "object",
       "group": false,
-      "assetStatus": "planned",
+      "assetStatus": "ready",
       "placementStatus": "candidate",
       "footprint": [
-        1.4,
-        1.6,
-        1.4
+        1.2,
+        2.2,
+        1.2
       ],
       "position": [
         -5,
@@ -4226,16 +4800,17 @@
       "camera": [
         -5,
         1.7,
-        -40.6
-      ]
+        -41.6
+      ],
+      "workId": "study-127-the-broken-cereal-bowl"
     },
     {
       "id": "reserve-128",
       "room": "chamber-4",
       "kind": "panel",
       "group": false,
-      "assetStatus": "planned",
-      "placementStatus": "candidate",
+      "assetStatus": "ready",
+      "placementStatus": "verified",
       "footprint": [
         2.4,
         1.65,
@@ -4251,7 +4826,8 @@
         10.74,
         1.7,
         -31.25
-      ]
+      ],
+      "workId": "father-and-son"
     },
     {
       "id": "reserve-129",
@@ -4270,7 +4846,7 @@
         2.2,
         12.66
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
         -31.5,
         1.7,
@@ -4294,12 +4870,2049 @@
         2.2,
         12.66
       ],
-      "angle": 0.0,
+      "angle": 0,
       "camera": [
         -22.5,
         1.7,
         15.76
       ]
+    },
+    {
+      "id": "reserve-265",
+      "room": "across-moments",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "footprint": [
+        3.8,
+        2.7,
+        0.1
+      ],
+      "position": [
+        -33.84,
+        2.2,
+        -5
+      ],
+      "angle": 1.5707963267948966,
+      "camera": [
+        -30.4,
+        1.7,
+        -5
+      ],
+      "workId": "navidad-memories"
+    },
+    {
+      "id": "reserve-277",
+      "room": "across-moments",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "footprint": [
+        3.8,
+        2.7,
+        0.1
+      ],
+      "position": [
+        -33.84,
+        2.2,
+        0
+      ],
+      "angle": 1.5707963267948966,
+      "camera": [
+        -30.4,
+        1.7,
+        0
+      ],
+      "workId": "wings-were-always-there"
+    },
+    {
+      "id": "reserve-132",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "position": [
+        13.84,
+        2.2,
+        -27.417
+      ],
+      "angle": -1.5707963267948966,
+      "camera": [
+        10.74,
+        1.7,
+        -27.417
+      ],
+      "workId": "porch-family-russell"
+    },
+    {
+      "id": "reserve-142",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "position": [
+        12.143,
+        2.2,
+        -25.66
+      ],
+      "angle": 3.141592653589793,
+      "camera": [
+        12.143,
+        1.7,
+        -28.76
+      ],
+      "workId": "navidad-oil"
+    },
+    {
+      "id": "reserve-143",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "position": [
+        8.429,
+        2.2,
+        -25.66
+      ],
+      "angle": 3.141592653589793,
+      "camera": [
+        8.429,
+        1.7,
+        -28.76
+      ],
+      "workId": "mouse-oil"
+    },
+    {
+      "id": "reserve-144",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "position": [
+        4.714,
+        2.2,
+        -25.66
+      ],
+      "angle": 3.141592653589793,
+      "camera": [
+        4.714,
+        1.7,
+        -28.76
+      ],
+      "workId": "jojo-oil"
+    },
+    {
+      "id": "reserve-145",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "position": [
+        1,
+        2.2,
+        -25.66
+      ],
+      "angle": 3.141592653589793,
+      "camera": [
+        1,
+        1.7,
+        -28.76
+      ],
+      "workId": "horses-white-owls"
+    },
+    {
+      "id": "reserve-146",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "position": [
+        -2.714,
+        2.2,
+        -25.66
+      ],
+      "angle": 3.141592653589793,
+      "camera": [
+        -2.714,
+        1.7,
+        -28.76
+      ],
+      "workId": "horses-beaver"
+    },
+    {
+      "id": "reserve-147",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "position": [
+        -6.429,
+        2.2,
+        -25.66
+      ],
+      "angle": 3.141592653589793,
+      "camera": [
+        -6.429,
+        1.7,
+        -28.76
+      ],
+      "workId": "horses-old-elk"
+    },
+    {
+      "id": "reserve-149",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "position": [
+        -10.143,
+        2.2,
+        -25.66
+      ],
+      "angle": 3.141592653589793,
+      "camera": [
+        -10.143,
+        1.7,
+        -28.76
+      ],
+      "workId": "old-elk-canopy"
+    },
+    {
+      "id": "reserve-150",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "position": [
+        -11.84,
+        2.2,
+        -27.417
+      ],
+      "angle": 1.5707963267948966,
+      "camera": [
+        -8.74,
+        1.7,
+        -27.417
+      ],
+      "workId": "old-elk-rain"
+    },
+    {
+      "id": "reserve-151",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "position": [
+        -11.84,
+        2.2,
+        -31.25
+      ],
+      "angle": 1.5707963267948966,
+      "camera": [
+        -8.74,
+        1.7,
+        -31.25
+      ],
+      "workId": "old-elk-fog"
+    },
+    {
+      "id": "reserve-152",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "position": [
+        -11.84,
+        2.2,
+        -35.083
+      ],
+      "angle": 1.5707963267948966,
+      "camera": [
+        -8.74,
+        1.7,
+        -35.083
+      ],
+      "workId": "old-elk-tarp"
+    },
+    {
+      "id": "reserve-153",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "position": [
+        -11.84,
+        2.2,
+        -43.625
+      ],
+      "angle": 1.5707963267948966,
+      "camera": [
+        -8.74,
+        1.7,
+        -43.625
+      ],
+      "workId": "mothers-hope-and-doubt"
+    },
+    {
+      "id": "reserve-155",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "position": [
+        -11.84,
+        2.2,
+        -48.875
+      ],
+      "angle": 1.5707963267948966,
+      "camera": [
+        -8.74,
+        1.7,
+        -48.875
+      ],
+      "workId": "atv-group-postcard"
+    },
+    {
+      "id": "reserve-157",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "position": [
+        -1.84,
+        2.2,
+        -42.5
+      ],
+      "angle": 1.5707963267948966,
+      "camera": [
+        1.26,
+        1.7,
+        -42.5
+      ],
+      "workId": "sick-boy-crouching"
+    },
+    {
+      "id": "reserve-158",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "position": [
+        -1.84,
+        2.2,
+        -38.5
+      ],
+      "angle": 1.5707963267948966,
+      "camera": [
+        1.26,
+        1.7,
+        -38.5
+      ],
+      "workId": "sick-boy-vomiting"
+    },
+    {
+      "id": "reserve-159",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "position": [
+        -1.84,
+        2.2,
+        -34.5
+      ],
+      "angle": 1.5707963267948966,
+      "camera": [
+        1.26,
+        1.7,
+        -34.5
+      ],
+      "workId": "sick-boy-sleeping"
+    },
+    {
+      "id": "reserve-160",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "position": [
+        -2.16,
+        2.2,
+        -34.5
+      ],
+      "angle": -1.5707963267948966,
+      "camera": [
+        -5.26,
+        1.7,
+        -34.5
+      ],
+      "workId": "children-gray-meadow"
+    },
+    {
+      "id": "reserve-161",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "position": [
+        -2.16,
+        2.2,
+        -38.5
+      ],
+      "angle": -1.5707963267948966,
+      "camera": [
+        -5.26,
+        1.7,
+        -38.5
+      ],
+      "workId": "children-green-gray-water"
+    },
+    {
+      "id": "reserve-162",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "position": [
+        -2.16,
+        2.2,
+        -42.5
+      ],
+      "angle": -1.5707963267948966,
+      "camera": [
+        -5.26,
+        1.7,
+        -42.5
+      ],
+      "workId": "children-dark-stone"
+    },
+    {
+      "id": "reserve-163",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "position": [
+        4.16,
+        2.2,
+        -42
+      ],
+      "angle": 1.5707963267948966,
+      "camera": [
+        7.26,
+        1.7,
+        -42
+      ],
+      "workId": "animal-apparitions-coyotes"
+    },
+    {
+      "id": "reserve-164",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "position": [
+        4.16,
+        2.2,
+        -38
+      ],
+      "angle": 1.5707963267948966,
+      "camera": [
+        7.26,
+        1.7,
+        -38
+      ],
+      "workId": "animal-apparitions-wolves"
+    },
+    {
+      "id": "reserve-165",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "position": [
+        4.16,
+        2.2,
+        -34
+      ],
+      "angle": 1.5707963267948966,
+      "camera": [
+        7.26,
+        1.7,
+        -34
+      ],
+      "workId": "animal-apparitions-elephants"
+    },
+    {
+      "id": "reserve-166",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "position": [
+        3.84,
+        2.2,
+        -34
+      ],
+      "angle": -1.5707963267948966,
+      "camera": [
+        0.74,
+        1.7,
+        -34
+      ],
+      "workId": "animal-apparitions-giraffes"
+    },
+    {
+      "id": "reserve-167",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": true,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "position": [
+        3.84,
+        2.2,
+        -38
+      ],
+      "angle": -1.5707963267948966,
+      "camera": [
+        0.74,
+        1.7,
+        -38
+      ],
+      "workId": "animal-apparitions-lions"
+    },
+    {
+      "id": "reserve-168",
+      "room": "chamber-4",
+      "kind": "panel",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "position": [
+        3.84,
+        2.2,
+        -42
+      ],
+      "angle": -1.5707963267948966,
+      "camera": [
+        0.74,
+        1.7,
+        -42
+      ],
+      "workId": "dreamy-mule"
+    },
+    {
+      "id": "reserve-131",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "chamber-4",
+      "position": [
+        -3.8,
+        0,
+        -28.3
+      ],
+      "angle": 0,
+      "camera": [
+        -3.8,
+        1.7,
+        -30.7
+      ],
+      "kind": "object",
+      "footprint": [
+        1.2,
+        2.2,
+        1.2
+      ],
+      "workId": "study-131-i-want-you"
+    },
+    {
+      "id": "reserve-137",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "chamber-4",
+      "position": [
+        -8,
+        0,
+        -36
+      ],
+      "angle": 0,
+      "camera": [
+        -8,
+        1.7,
+        -33.6
+      ],
+      "kind": "object",
+      "footprint": [
+        1.2,
+        2.2,
+        1.2
+      ],
+      "workId": "study-137-bone-cliffs"
+    },
+    {
+      "id": "reserve-138",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "chamber-4",
+      "position": [
+        10.5,
+        0,
+        -29.5
+      ],
+      "angle": 0,
+      "camera": [
+        10.5,
+        1.7,
+        -31.9
+      ],
+      "kind": "object",
+      "footprint": [
+        1.2,
+        2.2,
+        1.2
+      ],
+      "workId": "study-138-mesh"
+    },
+    {
+      "id": "reserve-156",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "chamber-4",
+      "position": [
+        9,
+        0,
+        -34
+      ],
+      "angle": 0,
+      "camera": [
+        9,
+        1.7,
+        -31.6
+      ],
+      "kind": "object",
+      "footprint": [
+        1.2,
+        2.2,
+        1.2
+      ],
+      "workId": "study-156-dustbin-of-ashes"
+    },
+    {
+      "id": "reserve-169",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "chamber-4",
+      "position": [
+        -5.1,
+        0,
+        -47
+      ],
+      "angle": 0,
+      "camera": [
+        -5.1,
+        1.7,
+        -49.4
+      ],
+      "kind": "object",
+      "footprint": [
+        1.2,
+        2.2,
+        1.2
+      ],
+      "workId": "study-169-smeared-plastic-bag"
+    },
+    {
+      "id": "reserve-170",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "chamber-4",
+      "position": [
+        7,
+        0,
+        -48
+      ],
+      "angle": 0,
+      "camera": [
+        7,
+        1.7,
+        -45.6
+      ],
+      "kind": "object",
+      "footprint": [
+        1.2,
+        2.2,
+        1.2
+      ],
+      "workId": "study-170-two-discharged-casings"
+    },
+    {
+      "id": "reserve-185",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "chamber-5",
+      "position": [
+        -25,
+        0,
+        -34
+      ],
+      "angle": 0,
+      "camera": [
+        -25,
+        1.7,
+        -31.6
+      ],
+      "kind": "object",
+      "footprint": [
+        1.2,
+        2.2,
+        1.2
+      ],
+      "workId": "study-185-beans"
+    },
+    {
+      "id": "reserve-191",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "chamber-5",
+      "position": [
+        -37,
+        0,
+        -34
+      ],
+      "angle": 0,
+      "camera": [
+        -37,
+        1.7,
+        -31.6
+      ],
+      "kind": "object",
+      "footprint": [
+        1.2,
+        2.2,
+        1.2
+      ],
+      "workId": "study-191-snowball"
+    },
+    {
+      "id": "reserve-195",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "chamber-5",
+      "position": [
+        -31,
+        0,
+        -44
+      ],
+      "angle": 0,
+      "camera": [
+        -31,
+        1.7,
+        -41.6
+      ],
+      "kind": "object",
+      "footprint": [
+        1.2,
+        2.2,
+        1.2
+      ],
+      "workId": "study-195-the-colt-in-the-glass-case"
+    },
+    {
+      "id": "reserve-246",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "afterimages",
+      "position": [
+        -58,
+        0,
+        -7
+      ],
+      "angle": 0,
+      "camera": [
+        -58,
+        1.7,
+        -4.6
+      ],
+      "kind": "object",
+      "footprint": [
+        1.2,
+        2.2,
+        1.2
+      ],
+      "workId": "study-246-old-porch-in-the-rain-holographic-return"
+    },
+    {
+      "id": "reserve-247",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "afterimages",
+      "position": [
+        -69,
+        0,
+        -7
+      ],
+      "angle": 0,
+      "camera": [
+        -69,
+        1.7,
+        -4.6
+      ],
+      "kind": "object",
+      "footprint": [
+        1.2,
+        2.2,
+        1.2
+      ],
+      "workId": "study-247-nathan-nibley-s-cello-piece-listening-place"
+    },
+    {
+      "id": "reserve-172",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "chamber-4",
+      "position": [
+        -9,
+        5.8,
+        -51.34
+      ],
+      "angle": 0,
+      "camera": [
+        -9,
+        1.7,
+        -46.5
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-172-cirque-wall-etching"
+    },
+    {
+      "id": "reserve-173",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "chamber-4",
+      "position": [
+        -5,
+        5.8,
+        -51.34
+      ],
+      "angle": 0,
+      "camera": [
+        -5,
+        1.7,
+        -49
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-173-cirque-wall-painted-ledges"
+    },
+    {
+      "id": "reserve-174",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "chamber-4",
+      "position": [
+        -1,
+        5.8,
+        -51.34
+      ],
+      "angle": 0,
+      "camera": [
+        -1,
+        1.7,
+        -46.5
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-174-cirque-wall-illusion-of-depth"
+    },
+    {
+      "id": "reserve-175",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "chamber-4",
+      "position": [
+        3,
+        5.8,
+        -51.34
+      ],
+      "angle": 0,
+      "camera": [
+        3,
+        1.7,
+        -46.5
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-175-cirque-wall-treated-photograph"
+    },
+    {
+      "id": "reserve-176",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "chamber-4",
+      "position": [
+        7,
+        5.8,
+        -51.34
+      ],
+      "angle": 0,
+      "camera": [
+        7,
+        1.7,
+        -46.5
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-176-cirque-wall-diaphanous-wash"
+    },
+    {
+      "id": "reserve-177",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "chamber-4",
+      "position": [
+        11,
+        5.8,
+        -51.34
+      ],
+      "angle": 0,
+      "camera": [
+        11,
+        1.7,
+        -46.5
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-177-cirque-wall-the-column"
+    },
+    {
+      "id": "reserve-178",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "chamber-4",
+      "position": [
+        -7,
+        8.4,
+        -51.34
+      ],
+      "angle": 0,
+      "camera": [
+        -7,
+        1.7,
+        -46.5
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "displaySize": [
+        1.3,
+        1
+      ],
+      "workId": "study-178-cirque-wall-landry-on-the-ledge"
+    },
+    {
+      "id": "reserve-179",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "chamber-4",
+      "position": [
+        7,
+        8.4,
+        -51.34
+      ],
+      "angle": 0,
+      "camera": [
+        7,
+        1.7,
+        -46.5
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "displaySize": [
+        1.3,
+        1
+      ],
+      "workId": "study-179-cirque-wall-kalin-on-the-ledge"
+    },
+    {
+      "id": "reserve-180",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "chamber-4",
+      "position": [
+        0,
+        9.9,
+        -51.34
+      ],
+      "angle": 0,
+      "camera": [
+        0,
+        1.7,
+        -46.5
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "displaySize": [
+        5,
+        2.6
+      ],
+      "workId": "study-180-cirque-wall-moonlit-ascent"
+    },
+    {
+      "id": "reserve-181",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "passage-1-2",
+      "position": [
+        18,
+        2.2,
+        -7.84
+      ],
+      "angle": 0,
+      "camera": [
+        18,
+        1.7,
+        -4.7
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-181-strange-to-be-yourself"
+    },
+    {
+      "id": "reserve-182",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "passage-4-5",
+      "position": [
+        -15,
+        2.2,
+        -40.84
+      ],
+      "angle": 0,
+      "camera": [
+        -15,
+        1.7,
+        -37.7
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-182-violence-and-power"
+    },
+    {
+      "id": "reserve-183",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "chamber-5",
+      "position": [
+        -41,
+        2.2,
+        -51.34
+      ],
+      "angle": 0,
+      "camera": [
+        -41,
+        1.7,
+        -48.2
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-183-the-mothers-by-the-black-river"
+    },
+    {
+      "id": "reserve-184",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "chamber-5",
+      "position": [
+        -36,
+        2.2,
+        -51.34
+      ],
+      "angle": 0,
+      "camera": [
+        -36,
+        1.7,
+        -48.2
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-184-the-porch-boys-asleep"
+    },
+    {
+      "id": "reserve-186",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "chamber-5",
+      "position": [
+        -26,
+        2.2,
+        -51.34
+      ],
+      "angle": 0,
+      "camera": [
+        -26,
+        1.7,
+        -48.2
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-186-morning-landscape"
+    },
+    {
+      "id": "reserve-192",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "chamber-5",
+      "position": [
+        -21,
+        2.2,
+        -51.34
+      ],
+      "angle": 0,
+      "camera": [
+        -21,
+        1.7,
+        -48.2
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-192-accused"
+    },
+    {
+      "id": "reserve-194",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "chamber-5",
+      "position": [
+        -43.84,
+        2.2,
+        -46.5
+      ],
+      "angle": 1.5707963267948966,
+      "camera": [
+        -40.7,
+        1.7,
+        -46.5
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-194-the-horses-apart"
+    },
+    {
+      "id": "reserve-196",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "chamber-5",
+      "position": [
+        -43.84,
+        2.2,
+        -31.5
+      ],
+      "angle": 1.5707963267948966,
+      "camera": [
+        -40.7,
+        1.7,
+        -31.5
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-196-pillars-meadow-before-noon"
+    },
+    {
+      "id": "reserve-198",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "recollections",
+      "position": [
+        -73,
+        2.2,
+        -51.34
+      ],
+      "angle": 0,
+      "camera": [
+        -73,
+        1.7,
+        -48.2
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-198-recollection-hatch-on-the-bed"
+    },
+    {
+      "id": "reserve-199",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "recollections",
+      "position": [
+        -68,
+        2.2,
+        -51.34
+      ],
+      "angle": 0,
+      "camera": [
+        -68,
+        1.7,
+        -48.2
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-199-recollection-kelly"
+    },
+    {
+      "id": "reserve-200",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "recollections",
+      "position": [
+        -58,
+        2.2,
+        -51.34
+      ],
+      "angle": 0,
+      "camera": [
+        -58,
+        1.7,
+        -48.2
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-200-recollection-jewel"
+    },
+    {
+      "id": "reserve-201",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "recollections",
+      "position": [
+        -53,
+        2.2,
+        -51.34
+      ],
+      "angle": 0,
+      "camera": [
+        -53,
+        1.7,
+        -48.2
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-201-recollection-bricky"
+    },
+    {
+      "id": "reserve-203",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "recollections",
+      "position": [
+        -75.84,
+        2.2,
+        -46.5
+      ],
+      "angle": 1.5707963267948966,
+      "camera": [
+        -72.7,
+        1.7,
+        -46.5
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-203-recollection-old-porch-and-the-maps"
+    },
+    {
+      "id": "reserve-204",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "recollections",
+      "position": [
+        -75.84,
+        2.2,
+        -41.5
+      ],
+      "angle": 1.5707963267948966,
+      "camera": [
+        -72.7,
+        1.7,
+        -41.5
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-204-recollection-kevin-moffat"
+    },
+    {
+      "id": "reserve-205",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "recollections",
+      "position": [
+        -75.84,
+        2.2,
+        -35.5
+      ],
+      "angle": 1.5707963267948966,
+      "camera": [
+        -72.7,
+        1.7,
+        -35.5
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-205-recollection-mothers-in-oil"
+    },
+    {
+      "id": "reserve-206",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "recollections",
+      "position": [
+        -75.84,
+        2.2,
+        -30.5
+      ],
+      "angle": 1.5707963267948966,
+      "camera": [
+        -72.7,
+        1.7,
+        -30.5
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-206-recollection-mothers-in-watercolor"
+    },
+    {
+      "id": "reserve-207",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "recollections",
+      "position": [
+        -73,
+        2.2,
+        -25.66
+      ],
+      "angle": 3.141592653589793,
+      "camera": [
+        -73,
+        1.7,
+        -28.8
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-207-recollection-mothers-in-charcoal"
+    },
+    {
+      "id": "reserve-209",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "recollections",
+      "position": [
+        -68,
+        2.2,
+        -25.66
+      ],
+      "angle": 3.141592653589793,
+      "camera": [
+        -68,
+        1.7,
+        -28.8
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-209-the-ridge-and-the-small-fire"
+    },
+    {
+      "id": "reserve-210",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "recollections",
+      "position": [
+        -58,
+        2.2,
+        -25.66
+      ],
+      "angle": 3.141592653589793,
+      "camera": [
+        -58,
+        1.7,
+        -28.8
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-210-four-horses-four-elements"
+    },
+    {
+      "id": "reserve-213",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "afterimages",
+      "position": [
+        -73,
+        2.2,
+        -19.34
+      ],
+      "angle": 0,
+      "camera": [
+        -73,
+        1.7,
+        -16.2
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-213-mortality-and-the-world-of-appearances"
+    },
+    {
+      "id": "reserve-217",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "afterimages",
+      "position": [
+        -68,
+        2.2,
+        -19.34
+      ],
+      "angle": 0,
+      "camera": [
+        -68,
+        1.7,
+        -16.2
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-217-rear-view-digital-return"
+    },
+    {
+      "id": "reserve-233",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "afterimages",
+      "position": [
+        -58,
+        2.2,
+        -19.34
+      ],
+      "angle": 0,
+      "camera": [
+        -58,
+        1.7,
+        -16.2
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-233-pillars-meadow-before-noon-digital-return"
+    },
+    {
+      "id": "reserve-234",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "afterimages",
+      "position": [
+        -53,
+        2.2,
+        -19.34
+      ],
+      "angle": 0,
+      "camera": [
+        -53,
+        1.7,
+        -16.2
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-234-lemon-cake-digital-return"
+    },
+    {
+      "id": "reserve-236",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "afterimages",
+      "position": [
+        -75.84,
+        2.2,
+        -14.5
+      ],
+      "angle": 1.5707963267948966,
+      "camera": [
+        -72.7,
+        1.7,
+        -14.5
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-236-rhyme-and-revel-with-the-dead"
+    },
+    {
+      "id": "reserve-251",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "verified",
+      "room": "afterimages",
+      "position": [
+        -75.84,
+        2.2,
+        -9.5
+      ],
+      "angle": 1.5707963267948966,
+      "camera": [
+        -72.7,
+        1.7,
+        -9.5
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-251-the-campfire-with-tom-s-ghost"
+    },
+    {
+      "id": "reserve-257",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "candidate",
+      "room": "reader-responses",
+      "position": [
+        -73,
+        2.2,
+        12.66
+      ],
+      "angle": 0,
+      "camera": [
+        -73,
+        1.7,
+        15.8
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-257-what-the-fire-leaves-unsaid"
+    },
+    {
+      "id": "reserve-258",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "candidate",
+      "room": "reader-responses",
+      "position": [
+        -68,
+        2.2,
+        12.66
+      ],
+      "angle": 0,
+      "camera": [
+        -68,
+        1.7,
+        15.8
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-258-the-sermon-and-the-mothers"
+    },
+    {
+      "id": "reserve-259",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "candidate",
+      "room": "reader-responses",
+      "position": [
+        -58,
+        2.2,
+        12.66
+      ],
+      "angle": 0,
+      "camera": [
+        -58,
+        1.7,
+        15.8
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-259-standing-their-ground"
+    },
+    {
+      "id": "reserve-260",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "candidate",
+      "room": "reader-responses",
+      "position": [
+        -53,
+        2.2,
+        12.66
+      ],
+      "angle": 0,
+      "camera": [
+        -53,
+        1.7,
+        15.8
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-260-the-hands-and-the-step"
+    },
+    {
+      "id": "reserve-261",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "candidate",
+      "room": "reader-responses",
+      "position": [
+        -75.84,
+        2.2,
+        17.5
+      ],
+      "angle": 1.5707963267948966,
+      "camera": [
+        -72.7,
+        1.7,
+        17.5
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-261-hatch-makes-himself-small"
+    },
+    {
+      "id": "reserve-262",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "candidate",
+      "room": "reader-responses",
+      "position": [
+        -75.84,
+        2.2,
+        22.5
+      ],
+      "angle": 1.5707963267948966,
+      "camera": [
+        -72.7,
+        1.7,
+        22.5
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-262-the-crossing-is-two-posts"
+    },
+    {
+      "id": "reserve-263",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "candidate",
+      "room": "reader-responses",
+      "position": [
+        -75.84,
+        2.2,
+        28.5
+      ],
+      "angle": 1.5707963267948966,
+      "camera": [
+        -72.7,
+        1.7,
+        28.5
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-263-the-weight-of-choosing-the-colt"
+    },
+    {
+      "id": "reserve-264",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "candidate",
+      "room": "reader-responses",
+      "position": [
+        -75.84,
+        2.2,
+        33.5
+      ],
+      "angle": 1.5707963267948966,
+      "camera": [
+        -72.7,
+        1.7,
+        33.5
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-264-sadness-thins-to-watercolor"
+    },
+    {
+      "id": "reserve-264B",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "candidate",
+      "room": "reader-responses",
+      "position": [
+        -73,
+        2.2,
+        38.34
+      ],
+      "angle": 3.141592653589793,
+      "camera": [
+        -73,
+        1.7,
+        35.2
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-264b-landry-present-by-her-absence"
     }
   ]
 }

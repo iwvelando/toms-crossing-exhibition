@@ -2,7 +2,7 @@
 
 A local prototype of a walkable fan exhibition inspired by the novel by Mark Z.
 Danielewski. A spoiler-warning foyer leads to five connected chambers, an interpretation
-annex, a modeled object, and a fully readable collection view.
+annex and connected collections, 28 modeled object displays, and a fully readable collection view.
 
 The audience is people who have finished the novel. The collection itself is still
 in progress. The room's architecture and arrangement are design interpretations;
@@ -33,11 +33,10 @@ preview to your local network only while running; Ctrl-C stops it. Normal target
 remain loopback-only HTTP. No additional package or paid service is required.
 
 Open the printed local address. Accept the foyer warning to enter. Drag to look;
-use W A S D or arrow keys to walk. Double-click the room for mouse capture, and
-Escape to release it. Click a work or use the inspection action to open its label.
+use W A S D or arrow keys to walk. Press **M** to capture the mouse for unlimited turning around the centered crosshair;
+press **M** again or Escape to release it. Click a work or use the inspection action to open its label.
 The bottom navigation visits works directly; Collection works without walking or
-WebGL (Web Graphics Library). Phones have hold-to-walk buttons and tap-to-inspect
-labels. Open **Route** to jump between chambers. Enable **Show planning placeholders**
+WebGL (Web Graphics Library). Phones have an analog movement joystick and tap-to-inspect labels. Use the right thumb to look. The desktop status beside How to explore reflects actual mouse capture and shows how to release it. Opening an inspection or navigation panel also releases the mouse. Open **Route** to jump between chambers. Enable **Show planning placeholders**
 to see the full spatial preview: neutral wall panels, object volumes, and installation
 areas. This toggle is off by default. It is a local planning view, not an access-controlled
 curator account.
@@ -54,62 +53,38 @@ room connectivity, placeholder clearances, and the non-3D fallback. The phone
 project uses Chromium device emulation; it does not replace testing iOS Safari. Tests serve the
 built site on local port 4187. No hosting or deployment is configured.
 
-## Curating the collection
+## Collection and curation
 
-`public/collection/catalog.json` contains explicitly selected public captions,
-credits, interpretation notes, and references to the included images. Digital
-production and in-book attribution are separate. Images are generated fan works;
-they are not official artwork, and no affiliation or endorsement is implied.
+The collection contains 200 images across 188 works, including an ordered twelve-image
+montage, alternate realizations, and 28 modeled objects with inspection references.
+Ten connected spaces include the five chambers and interpretation annexes. The layout
+has 211 stable reservations, including 23 planning bays. Further prompt-only candidates
+remain private; the bays are not a complete assignment of every future piece.
 
-Prepare additions with the companion repository's `export-exhibition` skill. It
-stages reviewed public data separately from private transcripts, listening state,
-questions, and generation conversations. Copy only the reviewed bundle into
-`public/collection/`. Do not commit private selections or the companion workspace.
-Source evidence and listening timestamps do not belong in this public repository.
+Captions distinguish in-book attribution, the novel's author, and digital realization.
+Personal notes are selected interpretations rather than a private conversation archive.
+The object models are simplified studies; their labels describe limits such as a still
+film screen or silent listening station. Generated artworks can have imperfections
+and can be replaced individually without rebuilding the collection.
 
-`public/collection/layout.json` holds the room geometry and 130 stable reservation
-IDs. Five positions currently have installed works; 125 are provisional studies,
-including 40 expandable group bays. The count represents prompt entries, not an
-asserted count of artworks. Chamber 5 is reserved without invented contents.
-
-When installing a work, preserve its reservation's position and ID, set `workId` to
-the catalog ID, and set `assetStatus` to `ready`. Keep `placementStatus` separate:
-a finished image can still have a candidate placement. New entries need an explicit
-position and clearance review; never reorder positions from the catalog array.
-The layout tests check collisions and that every viewing point remains reachable. Preserve image aspect ratios and original files; avoid
-adding a second frame around imagery that already includes one. The existing
-framed reconstruction is displayed intact pending an artwork-only replacement.
-
-Selected personal feelings can become notes beside their relevant works. The
-prototype's current interpretive notes describe visible compositions; they are
-editorial captions, not quotations from the curator's private conversations.
+See [curation and spot corrections](docs/curation.md) to replace an image, update one
+panel or object reference, or install a reviewed companion export. The workflow
+preserves work IDs, positions, and montage order. It also explains how to keep spot
+fixes from being overwritten by a later export.
 
 ## Architecture and publication
 
-React and TypeScript own the interface. Three.js renders the room and procedural
-glass. The static scene renders on demand: idle rooms and open reading panels
-stop issuing draw calls, and hidden tabs suspend rendering. Vite produces a static site; no accounts, server, analytics, or external
-runtime services are used. No paid service is required for the prototype.
+React and TypeScript own the interface; Three.js renders the gallery. The scene
+renders on demand and stops drawing while idle or hidden. After consent, compact
+WebP textures decode before entry, avoiding visible art pop-in. Full-resolution
+images are available in inspection. Fixed spotlight washes illuminate walls and
+object displays at every distance; outlined, transparent lettering retains contrast.
 
-The foyer prevents accidental viewing through the ordinary interface. Public
-source and asset URLs are directly accessible; this is not access control. The
-site and repository are intended for public release, but this prototype is local
-only. Review the selected content and dependency notices before an MVP launch.
+Vite produces a static site with no accounts, analytics, backend, or paid runtime
+service. No hosting is configured. The foyer prevents accidental viewing through
+the interface; public source and asset URLs are directly accessible. Public release
+still requires content and attribution review.
 
-See [the layout plan](docs/layout-plan.md) for the chamber structure, provisional capacity, and how to refine the spatial preview as works arrive.
-
-## Install a reviewed update
-
-After the companion skill exports a reviewed public bundle, preview its installation:
-
-```sh
-node scripts/install-collection.mjs --bundle /path/to/reviewed/export
-```
-
-For a new work, add `--place work-id=reserve-001` with its chosen reservation ID.
-Existing works keep their positions. Add `--apply` to install locally, then run
-`make check`. The importer checks public fields, asset paths, image checksums,
-medium and room compatibility, and occupied slots before writing. It preserves
-unmentioned works and candidate/verified placement status. It does not verify
-book claims; that remains the companion skill's job. Run it with the preview
-server stopped and restart afterward so a loaded tab cannot mix export versions.
+See [development and deployment preparation](docs/development.md) for the code map,
+checks, native mouse-capture testing, and static-hosting constraints. The
+[layout plan](docs/layout-plan.md) describes chamber structure and spatial refinement.

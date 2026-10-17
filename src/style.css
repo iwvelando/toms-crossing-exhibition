@@ -1081,3 +1081,41 @@ h1, h2, h3 { overflow-wrap: anywhere; hyphens: auto; }
 
 .image-error { width: min(100%, 32rem); padding: 24px; border: 1px solid var(--line); background: #202720; }
 .image-error p { font-size: 1rem; }
+
+.reference-note { border-left: 2px solid var(--gold, #bda678); padding-left: 1rem; }
+
+.sequence-view { width: 100%; min-width: 0; align-self: center; }
+.sequence-main { height: clamp(14rem, 37svh, 28rem); display: flex; align-items: center; justify-content: center; }
+.sequence-main img { width: 100%; height: 100%; object-fit: contain; }
+.sequence-navigation { display: flex; align-items: center; gap: .75rem; margin: .8rem 0; }
+.sequence-navigation button { flex: 0 0 44px; min-height: 44px; border: 1px solid #777e6a; }
+.sequence-navigation button:disabled { opacity: .4; }
+.sequence-navigation p { flex: 1; margin: 0; text-align: center; font-size: 1rem; line-height: 1.4; }
+.sequence-navigation p span { color: #d4bd8c; }
+.sequence-thumbnails { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: .5rem; padding: 0; margin: 0; list-style: none; }
+.sequence-thumbnails button { display: block; position: relative; width: 100%; min-height: 44px; padding: 0; border: 2px solid transparent; }
+.sequence-thumbnails button[aria-pressed="true"] { border-color: #f0d39a; }
+.sequence-thumbnails img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: contain; }
+.sequence-thumbnails span { position: absolute; bottom: 0; left: 0; background: #101711; padding: .15rem .3rem; font-size: .875rem; color: #f5eddc; }
+@media (max-width: 600px) { .work-image:has(.sequence-view) { padding: 3.4rem 1rem 1rem; } }
+
+.work-image:has(.sequence-view) { overflow: auto; min-height: 0; align-items: flex-start; }
+.sequence-view { align-self: flex-start; }
+@media (max-width: 720px) {
+  .work-image:has(.sequence-view) { height: auto; overflow: visible; padding: 3.4rem 1rem 1rem; }
+}
+
+/* Fixed-contrast controls and movement surfaces remain independent of room lighting. */
+.explore-controls { display:flex; align-items:center; gap:1rem; pointer-events:auto; }
+.mouse-look-status { font-size:.875rem; color:var(--muted); letter-spacing:0; line-height:1.5; }
+.movement-joystick { display:none; }
+@media (hover:none), (pointer:coarse) {
+  .mouse-look-status { display:none; }
+  .movement-joystick { display:block; position:fixed; left:24px; bottom:118px; width:118px; height:118px; border-radius:50%; border:2px solid #c4cbb7; background:#15221be8; pointer-events:auto; touch-action:none; user-select:none; -webkit-user-select:none; -webkit-touch-callout:none; }
+  .joystick-knob { position:absolute; left:39px; top:39px; width:36px; height:36px; border-radius:50%; background:#e7d4b2; border:2px solid #fff4da; pointer-events:none; box-shadow:0 2px 8px #0008; }
+  .joystick-directions { position:absolute; inset:0; display:grid; place-items:center; font-size:5rem; color:#a5b4a3; opacity:.5; pointer-events:none; }
+  .inspect-hint { max-width:calc(100vw - 180px); }
+}
+@media (max-height:500px) and (pointer:coarse) { .movement-joystick { bottom:75px; } }
+
+.explore-controls { flex-wrap:wrap; min-width:0; max-width:100%; }

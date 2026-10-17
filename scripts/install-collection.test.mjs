@@ -43,3 +43,85 @@ test("missing positions, corrupt images, and private export fields fail before w
   await assert.rejects(prepareInstall(f.bundle,f.dest,{"new-work":"slot-1"}),/public work fields/);
   assert.equal(JSON.parse(await readFile(join(f.dest,"catalog.json"),"utf8")).works.length,0);
 });
+
+ test("object references keep the model, slot and explicit framing semantics",async t=>{
+  const f=await fixture(t);
+  const catalog=JSON.parse(await readFile(join(f.bundle,"catalog.json"),"utf8"));
+  const w=catalog.works[0]; w.object="syrup-glass"; w.referenceImage=w.image; delete w.image;
+  f.layout.reservations[0].kind="object";
+  await writeFile(join(f.dest,"layout.json"),JSON.stringify(f.layout));
+  await writeFile(join(f.bundle,"catalog.json"),JSON.stringify(catalog));
+  const plan=await prepareInstall(f.bundle,f.dest,{"new-work":"slot-1"});
+  assert.equal(plan.catalog.works[0].object,"syrup-glass");
+  assert.equal(plan.catalog.works[0].referenceImage,f.work.image);
+  assert.equal(plan.catalog.works[0].image,undefined);
+  await applyInstall(plan);
+  assert.deepEqual(await readFile(join(f.dest,f.work.image)),png);
+  w.image=w.referenceImage;
+  await writeFile(join(f.bundle,"catalog.json"),JSON.stringify(catalog));
+  await assert.rejects(prepareInstall(f.bundle,f.dest),/asset combination/);
+  delete w.image;delete w.object;
+  await writeFile(join(f.bundle,"catalog.json"),JSON.stringify(catalog));
+  await assert.rejects(prepareInstall(f.bundle,f.dest),/asset combination/);
+ });
+ test("frame styles are validated rather than inferred from a work ID",async t=>{
+  const f=await fixture(t);
+  const catalog=JSON.parse(await readFile(join(f.bundle,"catalog.json"),"utf8"));
+  catalog.works[0].frame="walnut";
+  await writeFile(join(f.bundle,"catalog.json"),JSON.stringify(catalog));
+  assert.equal((await prepareInstall(f.bundle,f.dest,{"new-work":"slot-1"})).catalog.works[0].frame,"walnut");
+  catalog.works[0].frame="unknown";
+  await writeFile(join(f.bundle,"catalog.json"),JSON.stringify(catalog));
+  await assert.rejects(prepareInstall(f.bundle,f.dest,{"new-work":"slot-1"}),/Unsupported frame/);
+ });
+
+ test("ordered montages verify every panel and reject reordered files and private panel fields",async t=>{
+  const f=await fixture(t);
+  const catalog=JSON.parse(await readFile(join(f.bundle,"catalog.json"),"utf8"));
+  const w=catalog.works[0];const hash=createHash("sha256").update(png).digest("hex").slice(0,16);
+  w.panels=[1,2].map(n=>({title:`Part ${n}`,alt:`Geometric study ${n}`,image:`assets/new-work-panel-0${n}-${hash}.png`}));
+  w.image=w.panels[0].image;
+  for(const panel of w.panels) await writeFile(join(f.bundle,panel.image),png);
+  await writeFile(join(f.bundle,"catalog.json"),JSON.stringify(catalog));
+  const plan=await prepareInstall(f.bundle,f.dest,{"new-work":"slot-1"});
+  assert.equal(plan.assets.length,2);assert.equal(plan.catalog.works[0].panels[1].title,"Part 2");
+  w.panels.reverse();w.image=w.panels[0].image;
+  await writeFile(join(f.bundle,"catalog.json"),JSON.stringify(catalog));
+  await assert.rejects(prepareInstall(f.bundle,f.dest,{"new-work":"slot-1"}),/asset path/);
+  w.panels.reverse();w.image=w.panels[0].image;w.panels[1].prompt="private";
+  await writeFile(join(f.bundle,"catalog.json"),JSON.stringify(catalog));
+  await assert.rejects(prepareInstall(f.bundle,f.dest,{"new-work":"slot-1"}),/public panel fields/);
+ });
+
+ test("wall lettering retains its reference and rejects ambiguous display modes",async t=>{
+  const f=await fixture(t);
+  const catalog=JSON.parse(await readFile(join(f.bundle,"catalog.json"),"utf8"));
+  const w=catalog.works[0]; w.wallText="Look closely."; w.frame="none";
+  const save=()=>writeFile(join(f.bundle,"catalog.json"),JSON.stringify(catalog));
+  await save();
+  const plan=await prepareInstall(f.bundle,f.dest,{"new-work":"slot-1"});
+  assert.equal(plan.catalog.works[0].wallText,"Look closely.");
+  assert.equal(plan.assets.length,1);
+  for (const value of ["", " ", 12, "x".repeat(201)]) {
+    w.wallText=value;await save();
+    await assert.rejects(prepareInstall(f.bundle,f.dest,{"new-work":"slot-1"}),/wall text/);
+  }
+  w.wallText="Look closely.";w.frame="gallery";await save();
+  await assert.rejects(prepareInstall(f.bundle,f.dest,{"new-work":"slot-1"}),/wall text/);
+  w.frame="none";w.panels=[];await save();
+  await assert.rejects(prepareInstall(f.bundle,f.dest,{"new-work":"slot-1"}),/wall text/);
+  delete w.panels;delete w.image;await save();
+  await assert.rejects(prepareInstall(f.bundle,f.dest,{"new-work":"slot-1"}),/wall text/);
+ });
+
+
+test("alternate images retain their comparison mode and reject invalid modes",async t=>{
+ const f=await fixture(t);const catalog=JSON.parse(await readFile(join(f.bundle,"catalog.json"),"utf8"));
+ const w=catalog.works[0],hash=createHash("sha256").update(png).digest("hex").slice(0,16);
+ w.panels=[1,2].map(n=>({title:`Version ${n}`,alt:`Study ${n}`,image:`assets/new-work-panel-0${n}-${hash}.png`}));w.image=w.panels[0].image;w.presentation="variants";
+ for(const panel of w.panels)await writeFile(join(f.bundle,panel.image),png);
+ const save=()=>writeFile(join(f.bundle,"catalog.json"),JSON.stringify(catalog));await save();
+ const plan=await prepareInstall(f.bundle,f.dest,{"new-work":"slot-1"});assert.equal(plan.catalog.works[0].presentation,"variants");assert.equal(plan.assets.length,2);
+ w.presentation="private-notes";await save();await assert.rejects(prepareInstall(f.bundle,f.dest,{"new-work":"slot-1"}),/presentation/);
+ delete w.presentation;delete w.panels;w.image=catalog.works[0].image;w.object=null;await save();await assert.rejects(prepareInstall(f.bundle,f.dest,{"new-work":"slot-1"}),/visual asset combination/);
+});

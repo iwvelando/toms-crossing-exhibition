@@ -8,7 +8,9 @@ permissions:
   contents: read
 jobs:
   check:
-    runs-on: ubuntu-latest
+    # The full gallery needs a native graphics path. Linux software WebGL stalls
+    # image preparation and input; Linux still verifies the complete fallback below.
+    runs-on: macos-latest
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -17,7 +19,7 @@ jobs:
           node-version: '22'
           cache: npm
       - run: make setup
-      - run: npx playwright install --with-deps chromium
+      - run: npx playwright install chromium
       - run: make check
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
@@ -32,6 +34,20 @@ jobs:
           name: chromium-test-results
           path: test-results/
           retention-days: 7
+  linux:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '22'
+          cache: npm
+      - run: make setup
+      - run: npm run build
+      - run: node --test scripts/*.test.mjs
+      - run: npx playwright install --with-deps chromium
+      - run: npx playwright test --project=desktop --grep 'collection remains usable without WebGL'
   webkit:
     runs-on: macos-latest
     timeout-minutes: 20
@@ -51,13 +67,13 @@ jobs:
           path: test-results/
           retention-days: 7
   verify:
-    needs: [check, webkit]
+    needs: [check, linux, webkit]
     if: ${{ !cancelled() }}
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
       - env:
-          RESULTS: ${{ needs.check.result }} ${{ needs.webkit.result }}
+          RESULTS: ${{ needs.check.result }} ${{ needs.linux.result }} ${{ needs.webkit.result }}
         run: |
           for result in $RESULTS; do
             test "$result" = success || { echo "::error::A test job finished with: $result"; exit 1; }
@@ -122,7 +138,7 @@ jobs:
           grep -q '<title>Tom’s Crossing — An Unofficial Exhibition</title>' index.html
   smoke:
     needs: deploy
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -131,7 +147,7 @@ jobs:
           node-version: '22'
           cache: npm
       - run: npm ci
-      - run: npx playwright install --with-deps chromium
+      - run: npx playwright install chromium
       - run: npx playwright test --grep @smoke --project=desktop
         env:
           BASE_URL: https://toms-crossing-exhibition.isaacvelando.com

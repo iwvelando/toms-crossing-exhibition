@@ -84,7 +84,7 @@ remains valid. Future deployment work should begin with the constraints in
 [development](docs/development.md#deployment-preparation).
 
 The canonical host is `toms-crossing-exhibition.isaacvelando.com`; its infrastructure
-belongs to `iwvelando/cloud-accounts`. Main deploys through CI after `check`, `webkit`,
+belongs to `iwvelando/cloud-accounts`. Main deploys through CI after `check`, `linux`, `webkit`,
 and aggregate `verify` succeed. Preserve the main-only `production` environment,
 scoped OIDC deployment, and read-only live smoke checks. Keep preview and CloudFront
 CSP identical. Dependabot patch/minor updates merge and deploy after Verify; majors

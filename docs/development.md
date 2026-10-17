@@ -95,8 +95,12 @@ and previews can be cached immutably. Revalidate HTML, catalog, layout, and prev
 manifest, and publish them with their assets as one release to avoid mixed versions.
 The foyer is an accidental-spoiler guard, not security: assets and source are public.
 
-`.github/workflows/ci.yml` runs `make check` under Node 22 with Playwright Chromium,
-plus `make test-webkit` on macOS. The required `verify` job requires both to pass.
+`.github/workflows/ci.yml` runs `make check` under Node 22 with Playwright Chromium
+and `make test-webkit` on macOS, using native graphics. Linux checks the build,
+Node tests, and the complete non-WebGL Collection fallback. Linux software WebGL
+was observed to stall preparation and input beyond the interaction-test deadlines;
+it is not the graphics path used for the full gallery suite. The required `verify`
+job requires all three jobs to pass.
 Only main deploys, using the main-only `production` environment and a scoped OIDC
 role. No private book material or runtime secrets are needed. Deploy the tested build
 through CI; never upload source or bypass checks with a local content deployment.

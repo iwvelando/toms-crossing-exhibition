@@ -10,9 +10,9 @@ export default defineConfig({
   timeout: process.env.WEBKIT ? 90000 : 30000,
   use: {
     baseURL: process.env.BASE_URL || "http://127.0.0.1:4187",
-    channel: process.env.EXHIBITION_BROWSER_CHANNEL || undefined,
+    channel: process.env.EXHIBITION_BROWSER_CHANNEL || (process.env.WEBKIT ? undefined : "chromium"),
     trace: "retain-on-failure",
-    launchOptions: { args: ["--use-angle=swiftshader"] },
+    launchOptions: { args: process.platform === "linux" ? ["--use-angle=swiftshader"] : [] },
   },
   projects: process.env.WEBKIT ? [{
     name: "webkit",

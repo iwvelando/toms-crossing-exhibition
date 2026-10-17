@@ -117,15 +117,15 @@
       "description": "Crosshatched marks on fragile napkin scraps suggest horses, a paddock, and perhaps a figure on a fence. Those identifications are Cal’s tentative readings.",
       "attribution": "Amelia Beltran (names as transcribed)",
       "credit": "Generated image, selected by Isaac.",
-      "note": "Editorial title, not a supplied title of the in-book work. One interpretation of an unenumerated group of scraps. This image makes the possible subjects more distinct than Cal finds them.",
-      "alt": "Crosshatched horses and a fence sitter on a crumpled paper napkin.",
+      "note": "Editorial title, not a supplied title of the in-book work. One interpretation of an unenumerated group of scraps. The broken crosshatching leaves the possible subjects unresolved; their identification remains Cal’s tentative reading.",
+      "alt": "Faint crosshatched horse-like forms and possible fence marks on three crumpled napkin scraps.",
       "frame": "gallery",
       "placement": {
         "room": "chamber-1",
         "label": "Chamber 1 · Through Wednesday",
         "note": "The book groups events up to and including October 27, 1982 in this chamber."
       },
-      "image": "assets/paddock-scraps-60b8c3d412c3c346.png"
+      "image": "assets/paddock-scraps-06cf812ca28cffdd.png"
     },
     {
       "id": "collapsing-barn",
@@ -135,15 +135,15 @@
       "description": "A collapsing barn stands behind a desolate paddock and two horses, drawn in ink over a directory page.",
       "attribution": "Simon Becket (names as transcribed)",
       "credit": "Generated image, selected by Isaac.",
-      "note": "Editorial title, not a supplied title of the in-book work. The generated directory text and architecture are invented. The image is more detailed than the crude, stick-like horses described in the passage.",
-      "alt": "An ink drawing of a damaged barn and two horses over yellow directory columns.",
+      "note": "Editorial title, not a supplied title of the in-book work. The two horses are reduced to stick-like marks. The directory lettering and exact barn structure are generated interpretations.",
+      "alt": "Two crude stick-like horses in a desolate paddock before a collapsing barn, drawn in ink over a yellow directory page.",
       "frame": "gallery",
       "placement": {
         "room": "chamber-1",
         "label": "Chamber 1 · Through Wednesday",
         "note": "The book groups events up to and including October 27, 1982 in this chamber."
       },
-      "image": "assets/collapsing-barn-c98a4e360cad1c42.png"
+      "image": "assets/collapsing-barn-936caafa44e9d444.png"
     },
     {
       "id": "hatless-boy-study-one",
@@ -297,15 +297,15 @@
       "description": "One of the gate sketches framed with fence slats. Its title names the boundary between Paddock A and Paddock B.",
       "attribution": "Eldon McKinnon / Courtney Resnick / Gil Stubbs / Anton Smiley — group credit (names as transcribed)",
       "credit": "Generated image, selected by Isaac.",
-      "note": "The passage gives these artists as a group, without assigning an individual to each gate. Ornate ironwork, stone pillars and vegetation are generated choices; the fence-slat frame is modeled separately.",
-      "alt": "An ornate iron gate between stone pillars, drawn in pencil.",
+      "note": "The passage gives these artists as a group, without assigning an individual to each gate. The two enclosures, timber gate, horses and Utah landscape are a title-based interpretation of a rural 1982 setting. Their exact arrangement is not supplied by the book. The fence-slat frame is modeled separately.",
+      "alt": "A pencil sketch of a plain timber gate within the dividing fence between two horse paddocks, with a horse on each side.",
       "frame": "fence-slats",
       "placement": {
         "room": "chamber-1",
         "label": "Chamber 1 · Through Wednesday",
         "note": "The book groups events up to and including October 27, 1982 in this chamber."
       },
-      "image": "assets/between-paddocks-b63d23a100fe2ff4.png"
+      "image": "assets/between-paddocks-9a4feeb95c136653.png"
     },
     {
       "id": "between-paddock-and-road",
@@ -315,15 +315,15 @@
       "description": "Another gate sketch framed with fence slats. Its title names the boundary between Paddock B and the road.",
       "attribution": "Eldon McKinnon / Courtney Resnick / Gil Stubbs / Anton Smiley — group credit (names as transcribed)",
       "credit": "Generated image, selected by Isaac.",
-      "note": "The passage gives these artists as a group, without assigning an individual to each gate. Ornate ironwork, stone pillars and vegetation are generated choices; the fence-slat frame is modeled separately.",
-      "alt": "A closed ornamental gate between stone pillars with foliage beyond.",
+      "note": "The passage gives these artists as a group, without assigning an individual to each gate. The paddock, timber gate and adjacent Utah road are a title-based interpretation of a rural 1982 setting. Their exact arrangement is not supplied by the book. The fence-slat frame is modeled separately.",
+      "alt": "A pencil sketch of a timber paddock gate beside an unmarked rural road, with a horse behind the fence and hills beyond.",
       "frame": "fence-slats",
       "placement": {
         "room": "chamber-1",
         "label": "Chamber 1 · Through Wednesday",
         "note": "The book groups events up to and including October 27, 1982 in this chamber."
       },
-      "image": "assets/between-paddock-and-road-97b1c6c97ca248ca.png"
+      "image": "assets/between-paddock-and-road-125e67517cf3522f.png"
     },
     {
       "id": "white-hatted-rider",
@@ -557,15 +557,15 @@
       "description": "The third work fills its canvas with lemon, gold and touches of purple. Cal finds no darkness in it, despite its title, and thinks the horses look more like goats.",
       "attribution": "Atticus Patty / Breen LaChance / Matt Van Buren — sequence credit (names as transcribed)",
       "credit": "Generated image, selected by Isaac.",
-      "note": "The title is supplied by the book. Individual artist-to-work attribution is unspecified. The towers, celestial forms and precise landscape are generated choices.",
-      "alt": "Two riders and slender, goat-like horses in a luminous yellow and purple landscape with invented towers.",
+      "note": "The title is supplied by the book. Individual artist-to-work attribution is unspecified. The revised image keeps two teenage riders amid lemony dabs and dreamy purple smears, with awkward horse proportions and luminous corners. Likenesses, clothing and the loosely suggested terrain are interpreted.",
+      "alt": "Two teenage riders, a white-hatted boy and a dark-haired girl, ride with three squat horse forms through lemon-yellow dabs and purple smears.",
       "frame": "gallery",
       "placement": {
         "room": "chamber-1",
         "label": "Chamber 1 · Through Wednesday",
         "note": "The book groups events up to and including October 27, 1982 in this chamber."
       },
-      "image": "assets/that-first-night-ab02acebd0d42176.png"
+      "image": "assets/that-first-night-696f6212d034af03.png"
     },
     {
       "id": "three-horses-darkness",
@@ -593,15 +593,15 @@
       "description": "Two riders and three horses are drawn in messy black and gray eyeliner. Among the splatters, Cal sees another hat-like mark that seems to suggest a third rider and a fourth horse.",
       "attribution": "Janice Brothwell (names as transcribed)",
       "credit": "Generated image, selected by Isaac.",
-      "note": "Editorial title, not a supplied title of the in-book work. The possible extra rider belongs to Cal’s reading. This generation makes some horse forms more distinct and does not reproduce the described black hat clearly.",
-      "alt": "Two loosely drawn riders, three prominent horses, and a faint extra horse-like form amid black splatters.",
+      "note": "Editorial title, not a supplied title of the in-book work. The black hat-like mark and surrounding smudges leave a possible additional rider and horse unresolved. That extra presence remains Cal’s reading rather than a fully depicted ghost.",
+      "alt": "Broken black and gray marks suggest mounted figures and horses, with an extra black hat-like shape dissolving into splatters.",
       "frame": "gallery",
       "placement": {
         "room": "chamber-1",
         "label": "Chamber 1 · Through Wednesday",
         "note": "The book groups events up to and including October 27, 1982 in this chamber."
       },
-      "image": "assets/journey-eyeliner-cae490754d38fd93.png"
+      "image": "assets/journey-eyeliner-d7e5d4e1af5a5fd6.png"
     },
     {
       "id": "gloomy-paths-pale-owls",
@@ -953,15 +953,15 @@
       "description": "A small, detailed group painting places Egan Porch at its center, blood splattered on his clothes and face. Cal identifies Kelly Porch and Billings Gale, and presumes two others are Sean and Shelley.",
       "attribution": "Lee Pert (names as transcribed)",
       "credit": "Generated image, selected by Isaac.",
-      "note": "The title is supplied by the book. The specific likenesses, clothing, weapon and setting are generated additions. Sean and Shelley’s identification is Cal’s presumption. The described small rococo frame is represented by a simple gallery frame in this preview.",
-      "alt": "Five men in a detailed oil-style scene, with a blood-spattered man prominent at the front and a building behind them.",
+      "note": "The title is supplied by the book. The specific likenesses and clothing are generated choices; Sean and Shelley’s identification remains Cal’s presumption. The close grouping leaves the surrounding setting indistinct. The described small rococo frame is represented by a simple gallery frame in this preview.",
+      "alt": "Five closely grouped men in a detailed oil-style image, with blood on the fierce central man’s face, shirt and jeans.",
       "frame": "gallery",
       "placement": {
         "room": "chamber-2",
         "label": "Chamber 2 · Thursday",
         "note": "The book dedicates this chamber to Thursday, October 28, 1982."
       },
-      "image": "assets/unholy-us-4ae35af1c4b05ee9.png"
+      "image": "assets/unholy-us-7c5d4695410bd23b.png"
     },
     {
       "id": "saint-bernard",
@@ -989,15 +989,15 @@
       "description": "A lovely house with a wraparound porch surrounds a hunched man vomiting near the front door. Despite the poor rendering, Cal finds him coiled and ready to strike.",
       "attribution": "Not attributed in the passage",
       "credit": "Generated image, selected by Isaac.",
-      "note": "The title identifies Old Porch; the medium is Cal’s apparent reading. The house design, garden and detailed likeness are generated choices, and this image is more polished than the described work.",
-      "alt": "A sunlit white house and wraparound veranda, with a man bent over near the front door.",
+      "note": "The title identifies Old Porch; the medium is Cal’s apparent reading. The image contrasts a more convincing house with a crudely drawn, hunched man. The house design, likeness and precise pose remain generated choices.",
+      "alt": "An awkwardly painted older man vomits near the door of an attractive house with a broad white wraparound porch.",
       "frame": "gallery",
       "placement": {
         "room": "chamber-2",
         "label": "Chamber 2 · Thursday",
         "note": "The book dedicates this chamber to Thursday, October 28, 1982."
       },
-      "image": "assets/old-porch-tells-his-truth-b21945063843f09d.png"
+      "image": "assets/old-porch-tells-his-truth-694052dab2906638.png"
     },
     {
       "id": "lemon-cake",
@@ -1007,15 +1007,15 @@
       "description": "A lemon cake is painted on a paper plate among the final works of the Thursday chamber.",
       "attribution": "Pinnegar Nelson / Louis Lang — pair credit (names as transcribed)",
       "credit": "Generated image, selected by Isaac.",
-      "note": "Editorial title. The artist pair is named without assigning either artist to this piece. Cake decoration, crockery and cloth are generated additions; the described paper-plate support is not reproduced. The brick-patterned linen framing mentioned for this group is simplified here.",
-      "alt": "A yellow cake with white icing and lemon slices, painted above a blue-rimmed plate and checked cloth.",
+      "note": "Editorial title. The artist pair is named without assigning either artist to this piece. The complete circular paper plate is retained as the painting’s support; the cake’s form and brushwork are interpreted. The brick-patterned linen framing mentioned for this group is simplified here.",
+      "alt": "A simple yellow cake painted directly on a complete round paper plate, with brush marks and a crimped rim visible.",
       "frame": "gallery",
       "placement": {
         "room": "chamber-2",
         "label": "Chamber 2 · Thursday",
         "note": "The book dedicates this chamber to Thursday, October 28, 1982."
       },
-      "image": "assets/lemon-cake-ab2738531d6371c3.png"
+      "image": "assets/lemon-cake-d7a6ac660723a4b5.png"
     },
     {
       "id": "mountain-range-cardboard",
@@ -1043,15 +1043,15 @@
       "description": "A hole in a mountainside appears in one of two near-identical paintings flanking the hallway toward Chamber 3.",
       "attribution": "Not attributed in the passage",
       "credit": "Generated image, selected by Isaac.",
-      "note": "Mine is the apparent shared title; the spoken wording continues “near-identical too.” The numeral distinguishes the two reconstructions here. Rock formations, light and precise medium are interpreted.",
-      "alt": "A dark, roughly oval opening in gray mountain rock beneath a pale sky.",
+      "note": "Mine is the apparent shared title; the spoken wording continues “near-identical too.” The numeral distinguishes the two reconstructions here. Both images share the same viewpoint and rock arrangement; small differences in brush marks are generated. The exact geology and medium are interpreted.",
+      "alt": "A dark oval opening slightly left of center in a gray-brown rock face, with a short rubble slope below.",
       "frame": "gallery",
       "placement": {
         "room": "chamber-2",
         "label": "Chamber 2 · Thursday",
         "note": "The book dedicates this chamber to Thursday, October 28, 1982."
       },
-      "image": "assets/mine-first-4b95611d44a4b40c.png"
+      "image": "assets/mine-first-994827eb56a81acc.png"
     },
     {
       "id": "mine-second",
@@ -1061,15 +1061,15 @@
       "description": "The companion painting repeats the mountain opening on the other side of the approach to Chamber 3.",
       "attribution": "Not attributed in the passage",
       "credit": "Generated image, selected by Isaac.",
-      "note": "Mine is the apparent shared title, with an editorial numeral. These two generations interpret the described near-identical pair; their differing viewpoints and rock shapes are not distinctions supplied by the book.",
-      "alt": "A dark opening at the base of a rocky mountainside, with gray and ocher rocks around it.",
+      "note": "Mine is the apparent shared title, with an editorial numeral. This image closely repeats its companion’s viewpoint, opening and rock shapes, with small generated differences in surface marks. The pair does not establish distinct geographical views.",
+      "alt": "A near-identical view of the dark mountain opening and gray-brown rubble slope shown in the companion painting.",
       "frame": "gallery",
       "placement": {
         "room": "chamber-2",
         "label": "Chamber 2 · Thursday",
         "note": "The book dedicates this chamber to Thursday, October 28, 1982."
       },
-      "image": "assets/mine-second-e1169d7cc84d0056.png"
+      "image": "assets/mine-second-c002ff746af8aa90.png"
     },
     {
       "id": "door-into-the-dark",
@@ -1528,18 +1528,18 @@
       "title": "The Sick Boy · Crouching",
       "collection": "exhibition",
       "medium": "Tempera painting, reimagined digitally",
-      "description": "A boy in a gray cowboy hat crouches while a girl looks after him. The tempera series shows his sickness and her care.",
+      "description": "A sick teenage boy in a dirtied white Stetson crouches while a teenage girl looks after him. The tempera series shows his sickness and her care.",
       "attribution": "Not individually attributed in the passage",
       "credit": "Generated image, selected by Isaac.",
-      "note": "Editorial title and one interpretation of an uncounted series by different artists. The cup, clothes, blanket pattern and setting are generated. Cal thinks of Landry and Kalin; his fears about their fate are his response to the paintings, not established by them.",
-      "alt": "A girl offers a cup to a crouching boy wrapped in a blanket beneath a worn gray cowboy hat.",
+      "note": "Editorial title and one interpretation of an uncounted series by different artists. The revised character designs depict Kalin and Landry as adolescents. His white hat is dirtied and shadowed. Faces, clothing, blanket pattern and landscape are interpreted. Cal’s fears about their fate are his response to the paintings, not established by them.",
+      "alt": "A teenage boy in a dirtied white cowboy hat crouches with his hand over his mouth while a dark-haired teenage girl rests a hand on his shoulder.",
       "frame": "gallery",
       "placement": {
         "room": "chamber-4",
         "label": "Chamber 4 · Saturday",
         "note": "The book dedicates this chamber to Saturday, October 30, 1982."
       },
-      "image": "assets/sick-boy-crouching-a4af12a21cb439c5.png"
+      "image": "assets/sick-boy-crouching-ce9d0bae1c27cea2.png"
     },
     {
       "id": "sick-boy-vomiting",
@@ -1549,15 +1549,15 @@
       "description": "The boy vomits while the girl attends to him, another action described across the tempera series.",
       "attribution": "Not individually attributed in the passage",
       "credit": "Generated image, selected by Isaac.",
-      "note": "Editorial title. The book does not specify a separate canvas for each action or assign individual artists. This generation suggests the sickness through posture; faces, clothing, landscape and exact gestures are interpretations.",
-      "alt": "A boy bends forward with his hands near his mouth as a girl steadies his shoulder and holds a blanket.",
+      "note": "Editorial title. The book does not specify a separate canvas for each action or assign individual artists. The revised image shares its adolescent character designs with the crouching and sleeping studies; faces, clothes, landscape and exact gestures are interpretations.",
+      "alt": "A white-hatted teenage boy kneels and vomits while a dark-haired teenage girl steadies his back.",
       "frame": "gallery",
       "placement": {
         "room": "chamber-4",
         "label": "Chamber 4 · Saturday",
         "note": "The book dedicates this chamber to Saturday, October 30, 1982."
       },
-      "image": "assets/sick-boy-vomiting-fc31b38d744a0e82.png"
+      "image": "assets/sick-boy-vomiting-724f8fa7896a54cb.png"
     },
     {
       "id": "sick-boy-sleeping",
@@ -1567,15 +1567,15 @@
       "description": "The boy sleeps beneath mounds of blankets by a struggling fire while the girl looks after him.",
       "attribution": "Not individually attributed in the passage",
       "credit": "Generated image, selected by Isaac.",
-      "note": "Editorial title and a selected moment from an uncounted series. Likenesses, blanket patterns and shelter are generated; the pictured fire is more vigorous than the struggling fire described. The image does not establish either child’s later fate.",
-      "alt": "A boy sleeps beneath patterned blankets as a girl leans beside him, with firelight behind her.",
+      "note": "Editorial title and a selected moment from an uncounted series. The revised image shares its adolescent character designs with the other studies and keeps the fire low and struggling. Likenesses, blanket patterns and landscape are generated; the image does not establish either teenager’s later fate.",
+      "alt": "A teenage boy sleeps under mounds of patterned blankets in his dirtied white hat while a teenage girl tends a few coals and a tiny flame.",
       "frame": "gallery",
       "placement": {
         "room": "chamber-4",
         "label": "Chamber 4 · Saturday",
         "note": "The book dedicates this chamber to Saturday, October 30, 1982."
       },
-      "image": "assets/sick-boy-sleeping-47848842289cbb27.png"
+      "image": "assets/sick-boy-sleeping-5f851e5453de51b6.png"
     },
     {
       "id": "children-gray-meadow",
@@ -1675,15 +1675,15 @@
       "description": "Elephants join the animal apparitions, as though the creatures share a dreamlike parade.",
       "attribution": "Ralph Flores / Judith Flanagan / Suki Clover — group credit (names as transcribed)",
       "credit": "Generated image, selected by Isaac.",
-      "note": "Editorial title and one interpretation of an uncounted group. The elephants are described; the riders, ornaments, canopies and procession arrangement are generated additions. The book does not assign an individual artist or a precise tool/support pairing.",
-      "alt": "A pale procession of elephants with elaborate ornaments, riders and canopies on a gray ground.",
+      "note": "Editorial title and one interpretation of an uncounted group. The elephants remain undecorated apparitional forms. Their number and arrangement, and the choice of white chalk on gray paper, are generated interpretations; individual artist and tool/support assignments are not established.",
+      "alt": "Pale chalk elephants fade into gray paper, with undecorated bodies and softly broken outlines.",
       "frame": "gallery",
       "placement": {
         "room": "chamber-4",
         "label": "Chamber 4 · Saturday",
         "note": "The book dedicates this chamber to Saturday, October 30, 1982."
       },
-      "image": "assets/animal-apparitions-elephants-a2ad3192a6077a5a.png"
+      "image": "assets/animal-apparitions-elephants-bce30155ef131b3b.png"
     },
     {
       "id": "animal-apparitions-giraffes",
@@ -1729,15 +1729,15 @@
       "description": "A mule drawing seems both dreamy and still part of this world. Cal wonders whether carefully offered details, subsequently blurred, produce the effect; he also simply likes the mule.",
       "attribution": "Shana Whiting (name as transcribed)",
       "credit": "Generated image, selected by Isaac.",
-      "note": "Editorial title. The drawing tool, support, pose and background are not specified. This generation uses a photographic style rather than reproducing drawn marks; the flowers, cloudscape, sunset and exact likeness are invented.",
-      "alt": "A brown mule stands on a flowered slope above clouds beneath a warm sunset sky.",
+      "note": "Editorial title. The drawing tool, support, pose and background are not specified. This generation uses visible drawn marks and rubbed edges to interpret the tension between offered detail and blurring; the graphite-like treatment is a chosen realization.",
+      "alt": "A long-eared mule drawn in fine graphite-like hatching, with rubbed and blurred edges dissolving into paper.",
       "frame": "gallery",
       "placement": {
         "room": "chamber-4",
         "label": "Chamber 4 · Saturday",
         "note": "The book dedicates this chamber to Saturday, October 30, 1982."
       },
-      "image": "assets/dreamy-mule-c7482ec90890586a.png"
+      "image": "assets/dreamy-mule-d217f8326637db22.png"
     },
     {
       "id": "study-1-the-firebrand",
@@ -2043,26 +2043,26 @@
       "title": "Black Hat · A Generated Variation",
       "collection": "interpretation",
       "medium": "Generated digital interpretation",
-      "description": "A thin, roughly drawn figure wears a black hat over a grinning pumpkin-like head.",
-      "alt": "A thin, roughly drawn figure wears a black hat over a grinning pumpkin-like head.",
+      "description": "A tall, thin boy in a black cowboy hat is crudely drawn with an enormous grin and awkward, elongated limbs.",
+      "alt": "A thin human boy in a black cowboy hat, dark shirt and blue trousers, with a broad exaggerated grin on plain paper.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": "This image literalizes the pumpkin-like face. It is retained as a generated departure, not a faithful likeness of the boy described in the exhibition. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": "The exaggerated grin remains on a human face. The spare drawing interprets the described awkward likeness; clothes, colors and exact features are artistic choices. Curatorial placement remains provisional.",
       "frame": "gallery",
-      "image": "assets/study-33-black-hat-a-generated-variation-6b60c838455e6b27.png"
+      "image": "assets/study-33-black-hat-a-generated-variation-41722f4ab6c3eb71.png"
     },
     {
       "id": "study-76-portrait-on-newsprint-a-generated-departure",
-      "title": "Portrait on Newsprint · A Generated Departure",
+      "title": "Portrait on Newsprint · A Generated Study",
       "collection": "interpretation",
       "medium": "Generated digital interpretation",
-      "description": "A photographic portrait and a dark ink face overlap on aged newsprint.",
-      "alt": "A photographic portrait and a dark ink face overlap on aged newsprint.",
+      "description": "A reproduced photograph of an older man sits above a splotched ink face on worn newspaper.",
+      "alt": "An aged man’s black-and-white photograph above a roughly inked counterpart, with dark splashes obscuring newspaper columns.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": "The generated portrait is not a reliable likeness of Old Porch. It is shown as an alternate response to the newspaper-and-ink format, not as the book’s portrait. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": "The aged face is an imagined likeness, not a verified portrait of Old Porch. The photograph and ink sketch interpret the newspaper format and its uneasy pairing of faces. Exact features and printed lettering are generated choices. Curatorial placement remains provisional.",
       "frame": "gallery",
-      "image": "assets/study-76-portrait-on-newsprint-a-generated-departure-5798521b32ed41e4.png"
+      "image": "assets/study-76-portrait-on-newsprint-a-generated-departure-276be49a5304b209.png"
     },
     {
       "id": "study-65-the-crayon-fire-and-the-fallen-tree",
@@ -2322,17 +2322,17 @@
       "collection": "exhibition",
       "medium": "Spatial study with a generated image reference",
       "description": "A small, blocky marble figure appears within an apse-like frame. Movement is present even without the rain.",
-      "alt": "A small, blocky marble figure appears within an apse-like frame. Movement is present even without the rain.",
+      "alt": "A small blocky marble figure in a carved coat and trousers stands within a complete rounded apse-like enclosure.",
       "attribution": "Not individually attributed in the passage",
       "credit": "Generated image, selected by Isaac. Procedural spatial study by the exhibition project.",
-      "note": "Editorial title. The generated reference omits the surrounding apse; the 3D study restores an interpretive arch. The 3D display is a simplified spatial study; inspect the image for the fuller generated interpretation. Dimensions and fine surface details are interpretive.",
+      "note": "Editorial title. The generated reference includes the surrounding apse; its exact arch, clothing and carving are interpretations. The 3D study retains its simplified arch and figure. Dimensions and fine surface details are interpretive.",
       "object": "marble-figure",
       "placement": {
         "room": "chamber-4",
         "label": "Chamber 4 · Saturday",
         "note": "The described chamber grouping is retained; room dimensions and mounting positions are interpretive."
       },
-      "referenceImage": "assets/study-123-the-marble-figure-7cf282d94d8a0da9.png"
+      "referenceImage": "assets/study-123-the-marble-figure-3fd455772bc925bc.png"
     },
     {
       "id": "study-127-the-broken-cereal-bowl",
@@ -2358,17 +2358,17 @@
       "collection": "exhibition",
       "medium": "Spatial study with a generated image reference",
       "description": "A tiny metal tube opens onto a minute written scroll. Even under its magnifier, only three words become readable: I want you.",
-      "alt": "A tiny metal tube opens onto a minute written scroll. Even under its magnifier, only three words become readable: I want you.",
+      "alt": "A plain miniature metal tube and scroll in a glass case, with a mounted magnifier making “I want you” readable among tiny marks.",
       "attribution": "Not individually attributed in the passage",
       "credit": "Generated image, selected by Isaac. Procedural spatial study by the exhibition project.",
-      "note": "Editorial title from the readable phrase. The elaborate ornament and additional text in the generated reference are invented. The 3D display is a simplified spatial study; inspect the image for the fuller generated interpretation. Dimensions and fine surface details are interpretive.",
+      "note": "Editorial title from the readable phrase. The reference uses a plain tube and magnifier; surrounding script remains indistinct. Their exact construction and proportions are generated interpretations. The 3D display is a simplified spatial study; dimensions and fine surface details are interpretive.",
       "object": "scroll-case",
       "placement": {
         "room": "chamber-4",
         "label": "Chamber 4 · Saturday",
         "note": "The described chamber grouping is retained; room dimensions and mounting positions are interpretive."
       },
-      "referenceImage": "assets/study-131-i-want-you-f47e78b3d51ee6d7.png"
+      "referenceImage": "assets/study-131-i-want-you-cf4529c798188a12.png"
     },
     {
       "id": "study-137-bone-cliffs",
@@ -2466,17 +2466,17 @@
       "collection": "exhibition",
       "medium": "Generated digital interpretation",
       "description": "A finely etched cliff rises above a talus field, its ledges and scars multiplying into the distance.",
-      "alt": "A finely etched cliff rises above a talus field, its ledges and scars multiplying into the distance.",
+      "alt": "Fine etched lines describe broken cliff ledges and rubble, with rock continuing beyond the image’s upper edge.",
       "attribution": "Stacy Sharma / John Bush / Daris Tan — group credit, names as transcribed",
       "credit": "Generated image, selected by Isaac.",
-      "note": "Editorial title and one interpretation of an uncounted wall of varied media. Individual works are not assigned to individual artists. The book withholds the summit; generated background peaks and visible upper surfaces should not be read as a verified route or summit view.",
+      "note": "Editorial title and one interpretation of an uncounted wall of varied media. Individual works are not assigned to individual artists. The cliff continues beyond the image’s upper edge without revealing the summit. Exact geology, ledges and surface treatment are generated interpretations, not a verified route.",
       "frame": "gallery",
       "placement": {
         "room": "chamber-4",
         "label": "Chamber 4 · Saturday",
         "note": "The described chamber grouping is retained; room dimensions and mounting positions are interpretive."
       },
-      "image": "assets/study-172-cirque-wall-etching-60b42a63fd10d4c1.png"
+      "image": "assets/study-172-cirque-wall-etching-f09c27fbd3bffd58.png"
     },
     {
       "id": "study-173-cirque-wall-painted-ledges",
@@ -2484,17 +2484,17 @@
       "collection": "exhibition",
       "medium": "Generated digital interpretation",
       "description": "Paint builds a sheer cliff face out of broken ledges and fallen stone.",
-      "alt": "Paint builds a sheer cliff face out of broken ledges and fallen stone.",
+      "alt": "Thick painted marks build a tightly cropped cliff face and broken ledges without showing the skyline.",
       "attribution": "Stacy Sharma / John Bush / Daris Tan — group credit, names as transcribed",
       "credit": "Generated image, selected by Isaac.",
-      "note": "Editorial title and one interpretation of an uncounted wall of varied media. Individual works are not assigned to individual artists. The book withholds the summit; generated background peaks and visible upper surfaces should not be read as a verified route or summit view.",
+      "note": "Editorial title and one interpretation of an uncounted wall of varied media. Individual works are not assigned to individual artists. The cliff continues beyond the image’s upper edge without revealing the summit. Exact geology, ledges and surface treatment are generated interpretations, not a verified route.",
       "frame": "gallery",
       "placement": {
         "room": "chamber-4",
         "label": "Chamber 4 · Saturday",
         "note": "The described chamber grouping is retained; room dimensions and mounting positions are interpretive."
       },
-      "image": "assets/study-173-cirque-wall-painted-ledges-0b33afec59bca70d.png"
+      "image": "assets/study-173-cirque-wall-painted-ledges-76e33e43a1293eed.png"
     },
     {
       "id": "study-174-cirque-wall-illusion-of-depth",
@@ -2502,17 +2502,17 @@
       "collection": "exhibition",
       "medium": "Generated digital interpretation",
       "description": "A sharply rendered cliff and ledge create the impression of looking into a mountain basin.",
-      "alt": "A sharply rendered cliff and ledge create the impression of looking into a mountain basin.",
+      "alt": "Sharply rendered ledges project from a tightly cropped sheer cliff, creating an illusion of depth.",
       "attribution": "Stacy Sharma / John Bush / Daris Tan — group credit, names as transcribed",
       "credit": "Generated image, selected by Isaac.",
-      "note": "Editorial title and one interpretation of an uncounted wall of varied media. Individual works are not assigned to individual artists. The book withholds the summit; generated background peaks and visible upper surfaces should not be read as a verified route or summit view.",
+      "note": "Editorial title and one interpretation of an uncounted wall of varied media. Individual works are not assigned to individual artists. The cliff continues beyond the image’s upper edge without revealing the summit. Exact geology, ledges and surface treatment are generated interpretations, not a verified route.",
       "frame": "gallery",
       "placement": {
         "room": "chamber-4",
         "label": "Chamber 4 · Saturday",
         "note": "The described chamber grouping is retained; room dimensions and mounting positions are interpretive."
       },
-      "image": "assets/study-174-cirque-wall-illusion-of-depth-bbaf57c55081e72e.png"
+      "image": "assets/study-174-cirque-wall-illusion-of-depth-ef8c551e8aaac351.png"
     },
     {
       "id": "study-175-cirque-wall-treated-photograph",
@@ -2520,17 +2520,17 @@
       "collection": "exhibition",
       "medium": "Generated digital interpretation",
       "description": "A dark photographic treatment compresses a towering wall and its rubble into stark light and shadow.",
-      "alt": "A dark photographic treatment compresses a towering wall and its rubble into stark light and shadow.",
+      "alt": "A dark photographic treatment of fractured rock, small ledges and rubble, cropped below the unseen summit.",
       "attribution": "Stacy Sharma / John Bush / Daris Tan — group credit, names as transcribed",
       "credit": "Generated image, selected by Isaac.",
-      "note": "Editorial title and one interpretation of an uncounted wall of varied media. Individual works are not assigned to individual artists. The book withholds the summit; generated background peaks and visible upper surfaces should not be read as a verified route or summit view.",
+      "note": "Editorial title and one interpretation of an uncounted wall of varied media. Individual works are not assigned to individual artists. The cliff continues beyond the image’s upper edge without revealing the summit. Exact geology, ledges and surface treatment are generated interpretations, not a verified route.",
       "frame": "gallery",
       "placement": {
         "room": "chamber-4",
         "label": "Chamber 4 · Saturday",
         "note": "The described chamber grouping is retained; room dimensions and mounting positions are interpretive."
       },
-      "image": "assets/study-175-cirque-wall-treated-photograph-4c55cae7baf5c9b7.png"
+      "image": "assets/study-175-cirque-wall-treated-photograph-6b6956b49759ef97.png"
     },
     {
       "id": "study-176-cirque-wall-diaphanous-wash",
@@ -2538,17 +2538,17 @@
       "collection": "exhibition",
       "medium": "Generated digital interpretation",
       "description": "Pale washes let the cliff dissolve toward the edges of the image.",
-      "alt": "Pale washes let the cliff dissolve toward the edges of the image.",
+      "alt": "Pale translucent washes describe cliff ledges, with faint illegible handwriting embedded in the rock-like surface.",
       "attribution": "Stacy Sharma / John Bush / Daris Tan — group credit, names as transcribed",
       "credit": "Generated image, selected by Isaac.",
-      "note": "Editorial title and one interpretation of an uncounted wall of varied media. Individual works are not assigned to individual artists. The book withholds the summit; generated background peaks and visible upper surfaces should not be read as a verified route or summit view. The described wash group includes illegible testimony; this image leaves that element indistinct.",
+      "note": "Editorial title and one interpretation of an uncounted wall of varied media. Individual works are not assigned to individual artists. The cliff continues beyond the image’s upper edge without revealing the summit. Exact geology, ledges and surface treatment are generated interpretations, not a verified route. Faint illegible marks interpret the testimony-like language described across the wash group.",
       "frame": "gallery",
       "placement": {
         "room": "chamber-4",
         "label": "Chamber 4 · Saturday",
         "note": "The described chamber grouping is retained; room dimensions and mounting positions are interpretive."
       },
-      "image": "assets/study-176-cirque-wall-diaphanous-wash-d087b2d5fc7c16da.png"
+      "image": "assets/study-176-cirque-wall-diaphanous-wash-53aff1a8dccf3145.png"
     },
     {
       "id": "study-177-cirque-wall-the-column",
@@ -2556,17 +2556,17 @@
       "collection": "exhibition",
       "medium": "Generated digital interpretation",
       "description": "A detached stone column rises beside the cliff in a deep mountain basin.",
-      "alt": "A detached stone column rises beside the cliff in a deep mountain basin.",
+      "alt": "A scarred stone column and adjacent cliff continue beyond the top of the image, crossed by narrow broken ledges.",
       "attribution": "Stacy Sharma / John Bush / Daris Tan — group credit, names as transcribed",
       "credit": "Generated image, selected by Isaac.",
-      "note": "Editorial title and one interpretation of an uncounted wall of varied media. Individual works are not assigned to individual artists. The book withholds the summit; generated background peaks and visible upper surfaces should not be read as a verified route or summit view.",
+      "note": "Editorial title and one interpretation of an uncounted wall of varied media. Individual works are not assigned to individual artists. The cliff continues beyond the image’s upper edge without revealing the summit. Exact geology, ledges and surface treatment are generated interpretations, not a verified route.",
       "frame": "gallery",
       "placement": {
         "room": "chamber-4",
         "label": "Chamber 4 · Saturday",
         "note": "The described chamber grouping is retained; room dimensions and mounting positions are interpretive."
       },
-      "image": "assets/study-177-cirque-wall-the-column-b765eb9e593b23ee.png"
+      "image": "assets/study-177-cirque-wall-the-column-7f23e830f3df3bdf.png"
     },
     {
       "id": "study-178-cirque-wall-landry-on-the-ledge",
@@ -2574,17 +2574,17 @@
       "collection": "exhibition",
       "medium": "Generated digital interpretation",
       "description": "A tiny woodcut places Landry on a blue horse on a high ledge.",
-      "alt": "A tiny woodcut places Landry on a blue horse on a high ledge.",
+      "alt": "A small black-and-blue woodcut of a girl on a blue horse on a narrow cliff ledge, enclosed by a rough dark iron quatrefoil frame.",
       "attribution": "Not individually attributed in the passage",
       "credit": "Generated image, selected by Isaac.",
-      "note": "Editorial title. The iron rock mentioned in the description is not precisely reproduced. The broad vista and distant peaks are generated additions; the scene is not a geographical diagram.",
-      "frame": "gallery",
+      "note": "Editorial title. The rock-like iron quatrefoil belongs to the frame surrounding the woodcut, not to a separate rock within the scene. Its exact shape and surface are interpreted. The cliff continues beyond the print’s upper edge without a summit view; rider, horse and carved marks are generated interpretations.",
+      "frame": "none",
       "placement": {
         "room": "chamber-4",
         "label": "Chamber 4 · Saturday",
         "note": "The described chamber grouping is retained; room dimensions and mounting positions are interpretive."
       },
-      "image": "assets/study-178-cirque-wall-landry-on-the-ledge-c191e6901e6fffe3.png"
+      "image": "assets/study-178-cirque-wall-landry-on-the-ledge-b4ed40cea90a8d67.png"
     },
     {
       "id": "study-179-cirque-wall-kalin-on-the-ledge",
@@ -2759,7 +2759,7 @@
       "alt": "Two mothers’ faces confront the viewer, marked by blood, snow and wetness. The painting gives little surrounding context; the people who threw at them are absent.",
       "attribution": "Elsa Sarantopolo (name as transcribed)",
       "credit": "Generated image, selected by Isaac.",
-      "note": "Two generated versions of the same work are retained together. Their expressions and framing differ. The book distinguishes wetness from tears and describes the women as undeterred; the second version’s open-mouthed expression is a departure.",
+      "note": "Two generated versions of the same work are retained together. Their framing and likenesses differ. The revised second version keeps both mouths closed and their expressions resolute; wetness is not presented as tears. Exact features and paint handling are interpreted.",
       "frame": "gallery",
       "presentation": "variants",
       "placement": {
@@ -2775,8 +2775,8 @@
         },
         {
           "title": "Accused · Interpretation 2",
-          "alt": "An alternate close view of two women, with more open expressions and a blurred vehicle behind them.",
-          "image": "assets/study-192-accused-panel-02-54358149111c4ac3.png"
+          "alt": "Two injured women stare forward with closed mouths, blood and wet snow on their faces, and a blurred vehicle behind them.",
+          "image": "assets/study-192-accused-panel-02-feea566cfbda4a06.png"
         }
       ],
       "image": "assets/study-192-accused-panel-01-c2a49705a8b10b7e.png"
@@ -2840,18 +2840,18 @@
       "title": "Recollection · Hatch on the Bed",
       "collection": "interpretation",
       "medium": "Generated digital interpretation",
-      "description": "A young figure sits alone on a bed in a dark room.",
-      "alt": "A young figure sits alone on a bed in a dark room.",
+      "description": "An older teenage figure sits alone on a bed in a dim room.",
+      "alt": "A sandy-haired older teenage figure sits alone on a bed in a dim, plainly furnished room.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": "Cal’s recollection gives way to doubt about whether he is inventing additional pieces. This image is presented as an interpretation of that uncertain recollection, not a confirmed original in Chamber Five. The generated figure appears much younger than intended; its apparent age is not a claim about Hatch.",
+      "note": "Cal’s recollection gives way to doubt about whether he is inventing additional pieces. This image is presented as an interpretation of that uncertain recollection, not a confirmed original in Chamber Five. The older-teen appearance is a chosen likeness; it does not establish an exact age for Hatch.",
       "frame": "gallery",
       "placement": {
         "room": "recollections",
         "label": "Recollections · An interpretation annex",
         "note": "A curatorial annex separates uncertain memories from the confirmed chamber inventory."
       },
-      "image": "assets/study-198-recollection-hatch-on-the-bed-04924885e1719a45.png"
+      "image": "assets/study-198-recollection-hatch-on-the-bed-f01e656012ecf0b9.png"
     },
     {
       "id": "study-199-recollection-kelly",
@@ -2877,17 +2877,17 @@
       "collection": "interpretation",
       "medium": "Generated digital interpretation",
       "description": "A sleeping uniformed figure rests at a card table beside a phone and heater.",
-      "alt": "A sleeping uniformed figure rests at a card table beside a phone and heater.",
+      "alt": "A uniformed man sleeps with his hat on and head on crossed arms at a card table, beside a corded telephone and space heater.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": "Cal’s recollection gives way to doubt about whether he is inventing additional pieces. This image is presented as an interpretation of that uncertain recollection, not a confirmed original in Chamber Five. The smartphone in the generation is an anachronistic addition, not a period detail.",
+      "note": "Cal’s recollection gives way to doubt about whether he is inventing additional pieces. This image is presented as an interpretation of that uncertain recollection, not a confirmed original in Chamber Five. The reference uses a corded landline; its exact model, the uniform and the furnishings are generated interpretations.",
       "frame": "gallery",
       "placement": {
         "room": "recollections",
         "label": "Recollections · An interpretation annex",
         "note": "A curatorial annex separates uncertain memories from the confirmed chamber inventory."
       },
-      "image": "assets/study-200-recollection-jewel-f9641f863c9e6460.png"
+      "image": "assets/study-200-recollection-jewel-2c1f58f1b637b384.png"
     },
     {
       "id": "study-201-recollection-bricky",
@@ -3094,17 +3094,17 @@
       "collection": "exhibition",
       "medium": "Generated digital interpretation",
       "description": "A bright yellow cake returns as a digital recreation of the paper-plate painting.",
-      "alt": "A bright yellow cake returns as a digital recreation of the paper-plate painting.",
+      "alt": "A digital recreation of the simple yellow cake painting, retaining the complete circular paper plate and crimped rim.",
       "attribution": "Pinnegar Nelson (name as transcribed)",
       "credit": "Generated image, selected by Isaac.",
-      "note": "The generated rectangular crop does not reproduce the original circular support. The later passage identifies the painter.",
+      "note": "The recreation retains the earlier painting’s complete circular support and painted cake composition. Surface texture is pictured digitally. The later passage identifies the painter.",
       "frame": "none",
       "placement": {
         "room": "afterimages",
         "label": "Afterimages · 2031",
         "note": "A separate curatorial wing for the later exhibition; this is not another room of the original Houston show."
       },
-      "image": "assets/study-234-lemon-cake-digital-return-d2036c501fb5114f.png"
+      "image": "assets/study-234-lemon-cake-digital-return-cbd76822ea948317.png"
     },
     {
       "id": "study-236-rhyme-and-revel-with-the-dead",
@@ -3131,17 +3131,17 @@
       "collection": "exhibition",
       "medium": "Spatial study with a generated image reference",
       "description": "The later show offers a holographic impression of the earlier bronze.",
-      "alt": "The later show offers a holographic impression of the earlier bronze.",
+      "alt": "A pale translucent impression of a hunched sculptural man holding a mug to his belly and reaching upward against a dark field.",
       "attribution": "Doran N. Tolan (name as transcribed)",
       "credit": "Generated image, selected by Isaac. Procedural spatial study by the exhibition project.",
-      "note": "This translucent 3D study suggests a holographic presence; it is not a physical hologram. The image reference shows a solid-looking interpretation. The 3D display is a simplified spatial study; inspect the image for the fuller generated interpretation. Dimensions and fine surface details are interpretive.",
+      "note": "The generated reference renders the earlier sculpture as a translucent impression of light. Its pale contours and transparency are interpretations of a holographic return, not a record of specific projection technology. The 3D display remains a simplified spatial study rather than a physical hologram; dimensions and fine surface details are interpretive.",
       "object": "hologram-figure",
       "placement": {
         "room": "afterimages",
         "label": "Afterimages · 2031",
         "note": "A separate curatorial wing for the later exhibition; this is not another room of the original Houston show."
       },
-      "referenceImage": "assets/study-246-old-porch-in-the-rain-holographic-return-06a281956f956c79.png"
+      "referenceImage": "assets/study-246-old-porch-in-the-rain-holographic-return-4ecf628c3f9467d7.png"
     },
     {
       "id": "study-247-nathan-nibley-s-cello-piece-listening-place",

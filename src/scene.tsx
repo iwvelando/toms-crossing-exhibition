@@ -1,9 +1,13 @@
+import { litWallMaterials, roomHeadingMounts, type DisplayLight } from "./gallery-lighting";
+import type { SceneMedia } from "./scene-media";
+import { createObjectStudy } from "./objects";
 import { forwardRef, useEffect, useImperativeHandle, useRef } from "react";
 import * as THREE from "three";
 import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
 import { wallGeometry } from "./architecture";
+import { imageDimensions } from "./display";
 import type { GalleryHandle, Work } from "./types";
-import { canStand, roomAt, type Layout, type Reservation } from "./layout";
+import { canStand, locationAt, roomAt, type Layout, type Reservation } from "./layout";
 
 type Props = {
   entered: boolean;
@@ -11,6 +15,9 @@ type Props = {
   paused: boolean;
   layout?: Layout;
   planning: boolean;
+  onMouseLook: (active: boolean) => void;
+  onMouseLookError: (message: string) => void;
+  media: SceneMedia;
   onRoom: (id: string) => void;
   onNear: (work?: Work | Reservation) => void;
   onSelect: (work: Work | Reservation) => void;
@@ -27,7 +34,9 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
         visitReservation: (id: string) => void;
         setPlanning: () => void;
         reset: () => void;
+        toggleMouseLook: () => void;
         keys: Set<string>;
+        axes: [number,number];
         invalidate: () => void;
         install: (works: Work[]) => void;
         enter: () => void;
@@ -39,6 +48,8 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
     visitRoom: (id) => runtime.current?.visitRoom(id),
     visitReservation: (id) => runtime.current?.visitReservation(id),
     reset: () => runtime.current?.reset(),
+    toggleMouseLook: () => runtime.current?.toggleMouseLook(),
+    steer: (x,y) => {if(runtime.current){runtime.current.axes[0]=x;runtime.current.axes[1]=y;runtime.current.invalidate();}},
     move: (d, p) => {
       if (p) runtime.current?.keys.add(d);
       else runtime.current?.keys.delete(d);
@@ -70,7 +81,7 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
     canvas.tabIndex = 0;
     canvas.setAttribute(
       "aria-label",
-      "3D exhibition. Drag to look, use W A S D or arrow keys to walk.",
+      "3D exhibition. Press M to capture or release the mouse, or drag to look. Use W A S D or arrow keys to walk.",
     );
     root.appendChild(canvas);
     const scene = new THREE.Scene();
@@ -87,6 +98,7 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
     camera.position.set(-2.8, 1.7, 13.6);
     camera.rotation.order = "YXZ";
     const keys = new Set<string>();
+    const axes:[number,number]=[0,0];
     const clickable: THREE.Object3D[] = [];
     const occluders: THREE.Object3D[] = [];
     const planned = new THREE.Group();
@@ -98,6 +110,23 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
     const content = new THREE.Group();
     scene.add(content);
     const textures: THREE.Texture[] = [];
+    const displayLights: DisplayLight[] = [];
+    const imageJobs: { position: THREE.Vector3; started: boolean; load: () => void }[] = [];
+    let pendingImages = 0;
+    function loadArt(path:string, success:(texture:THREE.Texture)=>void, failure:()=>void) {
+      const image=latest.current.media.get(path);
+      if(!image){failure();return;}
+      const texture=new THREE.Texture(image);texture.needsUpdate=true;success(texture);
+    }
+    function updateNearbyArt() {
+      if (!latest.current.entered || latest.current.paused) return;
+      // Decoding completed in the foyer. Build every surface before the first room render.
+      for (const job of imageJobs) if(!job.started){job.started=true;pendingImages++;job.load();}
+      canvas.dataset.pendingImages=String(pendingImages);
+      canvas.dataset.artLights=String(displayLights.length+Number(canvas.dataset.modeledObjects ?? 0));
+      canvas.dataset.lighting="static";
+      canvas.dataset.sceneImages=String(imageJobs.length);
+    }
     const doors = new THREE.Group();
     scene.add(doors);
     let disposed = false,
@@ -196,7 +225,7 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
     box(2.12,3.75,.12,-1.08,1.88,8.56,dark,doors);
     box(2.12,3.75,.12,1.08,1.88,8.56,dark,doors);
     for (const x of [-2.22,2.22]) box(.06,3.8,.09,x,1.9,8.68,trim,foyerPreview);
-    const ambient = new THREE.HemisphereLight("#fff0d5", "#74766e", 2.2);
+    const ambient = new THREE.HemisphereLight("#fff0d5", "#74766e", 1.55);
     scene.add(ambient);
     function spot(
       x: number,
@@ -205,6 +234,7 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
       ty: number,
       tz: number,
       intensity = 150,
+      withFixture = true,
     ) {
       const light = new THREE.SpotLight(
         "#ffe0b2",
@@ -217,6 +247,7 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
       light.position.set(x, 4.35, z);
       light.target.position.set(tx, ty, tz);
       scene.add(light, light.target);
+      if (!withFixture) return light;
       const fixture = new THREE.Mesh(
         new THREE.CylinderGeometry(0.11, 0.12, 0.22, 16),
         dark,
@@ -238,7 +269,7 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
     objectLight.shadow.bias = -0.001;
     spot(0,11,0,2,8.4,140);
     function label(
-      text: string,
+      text: string | string[],
       w: number,
       h: number,
       fontSize = 42,
@@ -248,11 +279,21 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
       c.width = 1024;
       c.height = Math.round((1024 * h) / w);
       const ctx = c.getContext("2d")!;
-      ctx.fillStyle = color;
-      ctx.font = `${fontSize}px Georgia`;
-      ctx.textAlign = "center";
-      ctx.textBaseline = "middle";
-      ctx.fillText(text, c.width / 2, c.height / 2, 970);
+      const lines=Array.isArray(text)?text:[text];
+      const lineHeight=c.height/lines.length;
+      ctx.textAlign = "center";ctx.textBaseline = "middle";
+      lines.forEach((line,index)=>{
+        let size=Math.min(fontSize*(lines.length>1 && index>0 ? .66 : 1),lineHeight*.86);
+        ctx.font=`${size}px Georgia`;
+        size*=Math.min(1,c.width*.93/Math.max(1,ctx.measureText(line).width));
+        ctx.font=`${size}px Georgia`;
+        const y=lineHeight*(index+.5);
+        // Letter edges provide contrast without putting an opaque strip on the wall.
+        ctx.lineJoin="round";ctx.strokeStyle="rgba(5,10,8,.88)";ctx.lineWidth=Math.max(1.4,size*.055);
+        ctx.shadowColor="rgba(0,0,0,.65)";ctx.shadowBlur=size*.09;ctx.shadowOffsetY=1;
+        ctx.strokeText(line,c.width/2,y);
+        ctx.fillStyle=index===0?color:"#d5c9b4";ctx.fillText(line,c.width/2,y);
+      });
       const tex = new THREE.CanvasTexture(c);
       tex.colorSpace = THREE.SRGBColorSpace;
       textures.push(tex);
@@ -261,6 +302,7 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
         new THREE.MeshBasicMaterial({
           map: tex,
           transparent: true,
+          alphaTest: .015,
           depthWrite: false,
           toneMapped: false,
         }),
@@ -289,7 +331,7 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
       for (const floor of layout.floors) {
         const [x0,x1,z0,z1] = floor.bounds;
         box(x1-x0,.2,z1-z0,(x0+x1)/2,-.12,(z0+z1)/2,stone);
-        box(x1-x0,.15,z1-z0,(x0+x1)/2,4.9,(z0+z1)/2,dark);
+        box(x1-x0,.15,z1-z0,(x0+x1)/2,floor.ceilingHeight ?? 4.9,(z0+z1)/2,dark);
         const vertices: number[] = [];
         for (let x=x0+2; x<x1; x+=2) vertices.push(x,-.015,z0,x,-.015,z1);
         for (let z=z0+2; z<z1; z+=2) vertices.push(x0,-.015,z,x1,-.015,z);
@@ -299,21 +341,18 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
       }
       for (const segment of layout.walls) {
         const geometry=wallGeometry(segment,layout.walls);
-        const mesh=new THREE.Mesh(geometry.wall,material(segment.tone));
+        const wallMaterials=litWallMaterials(geometry.wall,material(segment.tone),displayLights,textures);
+        canvas.dataset.wallLightmaps=String(Number(canvas.dataset.wallLightmaps ?? 0)+wallMaterials.length-1);
+        const mesh=new THREE.Mesh(geometry.wall,wallMaterials);
         const base=new THREE.Mesh(geometry.base,trim);
         for (const part of [mesh,base]) { part.receiveShadow=true;part.castShadow=true;scene.add(part); }
         occluders.push(mesh,base);
       }
-      for (const room of layout.rooms) {
-        const [x0,x1,z0] = room.bounds;
-        const title = label(room.title.toUpperCase(),5,.4,58);
-        title.position.set((x0+x1)/2,4.15,z0+.14);
-        scene.add(title);
-        const sub = label(room.subtitle,7,.3,34);
-        sub.position.set((x0+x1)/2,3.68,z0+.14);
-        scene.add(sub);
+      for (const mount of roomHeadingMounts(layout)) {
+        const heading=label([mount.room.title.toUpperCase(),mount.room.subtitle],mount.width,mount.height,52);
+        heading.position.fromArray(mount.position);scene.add(heading);
       }
-      // Wayfinding bands indicate the suggested route without moving visitors automatically.
+      // Separate wayfinding lettering indicates the suggested route without moving visitors automatically.
       for (const [x,z,angle,text] of [
         [15.84,-6,-Math.PI/2,"02  →"], [33,-19.34,0,"03  →"],
         [20.16,-39,Math.PI/2,"04  →"], [-11.84,-39,Math.PI/2,"05  →"],
@@ -367,24 +406,97 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
     function install(works: Work[]) {
       const layout=latest.current.layout;
       if (installed || !layout) return;
+      for(const work of works){
+        const slot=layout.reservations.find(r=>r.workId===work.id)!;
+        if(work.object)continue;
+        const image=work.image?latest.current.media.get(work.image):undefined;
+        const size=work.panels?{width:3.7,height:2.2}:image?imageDimensions(work,image.width/image.height,slot,layout):{width:2.2,height:1.6};
+        displayLights.push({position:slot.position,angle:slot.angle,...size});
+      }
       buildLayout(layout);
       installed = true;
+      // Constant fill lights keep materials readable without moving pools of light.
+      const fill=new THREE.DirectionalLight("#eee7d4",.65);fill.position.set(-20,40,20);scene.add(fill);
+      const rim=new THREE.DirectionalLight("#c2d2dc",.35);rim.position.set(20,20,-30);scene.add(rim);
+      const poolCanvas=document.createElement("canvas");poolCanvas.width=poolCanvas.height=128;
+      const poolContext=poolCanvas.getContext("2d")!;
+      const poolGradient=poolContext.createRadialGradient(64,64,6,64,64,64);
+      poolGradient.addColorStop(0,"#8b806b");poolGradient.addColorStop(.45,"#4c4537");poolGradient.addColorStop(1,"#000");
+      poolContext.fillStyle=poolGradient;poolContext.fillRect(0,0,128,128);
+      const poolTexture=new THREE.CanvasTexture(poolCanvas);poolTexture.colorSpace=THREE.SRGBColorSpace;textures.push(poolTexture);
+      const poolMaterial=new THREE.MeshBasicMaterial({map:poolTexture,transparent:true,opacity:.38,blending:THREE.AdditiveBlending,depthWrite:false,toneMapped:false});
       works.forEach((work) => {
         const slot = layout.reservations.find(r=>r.workId===work.id)!;
-        if (work.image) spot(slot.camera[0],slot.camera[2],slot.position[0],2.2,slot.position[2],175);
         const group = new THREE.Group();
         group.position.fromArray(slot.position);
         group.rotation.y = slot.angle;
         content.add(group);
-        if (work.image) {
-          const loader = new THREE.TextureLoader();
-          loader.load(
-            `/collection/${work.image}`,
+        const displayLight=displayLights.find(light=>light.position===slot.position);
+        if(displayLight){
+          // Fixed physical fixture corresponds to the baked wall wash below it.
+          const fixture=new THREE.Mesh(new THREE.CylinderGeometry(.065,.075,.2,12),dark);
+          const y=displayLight.height/2+.48;
+          fixture.position.set(0,y,.5);
+          fixture.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),new THREE.Vector3(0,y,.5).normalize());
+          group.add(fixture);
+          box(.03,.03,.46,0,y+.08,.24,dark,group);
+          const bulb=new THREE.Mesh(new THREE.CircleGeometry(.055,12),new THREE.MeshBasicMaterial({color:"#fff0d5"}));
+          bulb.position.set(0,y-.09,.46);bulb.quaternion.setFromUnitVectors(new THREE.Vector3(0,0,1),new THREE.Vector3(0,-y,-.5).normalize());group.add(bulb);
+        }
+        if (work.wallText) {
+          // Typeset on the actual wall; the generated gallery view is only a reference.
+          const words=work.wallText.trim().split(/\s+/), lines: string[]=[];
+          let line="";
+          for (const word of words) {
+            if (line && (line+" "+word).length>20) { lines.push(line); line=word; }
+            else line+=(line ? " " : "")+word;
+          }
+          if (line) lines.push(line);
+          const inscription=new THREE.Group(); group.add(inscription);
+          lines.forEach((line,index)=>{
+            const lettering=label(line,2.2,.25,64);
+            lettering.position.set(0,(lines.length-1)/2*.32-index*.32,.08);
+            inscription.add(lettering);
+          });
+          // Transparent hit target keeps gaps between letters easy to inspect.
+          const target=new THREE.Mesh(new THREE.PlaneGeometry(2.2,Math.max(.7,lines.length*.32)),
+            new THREE.MeshBasicMaterial({transparent:true,opacity:0,depthWrite:false}));
+          target.position.z=.085; target.userData.work=work;group.add(target);clickable.push(target);
+          canvas.dataset.wallInscriptions=String(Number(canvas.dataset.wallInscriptions ?? 0)+1);
+        } else if (work.image) {
+          const panels=work.panels ?? [{image:work.image,title:work.title,alt:work.alt}];
+          const montage=!!work.panels;
+          const variants=work.presentation === "variants";
+          const columns=variants ? 2 : 4;
+          const pitch=variants ? 1.8 : .9;
+          const rowHeight=variants ? 1.8 : .7;
+          if (montage) {
+            const backing=box(3.7,Math.ceil(panels.length/columns)*rowHeight,.04,0,0,.01,dark,group);
+            backing.userData.work=work;clickable.push(backing);
+          }
+          panels.forEach((panel,index) => {
+          const surface=new THREE.Group();
+          if (montage) surface.position.set((index%columns-(columns-1)/2)*pitch, (Math.ceil(panels.length/columns)-1)/2*rowHeight-Math.floor(index/columns)*rowHeight, 0);
+          group.add(surface);
+          imageJobs.push({position: group.position.clone(), started: false, load: () => {
+          loadArt(
+            panel.image,
             (tex) => {
               if (disposed) {
                 tex.dispose();
                 return;
               }
+              pendingImages--;
+              const original = tex.image as HTMLImageElement;
+              const scale = Math.min(1, 1024 / Math.max(original.width,original.height));
+              if (scale < 1) {
+                const reduced=document.createElement("canvas");
+                reduced.width=Math.max(1,Math.round(original.width*scale));
+                reduced.height=Math.max(1,Math.round(original.height*scale));
+                reduced.getContext("2d")!.drawImage(original,0,0,reduced.width,reduced.height);
+                (tex as THREE.Texture).image=reduced;
+              }
+              canvas.dataset.maxArtTexture=String(Math.max(Number(canvas.dataset.maxArtTexture ?? 0),(tex.image as HTMLImageElement).width,(tex.image as HTMLImageElement).height));
               tex.colorSpace = THREE.SRGBColorSpace;
               tex.anisotropy = Math.min(
                 8,
@@ -394,7 +506,7 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
               canvas.dataset.loadedImages = String(++settledImages);
               const img = tex.image as HTMLImageElement;
               const ratio = img.width / img.height;
-              const height = Math.min(2.18, 3.45 / ratio);
+              const height = montage ? Math.min(variants ? 1.5 : .5,(variants ? 1.65 : .82)/ratio) : imageDimensions(work, ratio, slot, layout).height;
               const width = height * ratio;
               const m = new THREE.Mesh(
                 new THREE.PlaneGeometry(width, height),
@@ -402,57 +514,92 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
               );
               m.position.z = 0.08;
               m.userData.work = work;
-              group.add(m);
+              m.userData.inspectDistance=Math.max(8,new THREE.Vector3(...slot.camera).distanceTo(group.position)+1);
+              surface.add(m);
               clickable.push(m);
-              // The existing reconstruction includes a frame in its pixels: keep it intact.
-              if (work.id !== "rear-view") {
+              if (!montage && work.frame !== "none") {
+                const frameMaterial = work.frame === "walnut" || work.frame === "fence-slats"
+                  ? new THREE.MeshStandardMaterial({color: work.frame === "walnut" ? "#372319" : "#74634e", roughness:.88, bumpMap:plaster, bumpScale:.018})
+                  : work.frame === "aluminum"
+                    ? new THREE.MeshStandardMaterial({color:"#a6aaa7",roughness:.65,metalness:.7}) : trim;
+                const rail=work.frame === "fence-slats" ? .11 : .04;
                 box(
-                  width + 0.11,
-                  height + 0.11,
+                  width + 2*rail + 0.02,
+                  height + 2*rail + 0.02,
                   0.055,
                   0,
                   0,
                   0.01,
                   dark,
-                  group,
+                  surface,
                 );
-                for (const x of [-width / 2 - 0.025, width / 2 + 0.025])
-                  box(0.04, height + 0.1, 0.07, x, 0, 0.055, trim, group);
-                for (const y of [-height / 2 - 0.025, height / 2 + 0.025])
-                  box(width + 0.1, 0.04, 0.07, 0, y, 0.055, trim, group);
+                for (const x of [-(width+rail+.02)/2, (width+rail+.02)/2])
+                  box(rail, height+.02, 0.07, x, 0, 0.055, frameMaterial, surface);
+                for (const y of [-(height+rail+.02)/2, (height+rail+.02)/2])
+                  box(width+2*rail+.02, rail, 0.07, 0, y, 0.055, frameMaterial, surface);
               }
-              const title = label(work.title, Math.max(width, 2), 0.18, 36);
-              title.position.set(0, -height / 2 - 0.28, 0.085);
-              group.add(title);
-              const tag = label(
-                work.collection === "exhibition"
-                  ? "EXHIBITION RECONSTRUCTION"
-                  : "PERSONAL INTERPRETATION",
-                2.4,
-                0.14,
-                22,
-                "#bcae95",
-              );
-              tag.position.set(0, -height / 2 - 0.49, 0.085);
-              group.add(tag);
+              const title = label(montage ? String(index+1).padStart(2,"0") : work.title, montage ? .3 : Math.max(width,2), montage ? .09 : .18, montage ? 220 : 36);
+              title.position.set(0,-height/2-(montage ? .08 : .28),.085);
+              surface.add(title);
+              if (!montage) {
+                const tag=label(work.collection === "exhibition" ? "Exhibition reconstruction" : "Reader interpretation",2.4,.14,22,"#bcae95");
+                tag.position.set(0,-height/2-.49,.085); surface.add(tag);
+              }
               renderer.shadowMap.needsUpdate = true;
               invalidate();
             },
-            undefined,
             () => {
               if (disposed) return;
+              pendingImages--;
               canvas.dataset.loadedImages = String(++settledImages);
               const failed = label(
                 "Image unavailable · open Collection",
-                3,
-                0.3,
+                montage ? .8 : 3,
+                montage ? .1 : .3,
                 34,
               );
-              group.add(failed);
+              surface.add(failed);
               invalidate();
             },
           );
+          }});
+          });
+          if (montage) {
+            const title=label(work.title,3.5,.18,36);title.position.set(0,-Math.ceil(panels.length/columns)*rowHeight/2-.2,.085);group.add(title);
+          }
+        } else if (work.object !== "syrup-glass") {
+          canvas.dataset.modeledObjects=String(Number(canvas.dataset.modeledObjects ?? 0)+1);
+          const pedestal=box(1,1.08,1,0,.54,0,dark,group);
+          const study=createObjectStudy(work.object!);
+          study.position.y=1.1; group.add(study);
+          const pool=new THREE.Mesh(new THREE.PlaneGeometry(3.6,3.6),poolMaterial);
+          pool.rotation.x=-Math.PI/2;pool.position.y=-.012;group.add(pool);
+          const fixture=new THREE.Mesh(new THREE.CylinderGeometry(.07,.09,.22,12),dark);
+          fixture.position.set(0,3.85,0);group.add(fixture);
+          // One inspection volume covers gaps in sparse sculptures and small relics.
+          const hitbox=box(.96,1.12,.96,0,1.65,0,new THREE.MeshBasicMaterial({transparent:true,opacity:0,depthWrite:false}),group);
+          hitbox.userData.work=work;clickable.push(hitbox);
+          const title=label(work.title,1.05,.16,70); title.position.set(0,.78,.507);group.add(title);
+          const tag=label("Object study · inspect",1.03,.11,30,"#bcae95");tag.position.set(0,.55,.508);group.add(tag);
+          pedestal.userData.work=work;clickable.push(pedestal);
+          study.traverse(child=>{ if(child instanceof THREE.Mesh){child.userData.work=work;clickable.push(child);} });
+          if (work.object==="film-screen" && work.referenceImage) {
+            imageJobs.push({position:group.position.clone(),started:false,load:()=>{
+              loadArt(work.referenceImage!,tex=>{
+                if(disposed){tex.dispose();return;} pendingImages--;tex.colorSpace=THREE.SRGBColorSpace;
+                const original=tex.image as HTMLImageElement, reduced=document.createElement("canvas");
+                const scale=Math.min(1,1024/Math.max(original.width,original.height));
+                reduced.width=Math.round(original.width*scale);reduced.height=Math.round(original.height*scale);
+                reduced.getContext("2d")!.drawImage(original,0,0,reduced.width,reduced.height);(tex as THREE.Texture).image=reduced;textures.push(tex);
+                const height=Math.min(.55,.84/(original.width/original.height));
+                const screen=new THREE.Mesh(new THREE.PlaneGeometry(height*original.width/original.height,height),new THREE.MeshBasicMaterial({map:tex,toneMapped:false}));
+                screen.position.set(0,1.67,.091);screen.userData.work=work;group.add(screen);clickable.push(screen);
+                canvas.dataset.loadedImages=String(++settledImages);invalidate();
+              },()=>{if(!disposed){pendingImages--;canvas.dataset.loadedImages=String(++settledImages);invalidate();}});
+            }});
+          }
         } else {
+          canvas.dataset.modeledObjects=String(Number(canvas.dataset.modeledObjects ?? 0)+1);
           const pedestal = box(1.0, 1.08, 1.0, 0, 0.54, 0, dark, group);
           pedestal.userData.work = work;
           clickable.push(pedestal);
@@ -526,7 +673,7 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
           title.position.set(0, 0.78, 0.507);
           group.add(title);
           const tag = label(
-            "EXHIBITION RECONSTRUCTION",
+            "Exhibition reconstruction",
             1.03,
             0.11,
             30,
@@ -571,7 +718,7 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
       renderer.shadowMap.needsUpdate = true;
       reset();
     }
-    runtime.current = { visit, visitRoom, visitReservation, setPlanning, reset, keys, install, enter, invalidate };
+    runtime.current = { visit, visitRoom, visitReservation, setPlanning, reset, toggleMouseLook, keys, axes, install, enter, invalidate };
     if (latest.current.entered) {
       install(latest.current.works);
       enter();
@@ -590,7 +737,7 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
       ray.setFromCamera(pointer,camera);
       const targets=clickable.filter(o=>!o.userData.reservation || latest.current.planning);
       const hit=ray.intersectObjects([...targets,...occluders],false)[0];
-      return hit && hit.distance<8 ? hit.object.userData.work ?? hit.object.userData.reservation : undefined;
+      return hit && hit.distance<(hit.object.userData.inspectDistance ?? 8) ? hit.object.userData.work ?? hit.object.userData.reservation : undefined;
     }
     function inspectAt(x: number, y: number) {
       const r=canvas.getBoundingClientRect();
@@ -604,13 +751,18 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
       dragged = false;
       px = e.clientX;
       py = e.clientY;
-      canvas.setPointerCapture(e.pointerId);
+      if (document.pointerLockElement !== canvas) canvas.setPointerCapture(e.pointerId);
       canvas.focus();
     }
     function move(e: PointerEvent) {
       if (!latest.current.entered || latest.current.paused) return;
       const locked = document.pointerLockElement === canvas;
-      if (!drag && !locked) return;
+      if (!drag && !locked) {
+        // Keep drag coordinates current while the pointer is free.
+        px = e.clientX;
+        py = e.clientY;
+        return;
+      }
       const dx = locked ? e.movementX : e.clientX - px,
         dy = locked ? e.movementY : e.clientY - py;
       px = e.clientX;
@@ -624,11 +776,45 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
     function up(e: PointerEvent) {
       if (!latest.current.entered || latest.current.paused) return;
       drag = false;
-      if (!dragged) inspectAt(e.clientX, e.clientY);
+      if (!dragged) {
+        if (document.pointerLockElement === canvas) {
+          const target = targetAt(new THREE.Vector2());
+          if (target) latest.current.onSelect(target);
+        } else inspectAt(e.clientX, e.clientY);
+      }
     }
-    function doubleClick() {
-      if (latest.current.entered && !latest.current.paused)
-        void canvas.requestPointerLock?.();
+    let capturePending = false;
+    function captureError() {
+      capturePending = false;
+      if (disposed) return;
+      latest.current.onMouseLook(document.pointerLockElement === canvas);
+      latest.current.onMouseLookError("Mouse capture unavailable. Drag to look; press M to retry.");
+    }
+    function toggleMouseLook() {
+      if (document.pointerLockElement === canvas) {
+        document.exitPointerLock();
+        return;
+      }
+      if (!latest.current.entered || latest.current.paused || capturePending) return;
+      capturePending = true;
+      try {
+        if (!canvas.requestPointerLock) { captureError(); return; }
+        // Request directly from the key event to retain the browser's user gesture.
+        const request = canvas.requestPointerLock();
+        request?.catch(captureError);
+      } catch { captureError(); }
+    }
+    function pointerLockChanged() {
+      capturePending = false;
+      const locked = document.pointerLockElement === canvas;
+      if (locked && (latest.current.paused || !latest.current.entered)) {
+        document.exitPointerLock();
+        return;
+      }
+      clear();
+      latest.current.onMouseLook(locked);
+      if (locked) { latest.current.onMouseLookError(""); canvas.focus(); }
+      invalidate();
     }
     function keydown(e: KeyboardEvent) {
       if (
@@ -671,7 +857,7 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
       keys.delete(mapping[e.code]);
     }
     const clear = () => {
-      keys.clear();
+      keys.clear();axes[0]=axes[1]=0;
       drag = false;
     };
     const visibility = () => {
@@ -687,11 +873,14 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
       frame = 0;
       latest.current.onUnavailable();
     };
+    const enterPointer=(e:PointerEvent)=>{px=e.clientX;py=e.clientY;};
+    canvas.addEventListener("pointerenter",enterPointer);
     canvas.addEventListener("pointerdown", down);
     canvas.addEventListener("pointermove", move);
     canvas.addEventListener("pointerup", up);
     canvas.addEventListener("pointercancel", clear);
-    canvas.addEventListener("dblclick", doubleClick);
+    document.addEventListener("pointerlockchange", pointerLockChanged);
+    document.addEventListener("pointerlockerror", captureError);
     canvas.addEventListener("webglcontextlost", lost);
     window.addEventListener("keydown", keydown);
     window.addEventListener("keyup", keyup);
@@ -709,13 +898,13 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
       const dt = Math.min((now - prev) / 1000, 0.05);
       prev = now;
       if (latest.current.paused) {
-        keys.clear();
+        keys.clear();axes[0]=axes[1]=0;
         if (document.pointerLockElement === canvas) document.exitPointerLock();
       }
       if (latest.current.entered && !latest.current.paused) {
-        let f = Number(keys.has("forward")) - Number(keys.has("back")),
-          s = Number(keys.has("right")) - Number(keys.has("left"));
-        const norm = Math.hypot(f, s) || 1;
+        let f = Number(keys.has("forward")) - Number(keys.has("back")) - axes[1],
+          s = Number(keys.has("right")) - Number(keys.has("left")) + axes[0];
+        const norm = Math.max(1, Math.hypot(f, s));
         f /= norm;
         s /= norm;
         const next = camera.position.clone();
@@ -734,14 +923,16 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
         }
       }
       if (latest.current.entered && latest.current.layout) {
-        const room=roomAt(latest.current.layout,camera.position.x,camera.position.z);
+        const room=locationAt(latest.current.layout,camera.position.x,camera.position.z);
         if (room && room.id!==lastRoom) { lastRoom=room.id; latest.current.onRoom(room.id); }
         canvas.dataset.room=lastRoom;
         canvas.dataset.planning=String(latest.current.planning);
       }
+      updateNearbyArt();
       renderer.render(scene, camera);
+      canvas.dataset.look=`${lookYaw.toFixed(3)},${lookPitch.toFixed(3)}`;
       canvas.dataset.position = `${camera.position.x.toFixed(2)},${camera.position.z.toFixed(2)}`;
-      if (latest.current.entered && !latest.current.paused && keys.size)
+      if (latest.current.entered && !latest.current.paused && (keys.size || axes.some(value=>value!==0)))
         frame = requestAnimationFrame(tick);
     }
     invalidate();
@@ -753,6 +944,8 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
       window.removeEventListener("keyup", keyup);
       window.removeEventListener("blur", clear);
       document.removeEventListener("visibilitychange", visibility);
+      document.removeEventListener("pointerlockchange", pointerLockChanged);
+      document.removeEventListener("pointerlockerror", captureError);
       if (document.pointerLockElement === canvas) document.exitPointerLock();
       scene.traverse((o) => {
         if (o instanceof THREE.Mesh || o instanceof THREE.LineSegments) {

@@ -1,13 +1,20 @@
+import { prepareSceneMedia, type PreviewIndex, type SceneMedia } from "./scene-media";
+import { Joystick } from "./joystick";
 import { createRoot } from "react-dom/client";
 import { useEffect, useRef, useState } from "react";
 import { Gallery } from "./scene";
 import type { Catalog, GalleryHandle, Work } from "./types";
-import { reservationTitle, validateLayout, type Layout, type Reservation } from "./layout";
+import { locationLabel, reservationTitle, validateLayout, type Layout, type Reservation } from "./layout";
 import { RoutePanel } from "./route";
 import { ArtImage } from "./art-image";
 import "./style.css";
 
 function App() {
+  const [mouseLook,setMouseLook]=useState(false);
+  const [mouseLookError,setMouseLookError]=useState("");
+  const [previews,setPreviews]=useState<PreviewIndex>({});
+  const [media,setMedia]=useState<SceneMedia>(new Map());
+  const [loadProgress,setLoadProgress]=useState(0);
   const [entered, setEntered] = useState(false);
   const [agreed, setAgreed] = useState(false);
   const [catalog, setCatalog] = useState<Catalog>();
@@ -16,7 +23,7 @@ function App() {
   const [route, setRoute] = useState(false);
   const [reservation, setReservation] = useState<Reservation>();
   const [roomId, setRoomId] = useState("chamber-1");
-  const room = layout?.rooms.find(r => r.id === roomId);
+  const room = layout ? locationLabel(layout, roomId) : undefined;
   const [error, setError] = useState("");
   const [selected, setSelected] = useState<Work>();
   const [browse, setBrowse] = useState(false);
@@ -83,9 +90,26 @@ function App() {
     if (overlay)
       dialog.current?.querySelector<HTMLButtonElement>("button")?.focus();
   }, [selected?.id, reservation?.id, route, browse, about, help]);
+  useEffect(() => {
+    const toggleMouseLook = (event: KeyboardEvent) => {
+      if (!entered || !graphics || overlay || event.defaultPrevented || event.repeat ||
+          event.ctrlKey || event.altKey || event.metaKey || event.shiftKey ||
+          event.key.toLowerCase() !== "m" ||
+          !window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+      const target = event.target;
+      if (target instanceof HTMLElement &&
+          (target.isContentEditable || target.closest("input, textarea, select"))) return;
+      event.preventDefault();
+      setMouseLookError("");
+      gallery.current?.toggleMouseLook();
+    };
+    window.addEventListener("keydown", toggleMouseLook);
+    return () => window.removeEventListener("keydown", toggleMouseLook);
+  }, [entered, graphics, overlay]);
   async function enter() {
     if (!agreed || loading) return;
     setLoading(true);
+    setLoadProgress(0);
     setError("");
     try {
       const [response, planResponse] = await Promise.all([
@@ -100,6 +124,8 @@ function App() {
         throw new Error("This collection format is not supported.");
       const plan = await planResponse.json() as Layout;
       validateLayout(plan, data.works.map(w => w.id));
+      const prepared=await prepareSceneMedia(data,graphics,setLoadProgress);
+      setPreviews(prepared.previews);setMedia(prepared.media);
       setLayout(plan);
       setCatalog(data);
       setEntered(true);
@@ -139,6 +165,9 @@ function App() {
         entered={entered}
         layout={layout}
         planning={planning}
+        onMouseLook={setMouseLook}
+        onMouseLookError={setMouseLookError}
+        media={media}
         onRoom={setRoomId}
         works={catalog?.works ?? []}
         paused={overlay}
@@ -225,7 +254,7 @@ function App() {
                 disabled={!agreed || loading}
                 onClick={enter}
               >
-                {loading ? "Opening the exhibition…" : "Enter the exhibition"}
+                {loading ? `Preparing the gallery · ${loadProgress}%` : "Enter the exhibition"}
                 <span aria-hidden="true">↗</span>
               </button>
               {error && (
@@ -263,39 +292,7 @@ function App() {
                     </small>
                   </button>
                 )}
-                <div className="walk-pad" aria-label="Movement controls">
-                  {[
-                    ["forward", "↑"],
-                    ["left", "←"],
-                    ["back", "↓"],
-                    ["right", "→"],
-                  ].map(([direction, label]) => (
-                    <button
-                      key={direction}
-                      aria-label={`Move ${direction}`}
-                      onContextMenu={(e) => e.preventDefault()}
-                      onPointerDown={(e) => {
-                        e.preventDefault();
-                        e.currentTarget.setPointerCapture(e.pointerId);
-                        gallery.current?.move(direction, true);
-                      }}
-                      onPointerUp={() =>
-                        gallery.current?.move(direction, false)
-                      }
-                      onPointerCancel={() => gallery.current?.move(direction, false)}
-                      onLostPointerCapture={() => gallery.current?.move(direction, false)}
-                      onKeyDown={(e) => {
-                        if (e.code === "Space" || e.code === "Enter") {
-                          e.preventDefault(); gallery.current?.move(direction, true);
-                        }
-                      }}
-                      onKeyUp={() => gallery.current?.move(direction, false)}
-                      onBlur={() => gallery.current?.move(direction, false)}
-                    >
-                      {label}
-                    </button>
-                  ))}
-                </div>
+                <Joystick onMove={(x,y)=>gallery.current?.steer(x,y)} />
               </>
             ) : (
               <div className="graphics-fallback">
@@ -344,9 +341,12 @@ function App() {
             <span className="footer-center">Curated by Isaac</span>
           )}
           {entered ? (
-            <button className="nav-link" onClick={() => setHelp(true)}>
-              How to explore <span aria-hidden="true">?</span>
-            </button>
+            <div className="explore-controls">
+              <button className="nav-link" onClick={() => setHelp(true)}>How to explore <span aria-hidden="true">?</span></button>
+              {graphics && <span className="mouse-look-status" role="status">
+                {mouseLookError || <>Mouse look {mouseLook ? "on" : "off"} · <kbd>M</kbd> to {mouseLook ? "release" : "capture"}{mouseLook && " · Esc also releases"}</>}
+              </span>}
+            </div>
           ) : (
             <span className="footer-right">
               LOCAL PREVIEW <span className="status-dot" />
@@ -388,8 +388,10 @@ function App() {
             ) : selected ? (
               <>
                 <div className="work-image">
-                  {selected.image ? (
-                    <ArtImage key={selected.image} image={selected.image} alt={selected.alt} />
+                  {selected.panels ? (
+                    <Montage key={selected.id} work={selected} />
+                  ) : (selected.referenceImage ?? selected.image) ? (
+                    <ArtImage key={selected.referenceImage ?? selected.image} image={(selected.referenceImage ?? selected.image)!} alt={selected.alt} />
                   ) : (
                     <ObjectStudy />
                   )}
@@ -402,6 +404,8 @@ function App() {
                   </p>
                   <h2 id="dialog-title">{selected.title}</h2>
                   <p className="medium">{selected.medium}</p>
+                  {selected.wallText && <p className="reference-note">Image reference · The passage displays the wording directly on its wall. The architecture in this reference image is imagined.</p>}
+                  {selected.referenceImage && <p className="reference-note">Image reference · The gallery displays this work as a 3D object. The model and reference are separate interpretations.</p>}
                   <p>{selected.description}</p>
                   {selected.placement && <div className="placement-note">
                     <h3>{selected.placement.label}</h3>
@@ -428,6 +432,7 @@ function App() {
                   <button
                     className="text-action"
                     onClick={() => {
+                      setIndex(catalog!.works.findIndex(work=>work.id===selected.id));
                       gallery.current?.visit(selected.id);
                       close();
                     }}
@@ -469,9 +474,9 @@ function App() {
                       onClick={() => view(work)}
                     >
                       <div className="card-image">
-                        {work.image ? (
+                        {(work.referenceImage ?? work.image) ? (
                           <img
-                            src={`/collection/${work.image}`}
+                            src={`/collection/${previews[work.referenceImage ?? work.image!]?.image ?? work.referenceImage ?? work.image}`}
                             alt={work.alt}
                             loading="lazy"
                           />
@@ -488,6 +493,7 @@ function App() {
                               : "PERSONAL INTERPRETATION"}
                           </small>
                           <h3>{work.title}</h3>
+                          {work.panels && <p>{work.panels.length}-image {work.presentation === "variants" ? "comparison · Alternate interpretations" : "montage · View in order"}</p>}
                         </div>
                         <span aria-hidden="true">↗</span>
                       </div>
@@ -547,14 +553,11 @@ function App() {
                 <dl className="controls-list">
                   <dt>Look around</dt>
                   <dd>
-                    Drag the room with your mouse or one finger. Desktop:
-                    double-click the room to capture the mouse; Escape releases
-                    it.
+                    Drag with your mouse or right thumb. On desktop, press M to capture the mouse. The cursor disappears and mouse movement turns the camera freely around the centered crosshair, without screen-edge limits. Press M again or Escape to release it. Opening a panel also releases the mouse.
                   </dd>
                   <dt>Walk</dt>
                   <dd>
-                    W A S D or the arrow keys. Touch devices have movement
-                    buttons.
+                    W A S D or arrow keys. On touch devices, drag the left joystick; pushing farther walks faster. Release it to stop.
                   </dd>
                   <dt>Inspect</dt>
                   <dd>
@@ -576,6 +579,25 @@ function App() {
       )}
     </>
   );
+}
+
+function Montage({work}: {work: Work}) {
+  const panels=work.panels!;
+  const [index,setIndex]=useState(0);
+  const panel=panels[index];
+  return <div className="sequence-view" aria-label={work.presentation === "variants" ? "Alternate interpretations" : "Ordered montage"}>
+    <div className="sequence-main"><ArtImage key={panel.image} image={panel.image} alt={panel.alt} /></div>
+    <div className="sequence-navigation">
+      <button aria-label={work.presentation === "variants" ? "Previous interpretation" : "Previous montage image"} disabled={index===0} onClick={()=>setIndex(i=>i-1)}>←</button>
+      <p aria-live="polite"><span>{String(index+1).padStart(2,"0")} / {panels.length}</span><br />{panel.title}</p>
+      <button aria-label={work.presentation === "variants" ? "Next interpretation" : "Next montage image"} disabled={index===panels.length-1} onClick={()=>setIndex(i=>i+1)}>→</button>
+    </div>
+    <ol className="sequence-thumbnails" aria-label={work.presentation === "variants" ? "Alternate interpretations" : "Montage sequence, read left to right"}>
+      {panels.map((item,i)=><li key={item.image}><button aria-label={`Image ${i+1}: ${item.title}`} aria-pressed={i===index} onClick={()=>setIndex(i)}>
+        <img src={`/collection/${item.image}`} alt="" loading="lazy" /><span>{String(i+1).padStart(2,"0")}</span>
+      </button></li>)}
+    </ol>
+  </div>;
 }
 
 function ObjectStudy() {

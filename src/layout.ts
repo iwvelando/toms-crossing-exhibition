@@ -11,12 +11,13 @@ export type Reservation = {
   placementStatus: "candidate" | "verified";
   position: Vector; camera: Vector; angle: number; footprint: Vector;
   workId?: string;
+  displaySize?: [number, number];
 };
 export type Layout = {
   version: 1;
   rooms: Room[];
-  floors: { id: string; bounds: Bounds; tone: string }[];
-  walls: { a: Point; b: Point; room: string; tone: string; partition: boolean }[];
+  floors: { id: string; bounds: Bounds; tone: string; ceilingHeight?: number }[];
+  walls: { a: Point; b: Point; room: string; tone: string; partition: boolean; height?: number }[];
   reservations: Reservation[];
 };
 export const reservationTitle = (r: Reservation) =>
@@ -27,6 +28,21 @@ export function contains(b: Bounds, x: number, z: number) {
 export function roomAt(layout: Layout, x: number, z: number) {
   return layout.rooms.find(r => contains(r.bounds, x, z)) ??
     (contains([15,20,-34.5,-28.5], x,z) ? layout.rooms.find(r => r.id === "chamber-3") : undefined);
+}
+export function locationLabel(layout: Layout, id: string) {
+  const room=layout.rooms.find(r=>r.id===id);
+  if (room) return room;
+  const passage=/^passage-(\d)-(\d)$/.exec(id);
+  return {title: id==="foyer" ? "Foyer" : "Passage", subtitle: passage
+    ? `Between Chambers ${passage[1]} and ${passage[2]}`
+    : id==="passage-annex" ? "To the interpretation annex"
+    : id==="passage-side" ? "To the side gallery" : "The exhibition"};
+}
+export function locationAt(layout: Layout, x: number, z: number) {
+  const room=roomAt(layout,x,z);
+  if (room) return room;
+  const floor=layout.floors.find(f=>contains(f.bounds,x,z));
+  return floor ? {id:floor.id,...locationLabel(layout,floor.id)} : undefined;
 }
 export function segmentDistance(x: number, z: number, a: Point, b: Point) {
   const dx = b[0] - a[0], dz = b[1] - a[1];

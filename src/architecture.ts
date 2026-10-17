@@ -72,7 +72,7 @@ export function prism(points: Point[],bottom: number,top: number) {
 export const BASE_HEIGHT=.09;
 export function wallGeometry(wall: Wall,walls: Wall[]) {
   return {
-    wall: prism(wallFootprint(wall,walls,.24),BASE_HEIGHT,wall.partition?3.6:4.8),
+    wall: prism(wallFootprint(wall,walls,.24),BASE_HEIGHT,wall.height ?? (wall.partition?3.6:4.8)),
     base: prism(wallFootprint(wall,walls,.28),0,BASE_HEIGHT),
   };
 }

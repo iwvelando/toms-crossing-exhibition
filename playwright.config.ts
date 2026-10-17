@@ -4,12 +4,16 @@ export default defineConfig({
   fullyParallel: true,
   workers: 2,
   use: {
-    baseURL: "http://127.0.0.1:4187",
+    baseURL: process.env.BASE_URL || "http://127.0.0.1:4187",
     channel: process.env.EXHIBITION_BROWSER_CHANNEL || undefined,
     trace: "retain-on-failure",
     launchOptions: { args: ["--use-angle=swiftshader"] },
   },
-  projects: [
+  projects: process.env.WEBKIT ? [{
+    name: "webkit",
+    testMatch: /launch\.spec\.ts/,
+    use: { ...devices["iPhone 15"] },
+  }] : [
     {
       name: "desktop",
       use: {
@@ -22,7 +26,7 @@ export default defineConfig({
       use: { ...devices["iPhone 13"], defaultBrowserType: "chromium" },
     },
   ],
-  webServer: {
+  webServer: process.env.BASE_URL ? undefined : {
     command: "npm run preview -- --port 4187 --strictPort",
     url: "http://127.0.0.1:4187",
     reuseExistingServer: false,

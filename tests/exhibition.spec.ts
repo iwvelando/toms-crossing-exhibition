@@ -55,9 +55,11 @@ test("walking, direct visits, and inspection work without pointer lock", async (
   if (testInfo.project.name === "desktop") {
     await canvas.focus();
     await page.keyboard.down("w");
-    await page.waitForTimeout(300);
-    await page.keyboard.up("w");
-    await expect(canvas).not.toHaveAttribute("data-position", "0.00,6.70");
+    try {
+      await expect(canvas).not.toHaveAttribute("data-position", "0.00,6.70");
+    } finally {
+      await page.keyboard.up("w");
+    }
   }
   await page.getByRole("button", { name: "Next artwork" }).click();
   await expect(canvas).toHaveAttribute("data-position", "0.00,3.40");
@@ -150,7 +152,7 @@ test("failed catalog request can be retried without bypassing the gate", async (
 test("story filters preserve access and text can be enlarged on a narrow screen", async ({ page }) => {
   await page.setViewportSize({ width: 320, height: 800 });
   await page.goto("/");
-  await page.addStyleTag({ content: "html { font-size: 200% !important; }" });
+  await page.evaluate(() => document.documentElement.style.setProperty("font-size", "200%", "important"));
   expect(await page.evaluate(() => [...document.querySelectorAll("body *")].filter(el => {
     const r = el.getBoundingClientRect(); return r.width && r.right > innerWidth + 1;
   }).map(el => ({ tag: el.tagName, class: el.className, width: el.getBoundingClientRect().width })))).toEqual([]);

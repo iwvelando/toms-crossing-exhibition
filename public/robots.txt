@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /collection/
+
+Sitemap: https://toms-crossing-exhibition.isaacvelando.com/sitemap.xml

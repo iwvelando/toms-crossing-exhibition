@@ -2,6 +2,8 @@ import { defineConfig, devices } from "@playwright/test";
 export default defineConfig({
   testDir: "./tests",
   fullyParallel: true,
+  reporter: process.env.CI ? "list" : undefined,
+  maxFailures: process.env.CI ? 3 : 0,
   // Hosted macOS renders this texture-heavy scene much more slowly than a local
   // GPU. Keep WebKit galleries sequential and budget for the complete room tour.
   workers: process.env.WEBKIT ? 1 : 2,

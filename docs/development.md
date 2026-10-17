@@ -101,6 +101,10 @@ Node tests, and the complete non-WebGL Collection fallback. Linux software WebGL
 was observed to stall preparation and input beyond the interaction-test deadlines;
 it is not the graphics path used for the full gallery suite. The required `verify`
 job requires all three jobs to pass.
+Main may reuse the exact build from a successful PR run of the same Git tree,
+repository, and workflow. In that case the main test jobs are skipped and `verify`
+requires the proven artifact; PR test jobs always run. Without a matching artifact,
+all tests run again. Keep this trust boundary intact when editing CI.
 Only main deploys, using the main-only `production` environment and a scoped OIDC
 role. No private book material or runtime secrets are needed. Deploy the tested build
 through CI; never upload source or bypass checks with a local content deployment.

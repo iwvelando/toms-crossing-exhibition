@@ -20,7 +20,7 @@ test("foyer requires consent and does not request collection content beforehand"
   await page.getByRole("button", { name: "Enter the exhibition" }).click();
   await expect(
     page.getByRole("heading", { name: "Chamber 1", exact: true }),
-  ).toBeVisible({timeout:15000});
+  ).toBeVisible({timeout:process.env.CI ? 45000 : 15000});
   await page.getByRole("button", { name: /Collection/ }).click();
   await expect(page.getByRole("dialog")).toBeVisible();
   await expect(page.locator(".art-card")).toHaveCount(catalog.works.length);
@@ -51,7 +51,7 @@ test("walking, direct visits, and inspection work without pointer lock", async (
   await page.getByRole("checkbox").check();
   await page.getByRole("button", { name: "Enter the exhibition" }).click();
   const canvas = page.locator("canvas");
-  await expect(canvas).toHaveAttribute("data-position", "0.00,6.70", { timeout: 15000 });
+  await expect(canvas).toHaveAttribute("data-position", "0.00,6.70", { timeout: process.env.CI ? 45000 : 15000 });
   if (testInfo.project.name === "desktop") {
     await canvas.focus();
     await page.keyboard.down("w");

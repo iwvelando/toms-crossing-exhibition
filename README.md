@@ -94,6 +94,8 @@ AWS infrastructure lives in `iwvelando/cloud-accounts`, under
 Chromium desktop/phone behavior, and WebKit launch behavior before publishing only
 `dist/` through a scoped OIDC role. The `production` environment permits main only.
 Merging a passing PR deploys; a live browser smoke check follows every deployment.
+Main reuses a successful PR's artifact only when its repository, workflow, and
+entire Git tree match; otherwise it runs the full checks again.
 Dependabot patch/minor updates merge after Verify succeeds and trigger deployment;
 major upgrades require review.
 

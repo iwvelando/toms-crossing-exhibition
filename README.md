@@ -1,6 +1,6 @@
 # Tom’s Crossing — An Unofficial Exhibition
 
-A local prototype of a walkable fan exhibition inspired by the novel by Mark Z.
+A walkable fan exhibition inspired by the novel by Mark Z.
 Danielewski. A spoiler-warning foyer leads to five connected chambers, an interpretation
 annex and connected collections, 28 modeled object displays, and a fully readable collection view.
 
@@ -51,7 +51,8 @@ They cover desktop and phone sizes, spoiler acceptance, content loading, movemen
 inspection, touch cancellation, keyboard focus, error recovery, idle draw calls,
 room connectivity, placeholder clearances, and the non-3D fallback. The phone
 project uses Chromium device emulation; it does not replace testing iOS Safari. Tests serve the
-built site on local port 4187. No hosting or deployment is configured.
+built site on local port 4187. `make test-webkit` runs the launch checks in WebKit
+using an iPhone profile; this is engine coverage, not a real-device Safari test.
 
 ## Collection and curation
 
@@ -80,10 +81,30 @@ WebP textures decode before entry, avoiding visible art pop-in. Full-resolution
 images are available in inspection. Fixed spotlight washes illuminate walls and
 object displays at every distance; outlined, transparent lettering retains contrast.
 
-Vite produces a static site with no accounts, analytics, backend, or paid runtime
-service. No hosting is configured. The foyer prevents accidental viewing through
+Vite produces a static site with no accounts, analytics, backend, or external
+application API. The foyer prevents accidental viewing through
 the interface; public source and asset URLs are directly accessible. Public release
-still requires content and attribution review.
+does not grant a blanket license to the novel or collection artwork.
+
+## Hosting
+
+The canonical URL is [toms-crossing-exhibition.isaacvelando.com](https://toms-crossing-exhibition.isaacvelando.com/).
+AWS infrastructure lives in `iwvelando/cloud-accounts`, under
+`sites/toms-crossing-exhibition.isaacvelando.com`. GitHub Actions checks the build,
+Chromium desktop/phone behavior, and WebKit launch behavior before publishing only
+`dist/` through a scoped OIDC role. The `production` environment permits main only.
+Merging a passing PR deploys; a live browser smoke check follows every deployment.
+Main reuses a successful PR's artifact only when its repository, workflow, and
+entire Git tree match; otherwise it runs the full checks again.
+Dependabot patch/minor updates merge after Verify succeeds and trigger deployment;
+major upgrades require review.
+
+The share card uses the exhibition's doorway motif without revealing collection
+artwork. Its title and description match the page. Absolute canonical and Open Graph
+URLs point at production; `make share-card` regenerates the committed card and opaque
+Apple icon on the rendering machine. Inspect both images before committing them.
+`robots.txt` advertises the root-only `sitemap.xml` and discourages collection crawling.
+These directives do not restrict access to public images or replace the spoiler gate.
 
 See [development and deployment preparation](docs/development.md) for the code map,
 checks, native mouse-capture testing, and static-hosting constraints. The

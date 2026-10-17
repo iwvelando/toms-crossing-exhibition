@@ -82,3 +82,12 @@ Do not publish, push, deploy, merge, change visibility, or add paid services wit
 user authorization for that action. Existing authorization in the conversation
 remains valid. Future deployment work should begin with the constraints in
 [development](docs/development.md#deployment-preparation).
+
+The canonical host is `toms-crossing-exhibition.isaacvelando.com`; its infrastructure
+belongs to `iwvelando/cloud-accounts`. Main deploys builds that passed `check`, `linux`,
+`webkit`, and aggregate `verify`, reusing a successful PR's exact Git tree when available.
+Preserve the main-only `production` environment,
+scoped OIDC deployment, and read-only live smoke checks. Keep preview and CloudFront
+CSP identical. Dependabot patch/minor updates merge and deploy after Verify; majors
+need review. Preserve the root-only sitemap, robots collection restriction, spoiler-free
+share card, and runtime license notices. See development for caching and release order.

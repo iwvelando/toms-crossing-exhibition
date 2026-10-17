@@ -1,7 +1,7 @@
 .DEFAULT_GOAL := help
 DEV_PORT ?= 5173
 PREVIEW_PORT ?= 4173
-.PHONY: help setup dev dev-lan build preview preview-lan test check cert
+.PHONY: help setup dev dev-lan build preview preview-lan test check cert share-card test-webkit
 
 help:
 	@echo "setup        Install locked dependencies"
@@ -36,3 +36,9 @@ test:
 	npm test
 
 check: build test
+
+share-card: build
+	node scripts/build-share-card.mjs
+
+test-webkit: build
+	WEBKIT=1 npx playwright test

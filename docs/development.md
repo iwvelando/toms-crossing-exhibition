@@ -72,10 +72,12 @@ prevent a static build. Optimize only with measured benefit and regression check
 
 ## Deployment preparation
 
-No deployment is configured. A future deployment task can host `dist/` on a static
-host, but should first choose a destination and review public content and rights
-with the owner. Do not change repository visibility, create paid services, or
-publish a site merely to test deployment scaffolding. Do not add a blanket artwork
+The public deployment serves `dist/` at
+`https://toms-crossing-exhibition.isaacvelando.com/`. Infrastructure belongs to
+`iwvelando/cloud-accounts` (`sites/toms-crossing-exhibition.isaacvelando.com`).
+The owner authorized this release and public repository visibility. Future visibility,
+hosting, and release changes still need authorization; do not publish merely to test
+deployment scaffolding. Do not add a blanket artwork
 license: the novel, generated interpretations, application code, and dependencies
 have distinct attribution and rights considerations.
 
@@ -93,8 +95,40 @@ and previews can be cached immutably. Revalidate HTML, catalog, layout, and prev
 manifest, and publish them with their assets as one release to avoid mixed versions.
 The foyer is an accidental-spoiler guard, not security: assets and source are public.
 
-Continuous integration can run the existing build and test commands on a compatible
-Node runtime with Playwright Chromium installed. No private book material or runtime
-secrets are needed. Keep deployment credentials outside source and require explicit
-release authorization. This document records preparation constraints; it does not
-claim a host, release pipeline, or browser matrix has been validated.
+`.github/workflows/ci.yml` runs `make check` under Node 22 with Playwright Chromium
+and `make test-webkit` on macOS, using native graphics. Linux checks the build,
+Node tests, and the complete non-WebGL Collection fallback. Linux software WebGL
+was observed to stall preparation and input beyond the interaction-test deadlines;
+it is not the graphics path used for the full gallery suite. The required `verify`
+job requires all three jobs to pass.
+Main may reuse the exact build from a successful PR run of the same Git tree,
+repository, and workflow. In that case the main test jobs are skipped and `verify`
+requires the proven artifact; PR test jobs always run. Without a matching artifact,
+all tests run again. Keep this trust boundary intact when editing CI.
+Only main deploys, using the main-only `production` environment and a scoped OIDC
+role. No private book material or runtime secrets are needed. Deploy the tested build
+through CI; never upload source or bypass checks with a local content deployment.
+Dependabot patch/minor updates use the reference safe-update guard and dispatch
+Verify on main after merging, so they also deploy. Major upgrades wait for review.
+
+The build validates the complete collection, includes runtime dependency notices,
+and rejects private artifacts. Content-hashed JavaScript, artwork and previews upload
+first with immutable caching and retain old versions for open visitors. Mutable HTML
+and collection manifests revalidate; CloudFront is invalidated after upload. Keep
+`deploy/content-security-policy.txt` identical to the Terraform policy: preview tests
+run under it and deployment checks the live header. Any new resource source requires
+testing and coordinated CSP changes in both repositories.
+`style-src-attr 'unsafe-inline'` permits dynamic element styles and WebKit's native
+select implementation; stylesheet sources and script execution stay restricted to
+this origin. The WebKit smoke test reproduced a native-select violation with the
+stricter policy before this targeted allowance.
+
+`tests/launch.spec.ts` provides read-only `@smoke` checks for consent, entry,
+inspection, CSP violations, canonical/share metadata, PNG dimensions, robots and
+sitemap. `BASE_URL=https://… npx playwright test --grep @smoke --project=desktop`
+runs against a deployed site without starting a local server. The sitemap lists only
+the foyer, since panels and rooms have no independent URLs. Keep collection assets
+out of the sitemap and preserve the crawler restriction without treating it as access
+control. `make share-card` renders the committed share image and Apple icon with a
+temporary preview on port 4174, then closes it. Use spoiler-free architecture and
+typography in public previews.

@@ -20,7 +20,7 @@ test("foyer requires consent and does not request collection content beforehand"
   await page.getByRole("button", { name: "Enter the exhibition" }).click();
   await expect(
     page.getByRole("heading", { name: "Chamber 1", exact: true }),
-  ).toBeVisible({timeout:15000});
+  ).toBeVisible({timeout:process.env.CI ? 45000 : 15000});
   await page.getByRole("button", { name: /Collection/ }).click();
   await expect(page.getByRole("dialog")).toBeVisible();
   await expect(page.locator(".art-card")).toHaveCount(catalog.works.length);
@@ -51,13 +51,15 @@ test("walking, direct visits, and inspection work without pointer lock", async (
   await page.getByRole("checkbox").check();
   await page.getByRole("button", { name: "Enter the exhibition" }).click();
   const canvas = page.locator("canvas");
-  await expect(canvas).toHaveAttribute("data-position", "0.00,6.70", { timeout: 15000 });
+  await expect(canvas).toHaveAttribute("data-position", "0.00,6.70", { timeout: process.env.CI ? 45000 : 15000 });
   if (testInfo.project.name === "desktop") {
     await canvas.focus();
     await page.keyboard.down("w");
-    await page.waitForTimeout(300);
-    await page.keyboard.up("w");
-    await expect(canvas).not.toHaveAttribute("data-position", "0.00,6.70");
+    try {
+      await expect(canvas).not.toHaveAttribute("data-position", "0.00,6.70");
+    } finally {
+      await page.keyboard.up("w");
+    }
   }
   await page.getByRole("button", { name: "Next artwork" }).click();
   await expect(canvas).toHaveAttribute("data-position", "0.00,3.40");
@@ -150,7 +152,7 @@ test("failed catalog request can be retried without bypassing the gate", async (
 test("story filters preserve access and text can be enlarged on a narrow screen", async ({ page }) => {
   await page.setViewportSize({ width: 320, height: 800 });
   await page.goto("/");
-  await page.addStyleTag({ content: "html { font-size: 200% !important; }" });
+  await page.evaluate(() => document.documentElement.style.setProperty("font-size", "200%", "important"));
   expect(await page.evaluate(() => [...document.querySelectorAll("body *")].filter(el => {
     const r = el.getBoundingClientRect(); return r.width && r.right > innerWidth + 1;
   }).map(el => ({ tag: el.tagName, class: el.className, width: el.getBoundingClientRect().width })))).toEqual([]);

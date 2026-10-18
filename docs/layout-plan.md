@@ -1,6 +1,6 @@
 # Growing the exhibition
 
-The current scene contains 188 works from 200 supplied images, across five main
+The current scene contains 198 works from 210 supplied images, across five main
 chambers and five connected collection spaces. The main route runs counterclockwise.
 The Route panel shows the entire floor plan and offers direct room visits. Collection
 provides every work and its full label without requiring movement through the scene.
@@ -43,7 +43,7 @@ medium, review its footprint, camera location and circulation deliberately. Keep
 candidate chronological placement. Do not equate a chapter of disclosure with the
 day depicted, or treat a group template as a count of original works.
 
-There are 211 reservations: 188 ready and 23 planning bays. Eighty prompt-only
+There are 221 reservations: 198 ready and 23 planning bays. Eighty prompt-only
 candidates remain in the private inventory without supplied images. The planning
 bays do not individually represent every one of those candidates. Expand capacity
 through reviewed placements, rather than automatically producing a fictional

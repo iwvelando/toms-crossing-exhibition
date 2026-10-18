@@ -2,6 +2,7 @@ import { test, expect } from "@playwright/test";
 import { readFileSync } from "node:fs";
 
 const canonical = "https://toms-crossing-exhibition.isaacvelando.com/";
+const workCount = JSON.parse(readFileSync(new URL("../public/collection/catalog.json", import.meta.url), "utf8")).works.length;
 const rooms: { id: string; title: string }[] = JSON.parse(readFileSync(new URL("../public/collection/layout.json", import.meta.url), "utf8")).rooms;
 
 test("@smoke launch metadata and crawler files describe only the foyer", async ({ page, request }) => {
@@ -62,11 +63,11 @@ test("@smoke production CSP preserves consent, entry and artwork inspection", as
   await page.getByRole("button", { name: "Enter the exhibition" }).click();
   await expect(page.getByRole("heading", { name: "Chamber 1", exact: true })).toBeVisible({ timeout: 30000 });
   await page.getByRole("button", { name: /Collection/ }).click();
-  await expect(page.locator(".art-card")).toHaveCount(188);
+  await expect(page.locator(".art-card")).toHaveCount(workCount);
   await page.getByLabel("Browse by story grouping").selectOption("chamber-1");
   await expect(page.locator(".art-card").first()).toBeVisible();
   await page.getByLabel("Browse by story grouping").selectOption("all");
-  await expect(page.locator(".art-card")).toHaveCount(188);
+  await expect(page.locator(".art-card")).toHaveCount(workCount);
   await page.locator(".art-card").filter({ has: page.getByRole("heading", { name: "Rear View", exact: true }) }).click();
   await expect(page.locator(".dialog img").first()).toBeVisible();
   await expect.poll(() => page.locator(".dialog img").first().evaluate((img: HTMLImageElement) => img.complete && img.naturalWidth > 0)).toBe(true);

@@ -1,6 +1,6 @@
 # Growing the exhibition
 
-The current scene contains 198 works from 210 supplied images, across five main
+The current scene contains 200 works from 212 supplied images, across five main
 chambers and five connected collection spaces. The main route runs counterclockwise.
 The Route panel shows the entire floor plan and offers direct room visits. Collection
 provides every work and its full label without requiring movement through the scene.
@@ -34,7 +34,9 @@ Chamber 3 has clear paths around freestanding displays and its projection alcove
 Chamber 4 combines perimeter displays, staggered interior walls, and the raised
 Cirque Wall. Its height is a spatial interpretation of the described verticality.
 The meadow painting occupies an unobstructed wall segment in Chamber 5, clear
-of the doorway. The newer annexes connect beyond Chamber 5.
+of the doorway. The newer annexes connect beyond Chamber 5. A short interior wall
+in Reader responses pairs the discovery scene with its companion evidence-sheet
+interpretation.
 
 Preserve stable reservation IDs and explicit work-to-slot assignments. An import
 must not reshuffle installed works based on catalog order. When changing a display
@@ -43,7 +45,7 @@ medium, review its footprint, camera location and circulation deliberately. Keep
 candidate chronological placement. Do not equate a chapter of disclosure with the
 day depicted, or treat a group template as a count of original works.
 
-There are 221 reservations: 198 ready and 23 planning bays. Eighty prompt-only
+There are 223 reservations: 200 ready and 23 planning bays. Eighty prompt-only
 candidates remain in the private inventory without supplied images. The planning
 bays do not individually represent every one of those candidates. Expand capacity
 through reviewed placements, rather than automatically producing a fictional

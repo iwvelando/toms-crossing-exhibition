@@ -1647,6 +1647,19 @@
       "room": "passage-response",
       "tone": "dark",
       "partition": false
+    },
+    {
+      "a": [
+        -69,
+        25.5
+      ],
+      "b": [
+        -57,
+        25.5
+      ],
+      "room": "reader-responses",
+      "tone": "dark",
+      "partition": true
     }
   ],
   "reservations": [
@@ -7163,6 +7176,56 @@
         0.08
       ],
       "workId": "study-287-what-the-microphone-cannot-bury"
+    },
+    {
+      "id": "reserve-288",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "candidate",
+      "room": "reader-responses",
+      "position": [
+        -65.5,
+        2.2,
+        25.66
+      ],
+      "angle": 0,
+      "camera": [
+        -65.5,
+        1.7,
+        28.8
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-288-there-it-was"
+    },
+    {
+      "id": "reserve-289",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "candidate",
+      "room": "reader-responses",
+      "position": [
+        -60.5,
+        2.2,
+        25.66
+      ],
+      "angle": 0,
+      "camera": [
+        -60.5,
+        1.7,
+        28.8
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-289-twenty-dollars-evidence-copy"
     }
   ]
 }

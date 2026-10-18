@@ -3425,6 +3425,32 @@
       "alt": "An angry man in a wheelchair rests a hand on his chest at a microphone. Eight translucent male figures stand behind him; a curling black ribbon with barred figures stretches over illuminated houses outside.",
       "frame": "gallery",
       "image": "assets/study-287-what-the-microphone-cannot-bury-75b75ee90d6eb9be.png"
+    },
+    {
+      "id": "study-288-there-it-was",
+      "title": "There it was",
+      "collection": "interpretation",
+      "medium": "Generated digital interpretation in oil-painting style, with a composited banknote",
+      "description": "At Jolene Riddle’s coffee table, a gloved investigator lifts a handwritten twenty-dollar bill from money spread on a towel. The surrounding faces turn toward the small document.",
+      "attribution": "Reader interpretation; no in-book artist attribution",
+      "credit": "Concept and direction: Isaac. Image generated with OpenAI; banknote composited from the companion evidence study.",
+      "note": "The title echoes the narrator’s announcement of the discovery. Concentrated light and dark brushwork emphasize the document’s significance. Faces, staging and the precise appearance of the handwriting are illustrative choices. The pictured bill is shared with Twenty Dollars — Evidence Copy.",
+      "alt": "A kneeling, gloved woman holds a worn twenty-dollar bill with tweezers above a towel of money. Two men and a gray-haired woman watch; the bill carries a cursive agreement and two stacked signatures.",
+      "frame": "gallery",
+      "image": "assets/study-288-there-it-was-8fa57de300797f65.png"
+    },
+    {
+      "id": "study-289-twenty-dollars-evidence-copy",
+      "title": "Twenty Dollars — Evidence Copy",
+      "collection": "interpretation",
+      "medium": "Generated digital interpretation in color-photocopy style",
+      "description": "Front and reverse views of one worn twenty-dollar bill appear on an imagined evidence sheet. The reverse carries the sale agreement for Navidad and Mouse, followed by Landry Gatestone’s and Russell Porch’s separate signatures.",
+      "attribution": "Reader interpretation; no in-book artist attribution",
+      "credit": "Concept and direction: Isaac. Image generated with OpenAI.",
+      "note": "Invented title and evidence-file presentation. Landry writes and signs the agreement, then Russell signs too. The individual letterforms, signature arrangement, damage pattern and selected historical currency series are illustrative choices. Companion to There it was.",
+      "alt": "An off-white sheet labeled Evidence Copy shows the front and reverse of a creased twenty-dollar bill. Blue cursive crosses the White House; Landry’s flowing signature sits above Russell’s heavier upright signature.",
+      "frame": "gallery",
+      "image": "assets/study-289-twenty-dollars-evidence-copy-718470f26e111521.png"
     }
   ]
 }

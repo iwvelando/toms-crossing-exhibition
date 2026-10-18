@@ -56,10 +56,10 @@ using an iPhone profile; this is engine coverage, not a real-device Safari test.
 
 ## Collection and curation
 
-The collection contains 200 images across 188 works, including an ordered twelve-image
+The collection contains 210 images across 198 works, including an ordered twelve-image
 montage, alternate realizations, and 28 modeled objects with inspection references.
 Ten connected spaces include the five chambers and interpretation annexes. The layout
-has 211 stable reservations, including 23 planning bays. Further prompt-only candidates
+has 221 stable reservations, including 23 planning bays. Further prompt-only candidates
 remain private; the bays are not a complete assignment of every future piece.
 
 Captions distinguish in-book attribution, the novel's author, and digital realization.

@@ -6913,6 +6913,256 @@
         0.08
       ],
       "workId": "study-264b-landry-present-by-her-absence"
+    },
+    {
+      "id": "reserve-278",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "candidate",
+      "room": "reader-responses",
+      "position": [
+        -69,
+        2.2,
+        38.34
+      ],
+      "angle": 3.141592653589793,
+      "camera": [
+        -69,
+        1.7,
+        35.2
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-278-a-dollar-kept-for-him"
+    },
+    {
+      "id": "reserve-279",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "candidate",
+      "room": "reader-responses",
+      "position": [
+        -65,
+        2.2,
+        38.34
+      ],
+      "angle": 3.141592653589793,
+      "camera": [
+        -65,
+        1.7,
+        35.2
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-279-the-witness-they-chose"
+    },
+    {
+      "id": "reserve-280",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "candidate",
+      "room": "reader-responses",
+      "position": [
+        -61,
+        2.2,
+        38.34
+      ],
+      "angle": 3.141592653589793,
+      "camera": [
+        -61,
+        1.7,
+        35.2
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-280-a-field-without-a-chance"
+    },
+    {
+      "id": "reserve-281",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "candidate",
+      "room": "reader-responses",
+      "position": [
+        -57,
+        2.2,
+        38.34
+      ],
+      "angle": 3.141592653589793,
+      "camera": [
+        -57,
+        1.7,
+        35.2
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-281-no-enemy-in-his-hand"
+    },
+    {
+      "id": "reserve-282",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "candidate",
+      "room": "reader-responses",
+      "position": [
+        -53,
+        2.2,
+        38.34
+      ],
+      "angle": 3.141592653589793,
+      "camera": [
+        -53,
+        1.7,
+        35.2
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-282-the-father-behind-him"
+    },
+    {
+      "id": "reserve-283",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "candidate",
+      "room": "reader-responses",
+      "position": [
+        -50.16,
+        2.2,
+        33.5
+      ],
+      "angle": -1.5707963267948966,
+      "camera": [
+        -53.3,
+        1.7,
+        33.5
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-283-one-more-minute-at-the-crossing"
+    },
+    {
+      "id": "reserve-284",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "candidate",
+      "room": "reader-responses",
+      "position": [
+        -50.16,
+        2.2,
+        29
+      ],
+      "angle": -1.5707963267948966,
+      "camera": [
+        -53.3,
+        1.7,
+        29
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-284-the-son-returning"
+    },
+    {
+      "id": "reserve-285",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "candidate",
+      "room": "reader-responses",
+      "position": [
+        -50.16,
+        2.2,
+        25
+      ],
+      "angle": -1.5707963267948966,
+      "camera": [
+        -53.3,
+        1.7,
+        25
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-285-where-the-glass-lets-light-in"
+    },
+    {
+      "id": "reserve-286",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "candidate",
+      "room": "reader-responses",
+      "position": [
+        -50.16,
+        2.2,
+        21
+      ],
+      "angle": -1.5707963267948966,
+      "camera": [
+        -53.3,
+        1.7,
+        21
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-286-the-last-run-through-the-freeze"
+    },
+    {
+      "id": "reserve-287",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "candidate",
+      "room": "reader-responses",
+      "position": [
+        -50.16,
+        2.2,
+        17
+      ],
+      "angle": -1.5707963267948966,
+      "camera": [
+        -53.3,
+        1.7,
+        17
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-287-what-the-microphone-cannot-bury"
     }
   ]
 }

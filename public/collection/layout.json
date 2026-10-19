@@ -1660,6 +1660,19 @@
       "room": "reader-responses",
       "tone": "dark",
       "partition": true
+    },
+    {
+      "a": [
+        -71,
+        31.5
+      ],
+      "b": [
+        -55,
+        31.5
+      ],
+      "room": "reader-responses",
+      "tone": "dark",
+      "partition": true
     }
   ],
   "reservations": [
@@ -7226,6 +7239,181 @@
         0.08
       ],
       "workId": "study-289-twenty-dollars-evidence-copy"
+    },
+    {
+      "id": "reserve-290",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "candidate",
+      "room": "reader-responses",
+      "position": [
+        -69,
+        2.2,
+        31.66
+      ],
+      "angle": 0,
+      "camera": [
+        -69,
+        1.7,
+        34.8
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-290-a-head-in-his-lap"
+    },
+    {
+      "id": "reserve-291",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "candidate",
+      "room": "reader-responses",
+      "position": [
+        -65,
+        2.2,
+        31.66
+      ],
+      "angle": 0,
+      "camera": [
+        -65,
+        1.7,
+        34.8
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-291-son-of-a-gun-again"
+    },
+    {
+      "id": "reserve-292",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "candidate",
+      "room": "reader-responses",
+      "position": [
+        -61,
+        2.2,
+        31.66
+      ],
+      "angle": 0,
+      "camera": [
+        -61,
+        1.7,
+        34.8
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-292-my-dear-jojo"
+    },
+    {
+      "id": "reserve-293",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "candidate",
+      "room": "reader-responses",
+      "position": [
+        -57,
+        2.2,
+        31.66
+      ],
+      "angle": 0,
+      "camera": [
+        -57,
+        1.7,
+        34.8
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-293-i-shall-not-unhand-it"
+    },
+    {
+      "id": "reserve-294",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "candidate",
+      "room": "reader-responses",
+      "position": [
+        -67,
+        2.2,
+        25.34
+      ],
+      "angle": 3.141592653589793,
+      "camera": [
+        -67,
+        1.7,
+        22.2
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-294-no-way-out"
+    },
+    {
+      "id": "reserve-295",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "candidate",
+      "room": "reader-responses",
+      "position": [
+        -63,
+        2.2,
+        25.34
+      ],
+      "angle": 3.141592653589793,
+      "camera": [
+        -63,
+        1.7,
+        22.2
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-295-a-pillar-of-the-community"
+    },
+    {
+      "id": "reserve-296",
+      "group": false,
+      "assetStatus": "ready",
+      "placementStatus": "candidate",
+      "room": "reader-responses",
+      "position": [
+        -59,
+        2.2,
+        25.34
+      ],
+      "angle": 3.141592653589793,
+      "camera": [
+        -59,
+        1.7,
+        22.2
+      ],
+      "kind": "panel",
+      "footprint": [
+        3.45,
+        2.18,
+        0.08
+      ],
+      "workId": "study-296-as-he-deserves"
     }
   ]
 }

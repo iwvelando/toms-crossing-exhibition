@@ -1,8 +1,8 @@
 # Tom’s Crossing — An Unofficial Exhibition
 
 A walkable fan exhibition inspired by the novel by Mark Z.
-Danielewski. A spoiler-warning foyer leads to five connected chambers, an interpretation
-annex and connected collections, 28 modeled object displays, and a fully readable collection view.
+Danielewski. A spoiler-warning foyer leads through five days and Some of what comes
+after, with connected exhibition collections, 28 modeled object displays, and a fully readable collection view.
 
 The audience is people who have finished the novel. The collection itself is still
 in progress. The room's architecture and arrangement are design interpretations;
@@ -58,8 +58,11 @@ using an iPhone profile; this is engine coverage, not a real-device Safari test.
 
 The collection contains 219 images across 207 works, including an ordered twelve-image
 montage, alternate realizations, and 28 modeled objects with inspection references.
-Ten connected spaces include the five chambers and interpretation annexes. The layout
-has 230 stable reservations, including 23 planning bays. Further prompt-only candidates
+Eight connected spaces include the five day chambers, the closing chapter, and the
+recollections and exhibition intermission. Scene interpretations
+join the day in which the narrative delivers them, including memories and symbolic
+composites. The in-book exhibition works retain their described chamber groupings. The layout
+has 227 stable reservations, including 20 planning bays. Further prompt-only candidates
 remain private; the bays are not a complete assignment of every future piece.
 
 Captions distinguish in-book attribution, the novel's author, and digital realization.

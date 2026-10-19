@@ -84,9 +84,9 @@
       "note": "A symbolic composite of two separate moments. The journal held as an impossible remnant of ash gives form to Isaac’s reading of it as memory and legacy. Closed eyes, red glass, and fractured panes express threatened loss; they are artistic choices, not a literal scene or a resolution of Landry’s fate. The stained-glass surface is simulated within a generated image.",
       "alt": "A stained-glass-style portrait of a bowed girl holding fragments, surrounded by mountain and fire imagery.",
       "placement": {
-        "room": "across-moments",
-        "label": "Across moments · Composite",
-        "note": "The image joins the diary fire and the later lookout in one symbolic portrait."
+        "room": "chamber-5",
+        "label": "Chamber 5 · Sunday · October 31, 1982",
+        "note": "Grouped with Sunday’s narrative, including retrospectives, symbolic composites and imagined possibilities conveyed in that sequence."
       },
       "frame": "none",
       "image": "assets/where-the-words-were-04d2a30f453e9f3a.png"
@@ -427,9 +427,9 @@
       "alt": "A mare nuzzles a black foal finding its feet in a sunny field.",
       "frame": "none",
       "placement": {
-        "room": "across-moments",
-        "label": "Across moments · Remembered life",
-        "note": "A retrospective sequence spanning different moments, placed together in the interpretation annex rather than assigned to one day."
+        "room": "chamber-5",
+        "label": "Chamber 5 · Sunday · October 31, 1982",
+        "note": "Grouped with Sunday’s narrative, including retrospectives, symbolic composites and imagined possibilities conveyed in that sequence."
       },
       "panels": [
         {
@@ -507,9 +507,9 @@
       "alt": "A triptych joining a foal and mare in snow, a boy tending a black horse, and a winged horse and rider beneath the moon.",
       "frame": "gallery",
       "placement": {
-        "room": "across-moments",
-        "label": "Across moments · Remembered life",
-        "note": "A retrospective sequence spanning different moments, placed together in the interpretation annex rather than assigned to one day."
+        "room": "chamber-5",
+        "label": "Chamber 5 · Sunday · October 31, 1982",
+        "note": "Grouped with Sunday’s narrative, including retrospectives, symbolic composites and imagined possibilities conveyed in that sequence."
       },
       "image": "assets/wings-were-always-there-944494ac07a52c41.png"
     },
@@ -1748,9 +1748,14 @@
       "alt": "A rider raises a burning branch above a precarious mountain ledge. Horses and a following rider climb through the rain below.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": "The fire cuts a narrow path through the dark; this is an imagined view, not a geographical map. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": "The fire cuts a narrow path through the dark; this is an imagined view, not a geographical map. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event.",
       "frame": "gallery",
-      "image": "assets/study-1-the-firebrand-7ec338340c700f12.png"
+      "image": "assets/study-1-the-firebrand-7ec338340c700f12.png",
+      "placement": {
+        "room": "chamber-1",
+        "label": "Chamber 1 · Through Wednesday",
+        "note": "Grouped with Wednesday’s narrative; earlier memories remain part of the chapter in which they are told."
+      }
     },
     {
       "id": "study-2-the-campfire-in-the-cliff-alcove",
@@ -1761,9 +1766,14 @@
       "alt": "Two young figures sit beside a small fire beneath an overhanging cliff, with their horses gathered in the rain beyond.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": " Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": " Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event.",
       "frame": "gallery",
-      "image": "assets/study-2-the-campfire-in-the-cliff-alcove-6454a52f484301b8.png"
+      "image": "assets/study-2-the-campfire-in-the-cliff-alcove-6454a52f484301b8.png",
+      "placement": {
+        "room": "chamber-1",
+        "label": "Chamber 1 · Through Wednesday",
+        "note": "Grouped with Wednesday’s narrative; earlier memories remain part of the chapter in which they are told."
+      }
     },
     {
       "id": "study-3-the-firebrand-charcoal-and-ink",
@@ -1774,9 +1784,14 @@
       "alt": "A vertical, nearly monochrome view of riders following a torch up a cliff. The flame is the image’s concentrated point of color.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": "An alternative treatment of The Firebrand, retained as a companion image. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": "An alternative treatment of The Firebrand, retained as a companion image. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event.",
       "frame": "gallery",
-      "image": "assets/study-3-the-firebrand-charcoal-and-ink-74d70fc83d09bf1c.png"
+      "image": "assets/study-3-the-firebrand-charcoal-and-ink-74d70fc83d09bf1c.png",
+      "placement": {
+        "room": "chamber-1",
+        "label": "Chamber 1 · Through Wednesday",
+        "note": "Grouped with Wednesday’s narrative; earlier memories remain part of the chapter in which they are told."
+      }
     },
     {
       "id": "study-5-under-the-last-lamp",
@@ -1787,9 +1802,14 @@
       "alt": "Two mounted friends pause beneath a streetlamp, its gold reflection stretching across the wet road.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": " Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": " Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event.",
       "frame": "gallery",
-      "image": "assets/study-5-under-the-last-lamp-624df8218a238986.png"
+      "image": "assets/study-5-under-the-last-lamp-624df8218a238986.png",
+      "placement": {
+        "room": "chamber-1",
+        "label": "Chamber 1 · Through Wednesday",
+        "note": "Grouped with Wednesday’s narrative; earlier memories remain part of the chapter in which they are told."
+      }
     },
     {
       "id": "study-6-there-she-goes",
@@ -1800,9 +1820,14 @@
       "alt": "Two friends stand above an autumn canyon, one pointing toward the distance, with horses waiting beside them.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": " Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": " Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event.",
       "frame": "gallery",
-      "image": "assets/study-6-there-she-goes-6f107cecc222a2a0.png"
+      "image": "assets/study-6-there-she-goes-6f107cecc222a2a0.png",
+      "placement": {
+        "room": "chamber-2",
+        "label": "Chamber 2 · Thursday",
+        "note": "Grouped with Thursday’s narrative, including recollections told within that day’s chapters."
+      }
     },
     {
       "id": "study-7-lights-at-the-canyon-mouth",
@@ -1813,9 +1838,14 @@
       "alt": "A closer view of the two friends on the cliff, looking toward small lights in the vast valley.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": "A companion to There She Goes, with a tighter focus on the watchers. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": "A companion to There She Goes, with a tighter focus on the watchers. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event.",
       "frame": "gallery",
-      "image": "assets/study-7-lights-at-the-canyon-mouth-e732c478147c7ed7.png"
+      "image": "assets/study-7-lights-at-the-canyon-mouth-e732c478147c7ed7.png",
+      "placement": {
+        "room": "chamber-2",
+        "label": "Chamber 2 · Thursday",
+        "note": "Grouped with Thursday’s narrative, including recollections told within that day’s chapters."
+      }
     },
     {
       "id": "study-8-the-race",
@@ -1826,9 +1856,14 @@
       "alt": "A rider balances on one leg atop a white horse while another rider in pink reaches outward, with a third watching from behind.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": "A deliberately exuberant composition built around movement and imbalance. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": "A deliberately exuberant composition built around movement and imbalance. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event.",
       "frame": "gallery",
-      "image": "assets/study-8-the-race-9012c3c142535a51.png"
+      "image": "assets/study-8-the-race-9012c3c142535a51.png",
+      "placement": {
+        "room": "chamber-2",
+        "label": "Chamber 2 · Thursday",
+        "note": "Grouped with Thursday’s narrative, including recollections told within that day’s chapters."
+      }
     },
     {
       "id": "study-9-let-this-sofa-be-her-coffin",
@@ -1839,9 +1874,14 @@
       "alt": "A woman lies curled beneath a dark covering on an ochre sofa in a cold, dim room.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": "The title expresses the artwork’s emotional register, not a literal coffin or confirmation of death. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": "The title expresses the artwork’s emotional register, not a literal coffin or confirmation of death. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event.",
       "frame": "gallery",
-      "image": "assets/study-9-let-this-sofa-be-her-coffin-f0eb831aa95f1202.png"
+      "image": "assets/study-9-let-this-sofa-be-her-coffin-f0eb831aa95f1202.png",
+      "placement": {
+        "room": "chamber-2",
+        "label": "Chamber 2 · Thursday",
+        "note": "Grouped with Thursday’s narrative, including recollections told within that day’s chapters."
+      }
     },
     {
       "id": "study-10-i-m-his-mother",
@@ -1852,9 +1892,14 @@
       "alt": "A woman faces young men gathered around arcade machines in a diner. The nearest young man turns toward her.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": " Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": " Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event.",
       "frame": "gallery",
-      "image": "assets/study-10-i-m-his-mother-1445013f8dbd0998.png"
+      "image": "assets/study-10-i-m-his-mother-1445013f8dbd0998.png",
+      "placement": {
+        "room": "chamber-2",
+        "label": "Chamber 2 · Thursday",
+        "note": "Grouped with Thursday’s narrative, including recollections told within that day’s chapters."
+      }
     },
     {
       "id": "study-11-the-real-horseradish",
@@ -1865,9 +1910,14 @@
       "alt": "An older man kneels over a prone figure on a ridge road, with another man and a vehicle behind him.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": "The expansive golden landscape contrasts with the compressed, unsettling action in the foreground. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": "The expansive golden landscape contrasts with the compressed, unsettling action in the foreground. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event.",
       "frame": "gallery",
-      "image": "assets/study-11-the-real-horseradish-15e99e39c3c638e4.png"
+      "image": "assets/study-11-the-real-horseradish-15e99e39c3c638e4.png",
+      "placement": {
+        "room": "chamber-2",
+        "label": "Chamber 2 · Thursday",
+        "note": "Grouped with Thursday’s narrative, including recollections told within that day’s chapters."
+      }
     },
     {
       "id": "study-12-gray-as-a-ghost",
@@ -1878,9 +1928,14 @@
       "alt": "A girl approaches from a pickup, watched from a doorway by a woman and a dog.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": "The title describes the interpretation’s sense of shock and pallor, not a literal apparition. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": "The title describes the interpretation’s sense of shock and pallor, not a literal apparition. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event.",
       "frame": "gallery",
-      "image": "assets/study-12-gray-as-a-ghost-6ea750d730d413b5.png"
+      "image": "assets/study-12-gray-as-a-ghost-6ea750d730d413b5.png",
+      "placement": {
+        "room": "chamber-2",
+        "label": "Chamber 2 · Thursday",
+        "note": "Grouped with Thursday’s narrative, including recollections told within that day’s chapters."
+      }
     },
     {
       "id": "study-14-the-bargain",
@@ -1891,9 +1946,14 @@
       "alt": "A pale young figure faces a dark figure beside a mountain campfire, holding a small glimmer of violet light.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": " Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": " Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event.",
       "frame": "gallery",
-      "image": "assets/study-14-the-bargain-e9f919979df9f18b.png"
+      "image": "assets/study-14-the-bargain-e9f919979df9f18b.png",
+      "placement": {
+        "room": "chamber-3",
+        "label": "Chamber 3 · Friday",
+        "note": "Grouped with Friday’s narrative, including recollections told within that day’s chapters."
+      }
     },
     {
       "id": "study-15-the-parade-of-the-dead",
@@ -1904,9 +1964,14 @@
       "alt": "Horses and shadowy figures gather around a pale boy beside a fire in a dark canyon.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": "An imaginative procession; the image is not a literal inventory of people present. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": "An imaginative procession; the image is not a literal inventory of people present. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event.",
       "frame": "gallery",
-      "image": "assets/study-15-the-parade-of-the-dead-d1b31f6340c1d170.png"
+      "image": "assets/study-15-the-parade-of-the-dead-d1b31f6340c1d170.png",
+      "placement": {
+        "room": "chamber-3",
+        "label": "Chamber 3 · Friday",
+        "note": "Grouped with Friday’s narrative, including recollections told within that day’s chapters."
+      }
     },
     {
       "id": "study-16-the-two-rangers",
@@ -1917,9 +1982,14 @@
       "alt": "Two climbers pause on a steep ledge, ropes at their waists, beneath the golden walls of a canyon.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": " Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": " Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event.",
       "frame": "gallery",
-      "image": "assets/study-16-the-two-rangers-3d715d3629ed218b.png"
+      "image": "assets/study-16-the-two-rangers-3d715d3629ed218b.png",
+      "placement": {
+        "room": "chamber-3",
+        "label": "Chamber 3 · Friday",
+        "note": "Grouped with Friday’s narrative, including recollections told within that day’s chapters."
+      }
     },
     {
       "id": "study-17-borrow-my-faith",
@@ -1930,9 +2000,14 @@
       "alt": "Two women sit together in a vehicle, one driving while the other turns toward her; a dog rests between them.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": " Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": " Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event.",
       "frame": "gallery",
-      "image": "assets/study-17-borrow-my-faith-f5338c249b7be77b.png"
+      "image": "assets/study-17-borrow-my-faith-f5338c249b7be77b.png",
+      "placement": {
+        "room": "chamber-3",
+        "label": "Chamber 3 · Friday",
+        "note": "Grouped with Friday’s narrative, including recollections told within that day’s chapters."
+      }
     },
     {
       "id": "study-18-ash-and-tom-together-again",
@@ -1943,9 +2018,14 @@
       "alt": "Two scenes share one image: a young man embraces a fallen pale horse, while a mounted pair rides beneath a brighter sky.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": "A composite of grief and imagined reunion, not a single simultaneous scene. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": "A composite of grief and imagined reunion, not a single simultaneous scene. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event.",
       "frame": "gallery",
-      "image": "assets/study-18-ash-and-tom-together-again-dacc682f23b25b2d.png"
+      "image": "assets/study-18-ash-and-tom-together-again-dacc682f23b25b2d.png",
+      "placement": {
+        "room": "chamber-3",
+        "label": "Chamber 3 · Friday",
+        "note": "Grouped with Friday’s narrative, including recollections told within that day’s chapters."
+      }
     },
     {
       "id": "study-19-we-was-playing-poker",
@@ -1956,9 +2036,14 @@
       "alt": "Men gather around a table covered with maps and scattered plates. One stands beneath a chandelier while the others look toward him.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": " Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": " Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event.",
       "frame": "gallery",
-      "image": "assets/study-19-we-was-playing-poker-f6bbacb98f56139f.png"
+      "image": "assets/study-19-we-was-playing-poker-f6bbacb98f56139f.png",
+      "placement": {
+        "room": "chamber-3",
+        "label": "Chamber 3 · Friday",
+        "note": "Grouped with Friday’s narrative, including recollections told within that day’s chapters."
+      }
     },
     {
       "id": "study-20-the-coffin-and-the-command",
@@ -1969,9 +2054,14 @@
       "alt": "An older man reaches over an open coffin as dark-clothed family members crowd around it.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": "The theatrical grouping emphasizes pressure and grief; identical conviction should not be inferred from the shared staging. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": "The theatrical grouping emphasizes pressure and grief; identical conviction should not be inferred from the shared staging. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event.",
       "frame": "gallery",
-      "image": "assets/study-20-the-coffin-and-the-command-bebfe7a343b51206.png"
+      "image": "assets/study-20-the-coffin-and-the-command-bebfe7a343b51206.png",
+      "placement": {
+        "room": "chamber-4",
+        "label": "Chamber 4 · Saturday · Cirque Wall",
+        "note": "Grouped with Saturday’s narrative. The scene and its visual realization remain distinct."
+      }
     },
     {
       "id": "study-21-the-hand-before-the-fangs",
@@ -1982,9 +2072,14 @@
       "alt": "A boy holds a snake above a girl beneath blankets while a pale companion watches from behind.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": "The frozen instant concentrates on hands, fear and restraint. The pale companion’s fully opaque appearance is an artistic choice. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": "The frozen instant concentrates on hands, fear and restraint. The pale companion’s fully opaque appearance is an artistic choice. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event.",
       "frame": "gallery",
-      "image": "assets/study-21-the-hand-before-the-fangs-d56e9d4736bc40ec.png"
+      "image": "assets/study-21-the-hand-before-the-fangs-d56e9d4736bc40ec.png",
+      "placement": {
+        "room": "chamber-4",
+        "label": "Chamber 4 · Saturday · Cirque Wall",
+        "note": "Grouped with Saturday’s narrative. The scene and its visual realization remain distinct."
+      }
     },
     {
       "id": "study-22-two-mothers-against-the-town",
@@ -1995,9 +2090,14 @@
       "alt": "Two women stand close together in a narrow street, surrounded by shadowed faces and buildings.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": "An abstract composite of isolation and resistance. The crowd is not a literal gathering, and the image does not assign a single opinion to every towns-person. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": "An abstract composite of isolation and resistance. The crowd is not a literal gathering, and the image does not assign a single opinion to every towns-person. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event.",
       "frame": "gallery",
-      "image": "assets/study-22-two-mothers-against-the-town-9501bc1111602d65.png"
+      "image": "assets/study-22-two-mothers-against-the-town-9501bc1111602d65.png",
+      "placement": {
+        "room": "chamber-4",
+        "label": "Chamber 4 · Saturday · Cirque Wall",
+        "note": "Grouped with Saturday’s narrative. The scene and its visual realization remain distinct."
+      }
     },
     {
       "id": "study-23-the-prize-of-loneliness",
@@ -2008,9 +2108,14 @@
       "alt": "A solitary figure sits on a precipice above an immense mountain basin, enclosed by translucent red brushstrokes.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": "The red enclosure is metaphorical rather than a physical feature of the landscape. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": "The red enclosure is metaphorical rather than a physical feature of the landscape. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event.",
       "frame": "gallery",
-      "image": "assets/study-23-the-prize-of-loneliness-63592a1d2add458d.png"
+      "image": "assets/study-23-the-prize-of-loneliness-63592a1d2add458d.png",
+      "placement": {
+        "room": "chamber-4",
+        "label": "Chamber 4 · Saturday · Cirque Wall",
+        "note": "Grouped with Saturday’s narrative. The scene and its visual realization remain distinct."
+      }
     },
     {
       "id": "study-24-the-weight-of-goodbyes",
@@ -2021,9 +2126,14 @@
       "alt": "Two women stand beside a dark river; the nearer woman looks down at a stone in her palm.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": "The image holds on a difficult pause, without depicting a completed act or resolving what follows. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": "The image holds on a difficult pause, without depicting a completed act or resolving what follows. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event.",
       "frame": "gallery",
-      "image": "assets/study-24-the-weight-of-goodbyes-437755f48f8c36ac.png"
+      "image": "assets/study-24-the-weight-of-goodbyes-437755f48f8c36ac.png",
+      "placement": {
+        "room": "chamber-5",
+        "label": "Chamber 5 · Sunday · October 31, 1982",
+        "note": "Grouped with Sunday’s narrative, including retrospectives, symbolic composites and imagined possibilities conveyed in that sequence."
+      }
     },
     {
       "id": "study-25-the-lives-they-might-have-made",
@@ -2034,35 +2144,50 @@
       "alt": "Several young people appear in imagined occupations and rooms, crossed by red bands of paint.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": "Counterfactual possibilities, not a record of careers they actually pursued. The red bands make the interruption visible. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": "Counterfactual possibilities, not a record of careers they actually pursued. The red bands make the interruption visible. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event.",
       "frame": "gallery",
-      "image": "assets/study-25-the-lives-they-might-have-made-2f375df8ab1b9806.png"
+      "image": "assets/study-25-the-lives-they-might-have-made-2f375df8ab1b9806.png",
+      "placement": {
+        "room": "chamber-5",
+        "label": "Chamber 5 · Sunday · October 31, 1982",
+        "note": "Grouped with Sunday’s narrative, including retrospectives, symbolic composites and imagined possibilities conveyed in that sequence."
+      }
     },
     {
       "id": "study-33-black-hat-a-generated-variation",
-      "title": "Black Hat · A Generated Variation",
-      "collection": "interpretation",
-      "medium": "Generated digital interpretation",
+      "title": "Black Hat",
+      "collection": "exhibition",
+      "medium": "Digital reconstruction of a two-dimensional work; original medium unspecified",
       "description": "A tall, thin boy in a black cowboy hat is crudely drawn with an enormous grin and awkward, elongated limbs.",
       "alt": "A thin human boy in a black cowboy hat, dark shirt and blue trousers, with a broad exaggerated grin on plain paper.",
-      "attribution": "Reader interpretation; no in-book artist attribution",
+      "attribution": "Craig Sandauer (name as transcribed)",
       "credit": "Generated image, selected by Isaac.",
-      "note": "The exaggerated grin remains on a human face. The spare drawing interprets the described awkward likeness; clothes, colors and exact features are artistic choices. Curatorial placement remains provisional.",
+      "note": "A reconstruction of the described exhibition work. The exaggerated grin remains on a human face. Clothes, colors and exact features are generated choices.",
       "frame": "gallery",
-      "image": "assets/study-33-black-hat-a-generated-variation-41722f4ab6c3eb71.png"
+      "image": "assets/study-33-black-hat-a-generated-variation-41722f4ab6c3eb71.png",
+      "placement": {
+        "room": "chamber-1",
+        "label": "Chamber 1 · Through Wednesday",
+        "note": "Reconstructs a work described in the first chamber of the in-book exhibition."
+      }
     },
     {
       "id": "study-76-portrait-on-newsprint-a-generated-departure",
-      "title": "Portrait on Newsprint · A Generated Study",
-      "collection": "interpretation",
-      "medium": "Generated digital interpretation",
+      "title": "Portrait on Newsprint",
+      "collection": "exhibition",
+      "medium": "Digital reconstruction of an ink portrait on a newspaper clipping with a photograph",
       "description": "A reproduced photograph of an older man sits above a splotched ink face on worn newspaper.",
       "alt": "An aged man’s black-and-white photograph above a roughly inked counterpart, with dark splashes obscuring newspaper columns.",
-      "attribution": "Reader interpretation; no in-book artist attribution",
+      "attribution": "Melissa Grant / Crystal Garp / Don Anna Hobbs (group credit; names as transcribed)",
       "credit": "Generated image, selected by Isaac.",
-      "note": "The aged face is an imagined likeness, not a verified portrait of Old Porch. The photograph and ink sketch interpret the newspaper format and its uneasy pairing of faces. Exact features and printed lettering are generated choices. Curatorial placement remains provisional.",
+      "note": "A reconstruction of the described newspaper portrait. The aged face is an imagined likeness, not a verified portrait of Old Porch. Exact features and printed lettering are generated choices; the group credit does not identify an individual maker for this piece.",
       "frame": "gallery",
-      "image": "assets/study-76-portrait-on-newsprint-a-generated-departure-276be49a5304b209.png"
+      "image": "assets/study-76-portrait-on-newsprint-a-generated-departure-276be49a5304b209.png",
+      "placement": {
+        "room": "chamber-2",
+        "label": "Chamber 2 · Thursday",
+        "note": "Reconstructs a work described in the second chamber of the in-book exhibition."
+      }
     },
     {
       "id": "study-65-the-crayon-fire-and-the-fallen-tree",
@@ -2848,7 +2973,7 @@
       "frame": "gallery",
       "placement": {
         "room": "recollections",
-        "label": "Recollections · An interpretation annex",
+        "label": "Recollections · Cal’s remembered works · Uncertain inventory",
         "note": "A curatorial annex separates uncertain memories from the confirmed chamber inventory."
       },
       "image": "assets/study-198-recollection-hatch-on-the-bed-f01e656012ecf0b9.png"
@@ -2866,7 +2991,7 @@
       "frame": "gallery",
       "placement": {
         "room": "recollections",
-        "label": "Recollections · An interpretation annex",
+        "label": "Recollections · Cal’s remembered works · Uncertain inventory",
         "note": "A curatorial annex separates uncertain memories from the confirmed chamber inventory."
       },
       "image": "assets/study-199-recollection-kelly-2ac1929bd917404b.png"
@@ -2884,7 +3009,7 @@
       "frame": "gallery",
       "placement": {
         "room": "recollections",
-        "label": "Recollections · An interpretation annex",
+        "label": "Recollections · Cal’s remembered works · Uncertain inventory",
         "note": "A curatorial annex separates uncertain memories from the confirmed chamber inventory."
       },
       "image": "assets/study-200-recollection-jewel-2c1f58f1b637b384.png"
@@ -2902,7 +3027,7 @@
       "frame": "gallery",
       "placement": {
         "room": "recollections",
-        "label": "Recollections · An interpretation annex",
+        "label": "Recollections · Cal’s remembered works · Uncertain inventory",
         "note": "A curatorial annex separates uncertain memories from the confirmed chamber inventory."
       },
       "image": "assets/study-201-recollection-bricky-7517a30060b13980.png"
@@ -2920,7 +3045,7 @@
       "frame": "gallery",
       "placement": {
         "room": "recollections",
-        "label": "Recollections · An interpretation annex",
+        "label": "Recollections · Cal’s remembered works · Uncertain inventory",
         "note": "A curatorial annex separates uncertain memories from the confirmed chamber inventory."
       },
       "image": "assets/study-203-recollection-old-porch-and-the-maps-b930c57072c109f8.png"
@@ -2938,7 +3063,7 @@
       "frame": "gallery",
       "placement": {
         "room": "recollections",
-        "label": "Recollections · An interpretation annex",
+        "label": "Recollections · Cal’s remembered works · Uncertain inventory",
         "note": "A curatorial annex separates uncertain memories from the confirmed chamber inventory."
       },
       "image": "assets/study-204-recollection-kevin-moffat-b52e1859ca2cb0ef.png"
@@ -2956,7 +3081,7 @@
       "frame": "gallery",
       "placement": {
         "room": "recollections",
-        "label": "Recollections · An interpretation annex",
+        "label": "Recollections · Cal’s remembered works · Uncertain inventory",
         "note": "A curatorial annex separates uncertain memories from the confirmed chamber inventory."
       },
       "image": "assets/study-205-recollection-mothers-in-oil-0e6e6fba058e43f6.png"
@@ -2974,7 +3099,7 @@
       "frame": "gallery",
       "placement": {
         "room": "recollections",
-        "label": "Recollections · An interpretation annex",
+        "label": "Recollections · Cal’s remembered works · Uncertain inventory",
         "note": "A curatorial annex separates uncertain memories from the confirmed chamber inventory."
       },
       "image": "assets/study-206-recollection-mothers-in-watercolor-f156998bf7e797d7.png"
@@ -2992,7 +3117,7 @@
       "frame": "gallery",
       "placement": {
         "room": "recollections",
-        "label": "Recollections · An interpretation annex",
+        "label": "Recollections · Cal’s remembered works · Uncertain inventory",
         "note": "A curatorial annex separates uncertain memories from the confirmed chamber inventory."
       },
       "image": "assets/study-207-recollection-mothers-in-charcoal-f51b5906b22b7d89.png"
@@ -3010,7 +3135,7 @@
       "frame": "gallery",
       "placement": {
         "room": "recollections",
-        "label": "Recollections · An interpretation annex",
+        "label": "Recollections · Cal’s remembered works · Uncertain inventory",
         "note": "A curatorial annex separates uncertain memories from the confirmed chamber inventory."
       },
       "image": "assets/study-209-the-ridge-and-the-small-fire-760caac1367b6b19.png"
@@ -3028,7 +3153,7 @@
       "frame": "gallery",
       "placement": {
         "room": "recollections",
-        "label": "Recollections · An interpretation annex",
+        "label": "Recollections · Cal’s remembered works · Uncertain inventory",
         "note": "A curatorial annex separates uncertain memories from the confirmed chamber inventory."
       },
       "image": "assets/study-210-four-horses-four-elements-78babb3f4d370de3.png"
@@ -3047,7 +3172,7 @@
       "wallText": "The inner awareness of one’s own mortality is perhaps the most anti-political experience there is. It signifies that we shall disappear from the world of appearances.",
       "placement": {
         "room": "afterimages",
-        "label": "Afterimages · 2031",
+        "label": "Exhibition intermission · New Hampshire · Gallery history",
         "note": "A separate curatorial wing for the later exhibition; this is not another room of the original Houston show."
       },
       "image": "assets/study-213-mortality-and-the-world-of-appearances-bae68a19db5392af.png"
@@ -3065,7 +3190,7 @@
       "frame": "none",
       "placement": {
         "room": "afterimages",
-        "label": "Afterimages · 2031",
+        "label": "Exhibition intermission · New Hampshire · Gallery history",
         "note": "A separate curatorial wing for the later exhibition; this is not another room of the original Houston show."
       },
       "image": "assets/study-217-rear-view-digital-return-70350452fc5fce47.png"
@@ -3083,7 +3208,7 @@
       "frame": "none",
       "placement": {
         "room": "afterimages",
-        "label": "Afterimages · 2031",
+        "label": "Exhibition intermission · New Hampshire · Gallery history",
         "note": "A separate curatorial wing for the later exhibition; this is not another room of the original Houston show."
       },
       "image": "assets/study-233-pillars-meadow-before-noon-digital-return-1b17e2fea5b85377.png"
@@ -3101,7 +3226,7 @@
       "frame": "none",
       "placement": {
         "room": "afterimages",
-        "label": "Afterimages · 2031",
+        "label": "Exhibition intermission · New Hampshire · Gallery history",
         "note": "A separate curatorial wing for the later exhibition; this is not another room of the original Houston show."
       },
       "image": "assets/study-234-lemon-cake-digital-return-cbd76822ea948317.png"
@@ -3120,7 +3245,7 @@
       "wallText": "rhyme and revel with the dead",
       "placement": {
         "room": "afterimages",
-        "label": "Afterimages · 2031",
+        "label": "Exhibition intermission · New Hampshire · Gallery history",
         "note": "A separate curatorial wing for the later exhibition; this is not another room of the original Houston show."
       },
       "image": "assets/study-236-rhyme-and-revel-with-the-dead-b5e574c00162169b.png"
@@ -3138,7 +3263,7 @@
       "object": "hologram-figure",
       "placement": {
         "room": "afterimages",
-        "label": "Afterimages · 2031",
+        "label": "Exhibition intermission · New Hampshire · Gallery history",
         "note": "A separate curatorial wing for the later exhibition; this is not another room of the original Houston show."
       },
       "referenceImage": "assets/study-246-old-porch-in-the-rain-holographic-return-4ecf628c3f9467d7.png"
@@ -3156,7 +3281,7 @@
       "object": "audio-station",
       "placement": {
         "room": "afterimages",
-        "label": "Afterimages · 2031",
+        "label": "Exhibition intermission · New Hampshire · Gallery history",
         "note": "A separate curatorial wing for the later exhibition; this is not another room of the original Houston show."
       },
       "referenceImage": "assets/study-247-nathan-nibley-s-cello-piece-listening-place-701b80e0a3eb4511.png"
@@ -3174,7 +3299,7 @@
       "frame": "none",
       "placement": {
         "room": "afterimages",
-        "label": "Afterimages · 2031",
+        "label": "Exhibition intermission · New Hampshire · Gallery history",
         "note": "A separate curatorial wing for the later exhibition; this is not another room of the original Houston show."
       },
       "image": "assets/study-251-the-campfire-with-tom-s-ghost-50da7356179559bd.png"
@@ -3188,9 +3313,14 @@
       "alt": "A gallery’s smashed windows and scattered frames meet an exterior engulfed in fire.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": "A composite joining damage and destruction at different moments. It does not establish who started a fire or combine those moments into one witnessed event. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": "A composite joining damage and destruction at different moments. It does not establish who started a fire or combine those moments into one witnessed event. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event.",
       "frame": "gallery",
-      "image": "assets/study-257-what-the-fire-leaves-unsaid-99b1ae89a101b168.png"
+      "image": "assets/study-257-what-the-fire-leaves-unsaid-99b1ae89a101b168.png",
+      "placement": {
+        "room": "afterimages",
+        "label": "Exhibition intermission · New Hampshire · Gallery history",
+        "note": "Part of the exhibition intermission, keeping the later New Hampshire exhibition and gallery history distinct from the closing chapter."
+      }
     },
     {
       "id": "study-258-the-sermon-and-the-mothers",
@@ -3201,9 +3331,14 @@
       "alt": "Two women sit in a church while a preacher gestures from the pulpit and a seated man watches.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": "The severe lighting and accusatory staging are interpretive choices, not a claim that every listener shares one judgment. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": "The severe lighting and accusatory staging are interpretive choices, not a claim that every listener shares one judgment. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event.",
       "frame": "gallery",
-      "image": "assets/study-258-the-sermon-and-the-mothers-cbe002f11080d438.png"
+      "image": "assets/study-258-the-sermon-and-the-mothers-cbe002f11080d438.png",
+      "placement": {
+        "room": "chamber-5",
+        "label": "Chamber 5 · Sunday · October 31, 1982",
+        "note": "Grouped with Sunday’s narrative, including retrospectives, symbolic composites and imagined possibilities conveyed in that sequence."
+      }
     },
     {
       "id": "study-259-standing-their-ground",
@@ -3214,9 +3349,14 @@
       "alt": "Two women shield themselves beside a vehicle while projectiles and onlookers fill a snowy church street.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": "The foreground gestures are defensive, not reciprocal throwing. The precise arrangement of the crowd is generated. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": "The foreground gestures are defensive, not reciprocal throwing. The precise arrangement of the crowd is generated. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event.",
       "frame": "gallery",
-      "image": "assets/study-259-standing-their-ground-3286b0854cb325d3.png"
+      "image": "assets/study-259-standing-their-ground-3286b0854cb325d3.png",
+      "placement": {
+        "room": "chamber-5",
+        "label": "Chamber 5 · Sunday · October 31, 1982",
+        "note": "Grouped with Sunday’s narrative, including retrospectives, symbolic composites and imagined possibilities conveyed in that sequence."
+      }
     },
     {
       "id": "study-260-the-hands-and-the-step",
@@ -3227,9 +3367,14 @@
       "alt": "A girl climbs toward two figures on a steep rock face, her hands partly hidden by the bodies above.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": "The rear viewpoint intentionally conceals the crucial hands rather than illustrating every contact clearly. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": "The rear viewpoint intentionally conceals the crucial hands rather than illustrating every contact clearly. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event.",
       "frame": "gallery",
-      "image": "assets/study-260-the-hands-and-the-step-eab64fdd6c5cba03.png"
+      "image": "assets/study-260-the-hands-and-the-step-eab64fdd6c5cba03.png",
+      "placement": {
+        "room": "chamber-4",
+        "label": "Chamber 4 · Saturday · Cirque Wall",
+        "note": "Grouped with Saturday’s narrative. The scene and its visual realization remain distinct."
+      }
     },
     {
       "id": "study-261-hatch-makes-himself-small",
@@ -3240,9 +3385,14 @@
       "alt": "Three men dominate the foreground of a snowy mountain scene while a fourth stands small and distant.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": "Scale and distance express social pressure and isolation. The title gives the artist’s reading of the composition, not access to every character’s private thoughts. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": "Scale and distance express social pressure and isolation. The title gives the artist’s reading of the composition, not access to every character’s private thoughts. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event.",
       "frame": "gallery",
-      "image": "assets/study-261-hatch-makes-himself-small-56fae34e72c33c59.png"
+      "image": "assets/study-261-hatch-makes-himself-small-56fae34e72c33c59.png",
+      "placement": {
+        "room": "chamber-5",
+        "label": "Chamber 5 · Sunday · October 31, 1982",
+        "note": "Grouped with Sunday’s narrative, including retrospectives, symbolic composites and imagined possibilities conveyed in that sequence."
+      }
     },
     {
       "id": "study-262-the-crossing-is-two-posts",
@@ -3253,9 +3403,14 @@
       "alt": "Three horses wait at the edge of woods before a wide golden meadow, a shallow channel and two distant posts.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": "The open landscape presents anticipated passage, not a completed crossing. The mountain arrangement is imagined. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": "The open landscape presents anticipated passage, not a completed crossing. The mountain arrangement is imagined. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event.",
       "frame": "gallery",
-      "image": "assets/study-262-the-crossing-is-two-posts-bbe529e3d773804c.png"
+      "image": "assets/study-262-the-crossing-is-two-posts-bbe529e3d773804c.png",
+      "placement": {
+        "room": "chamber-5",
+        "label": "Chamber 5 · Sunday · October 31, 1982",
+        "note": "Grouped with Sunday’s narrative, including retrospectives, symbolic composites and imagined possibilities conveyed in that sequence."
+      }
     },
     {
       "id": "study-263-the-weight-of-choosing-the-colt",
@@ -3266,9 +3421,14 @@
       "alt": "A boy stands among horses with a lowered revolver, while a shadowed female figure seems to linger behind him.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": "The shadow represents a maternal bond, not a woman physically present. The visible gun is a compositional choice and should not be read as an exact illustration of taking a pouch from a saddlebag. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": "The shadow represents a maternal bond, not a woman physically present. The visible gun is a compositional choice and should not be read as an exact illustration of taking a pouch from a saddlebag. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event.",
       "frame": "gallery",
-      "image": "assets/study-263-the-weight-of-choosing-the-colt-242edb634eb8b2c2.png"
+      "image": "assets/study-263-the-weight-of-choosing-the-colt-242edb634eb8b2c2.png",
+      "placement": {
+        "room": "chamber-5",
+        "label": "Chamber 5 · Sunday · October 31, 1982",
+        "note": "Grouped with Sunday’s narrative, including retrospectives, symbolic composites and imagined possibilities conveyed in that sequence."
+      }
     },
     {
       "id": "study-264-sadness-thins-to-watercolor",
@@ -3279,9 +3439,14 @@
       "alt": "Heavy violet and blue paint flows across a snowy landscape, becoming pale washes and finally almost bare paper.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": "The river of color makes grief visible as a changing medium rather than a literal substance in the terrain. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": "The river of color makes grief visible as a changing medium rather than a literal substance in the terrain. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event.",
       "frame": "gallery",
-      "image": "assets/study-264-sadness-thins-to-watercolor-2e7713f6f275a9a0.png"
+      "image": "assets/study-264-sadness-thins-to-watercolor-2e7713f6f275a9a0.png",
+      "placement": {
+        "room": "chamber-5",
+        "label": "Chamber 5 · Sunday · October 31, 1982",
+        "note": "Grouped with Sunday’s narrative, including retrospectives, symbolic composites and imagined possibilities conveyed in that sequence."
+      }
     },
     {
       "id": "study-264b-landry-present-by-her-absence",
@@ -3292,9 +3457,14 @@
       "alt": "A blank human silhouette interrupts a landscape that dissolves from thick paint into watercolor.",
       "attribution": "Reader interpretation; no in-book artist attribution",
       "credit": "Generated image, selected by Isaac.",
-      "note": "The unpainted figure signifies absence. It is not a ghost, corpse or physical cutout standing in the scene. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event. Curatorial placement is provisional.",
+      "note": "The unpainted figure signifies absence. It is not a ghost, corpse or physical cutout standing in the scene. Faces, clothing, lighting and composition are artistic choices. This caption describes the interpretation rather than certifying every pictured detail as a narrated event.",
       "frame": "gallery",
-      "image": "assets/study-264b-landry-present-by-her-absence-cf4573e847cbf743.png"
+      "image": "assets/study-264b-landry-present-by-her-absence-cf4573e847cbf743.png",
+      "placement": {
+        "room": "chamber-5",
+        "label": "Chamber 5 · Sunday · October 31, 1982",
+        "note": "Grouped with Sunday’s narrative, including retrospectives, symbolic composites and imagined possibilities conveyed in that sequence."
+      }
     },
     {
       "id": "study-278-a-dollar-kept-for-him",
@@ -3307,7 +3477,12 @@
       "note": "Invented title. The counter exchange brings Lindsay’s confession and Allison’s later hand contact into one intimate composition. Tearful expressions and the shared light emphasize vulnerability and an attempt to make amends; they are interpretive staging.",
       "alt": "A tearful blonde woman reaches across a shop counter to touch a broad teenage boy’s hand beside a dollar bill; a dark-haired woman watches.",
       "frame": "gallery",
-      "image": "assets/study-278-a-dollar-kept-for-him-06d131984ac8b15a.png"
+      "image": "assets/study-278-a-dollar-kept-for-him-06d131984ac8b15a.png",
+      "placement": {
+        "room": "chamber-5",
+        "label": "Chamber 5 · Sunday · October 31, 1982",
+        "note": "Grouped with Sunday’s narrative, including retrospectives, symbolic composites and imagined possibilities conveyed in that sequence."
+      }
     },
     {
       "id": "study-279-the-witness-they-chose",
@@ -3320,7 +3495,12 @@
       "note": "Invented title. The separated figures interpret the pressure on Hatch as his father imposes a false account of the pilot’s shooting. The red and charcoal gestures are symbolic; the blanket is a non-graphic illustration adaptation.",
       "alt": "Armed men cluster behind an older man marked by a vertical translucent red brushstroke. A covered body lies before them; a lone man stands to the right under dark shading.",
       "frame": "gallery",
-      "image": "assets/study-279-the-witness-they-chose-836131234441f824.png"
+      "image": "assets/study-279-the-witness-they-chose-836131234441f824.png",
+      "placement": {
+        "room": "chamber-5",
+        "label": "Chamber 5 · Sunday · October 31, 1982",
+        "note": "Grouped with Sunday’s narrative, including retrospectives, symbolic composites and imagined possibilities conveyed in that sequence."
+      }
     },
     {
       "id": "study-280-a-field-without-a-chance",
@@ -3333,7 +3513,12 @@
       "note": "Invented title. The exaggerated difference in scale conveys apparently overwhelming odds before the gunfight. The concealed weapon makes that appearance incomplete. Kalin’s clothes are an illustrative adaptation of the scene.",
       "alt": "Large winter-coated men and rifles frame a lone teenage boy standing full length with raised hands in a cold mountain meadow; three horses wait behind him.",
       "frame": "gallery",
-      "image": "assets/study-280-a-field-without-a-chance-4d2504c64bc428b8.png"
+      "image": "assets/study-280-a-field-without-a-chance-4d2504c64bc428b8.png",
+      "placement": {
+        "room": "chamber-5",
+        "label": "Chamber 5 · Sunday · October 31, 1982",
+        "note": "Grouped with Sunday’s narrative, including retrospectives, symbolic composites and imagined possibilities conveyed in that sequence."
+      }
     },
     {
       "id": "study-281-no-enemy-in-his-hand",
@@ -3346,7 +3531,12 @@
       "note": "Invented title. The image interprets the final exchange about Russell through tenderness and the easing of hostility. Added clothing and the close crop keep the illustration non-explicit.",
       "alt": "A dark-haired boy in a black hat leans close to a pale boy lying in a winter coat; their hands are clasped over snowy ground.",
       "frame": "gallery",
-      "image": "assets/study-281-no-enemy-in-his-hand-ec609057a30591e0.png"
+      "image": "assets/study-281-no-enemy-in-his-hand-ec609057a30591e0.png",
+      "placement": {
+        "room": "chamber-5",
+        "label": "Chamber 5 · Sunday · October 31, 1982",
+        "note": "Grouped with Sunday’s narrative, including retrospectives, symbolic composites and imagined possibilities conveyed in that sequence."
+      }
     },
     {
       "id": "study-282-the-father-behind-him",
@@ -3359,7 +3549,12 @@
       "note": "Invented title. The three linked sightlines compress the betrayal and the horses’ release into a single composition. The prone view, added clothes and translucent lengthwise red stroke are illustrative choices; the red paint signifies the father’s violence.",
       "alt": "An older man seen from behind lies above snowy grass, aiming a pistol at a standing man. A boy watches two horses departing beyond two wooden posts; red brushwork follows the prone figure.",
       "frame": "gallery",
-      "image": "assets/study-282-the-father-behind-him-82fc722ca4e63a6b.png"
+      "image": "assets/study-282-the-father-behind-him-82fc722ca4e63a6b.png",
+      "placement": {
+        "room": "chamber-5",
+        "label": "Chamber 5 · Sunday · October 31, 1982",
+        "note": "Grouped with Sunday’s narrative, including retrospectives, symbolic composites and imagined possibilities conveyed in that sequence."
+      }
     },
     {
       "id": "study-283-one-more-minute-at-the-crossing",
@@ -3372,7 +3567,12 @@
       "note": "Invented title. This imagined farewell joins an embrace and a hand on Ash with the procession Tom describes. The embrace is a personal interpretation, not an enacted moment established by the passage. Tom’s opaque pale skin is the chosen visual convention for his ghostliness.",
       "alt": "Two boys embrace beside a golden horse: one wears a black hat and denim, the other has pale skin and a white hat. A procession moves between two posts in the distance.",
       "frame": "gallery",
-      "image": "assets/study-283-one-more-minute-at-the-crossing-ab77884944cbf7b3.png"
+      "image": "assets/study-283-one-more-minute-at-the-crossing-ab77884944cbf7b3.png",
+      "placement": {
+        "room": "chamber-5",
+        "label": "Chamber 5 · Sunday · October 31, 1982",
+        "note": "Grouped with Sunday’s narrative, including retrospectives, symbolic composites and imagined possibilities conveyed in that sequence."
+      }
     },
     {
       "id": "study-284-the-son-returning",
@@ -3385,7 +3585,12 @@
       "note": "Invented title. The image makes visible the approach Tom reports, which Kalin cannot see. The quiet non-contact arrangement, Cavalry’s gray design and red painted gesture are interpretive choices; no completed attack is depicted.",
       "alt": "A pale young rider on a gray horse approaches with two dogs through a misty meadow. An older man reclines in the foreground beneath lengthwise red brushstrokes; two posts stand at the right.",
       "frame": "gallery",
-      "image": "assets/study-284-the-son-returning-59c0dec474d2be6a.png"
+      "image": "assets/study-284-the-son-returning-59c0dec474d2be6a.png",
+      "placement": {
+        "room": "chamber-5",
+        "label": "Chamber 5 · Sunday · October 31, 1982",
+        "note": "Grouped with Sunday’s narrative, including retrospectives, symbolic composites and imagined possibilities conveyed in that sequence."
+      }
     },
     {
       "id": "study-285-where-the-glass-lets-light-in",
@@ -3398,7 +3603,12 @@
       "note": "Invented title. This hopeful response to Ash Where the Words Were centers the reunion with Jojo. The surrounding scenes form a symbolic composite rather than a literal window or simultaneous event. Its glass border is already part of the image.",
       "alt": "A girl smiles against a blue-gray horse’s face in a richly colored stained-glass-style panel, surrounded by mountains, woodland animals and smaller landscape scenes.",
       "frame": "none",
-      "image": "assets/study-285-where-the-glass-lets-light-in-5027a02f360ccfc1.png"
+      "image": "assets/study-285-where-the-glass-lets-light-in-5027a02f360ccfc1.png",
+      "placement": {
+        "room": "chamber-5",
+        "label": "Chamber 5 · Sunday · October 31, 1982",
+        "note": "Grouped with Sunday’s narrative, including retrospectives, symbolic composites and imagined possibilities conveyed in that sequence."
+      }
     },
     {
       "id": "study-286-the-last-run-through-the-freeze",
@@ -3411,7 +3621,12 @@
       "note": "Invented title. The scene interprets a running stretch of the descent with Kalin tied in place. Moonlight, flying snow and the exact terrain are visual staging. The image emphasizes speed, physical frailty and urgency.",
       "alt": "A girl urges a blue-gray horse downhill through snow with a pale boy tied close behind her; snowy spray, tilted trees and a moonlit mountain valley emphasize speed.",
       "frame": "gallery",
-      "image": "assets/study-286-the-last-run-through-the-freeze-c66505923e1106c9.png"
+      "image": "assets/study-286-the-last-run-through-the-freeze-c66505923e1106c9.png",
+      "placement": {
+        "room": "chamber-5",
+        "label": "Chamber 5 · Sunday · October 31, 1982",
+        "note": "Grouped with Sunday’s narrative, including retrospectives, symbolic composites and imagined possibilities conveyed in that sequence."
+      }
     },
     {
       "id": "study-287-what-the-microphone-cannot-bury",
@@ -3424,7 +3639,12 @@
       "note": "Invented title. The radio studio, spectral witnesses and ink-like rhetoric are an invented satirical tableau responding to his public account. The chest gesture asserts victimhood. The sons’ presence here is symbolic, not a narrated studio visitation.",
       "alt": "An angry man in a wheelchair rests a hand on his chest at a microphone. Eight translucent male figures stand behind him; a curling black ribbon with barred figures stretches over illuminated houses outside.",
       "frame": "gallery",
-      "image": "assets/study-287-what-the-microphone-cannot-bury-75b75ee90d6eb9be.png"
+      "image": "assets/study-287-what-the-microphone-cannot-bury-75b75ee90d6eb9be.png",
+      "placement": {
+        "room": "afterwards",
+        "label": "Some of what comes after · The closing chapter · Later lives and consequences",
+        "note": "A reader interpretation associated with the closing chapter. The discovery scene and imagined evidence copy are displayed together."
+      }
     },
     {
       "id": "study-288-there-it-was",
@@ -3437,7 +3657,12 @@
       "note": "The title echoes the narrator’s announcement of the discovery. Concentrated light and dark brushwork emphasize the document’s significance. Faces, staging and the precise appearance of the handwriting are illustrative choices. The pictured bill is shared with Twenty Dollars — Evidence Copy.",
       "alt": "A kneeling, gloved woman holds a worn twenty-dollar bill with tweezers above a towel of money. Two men and a gray-haired woman watch; the bill carries a cursive agreement and two stacked signatures.",
       "frame": "gallery",
-      "image": "assets/study-288-there-it-was-8fa57de300797f65.png"
+      "image": "assets/study-288-there-it-was-8fa57de300797f65.png",
+      "placement": {
+        "room": "afterwards",
+        "label": "Some of what comes after · The closing chapter · Later lives and consequences",
+        "note": "A reader interpretation associated with the closing chapter. The discovery scene and imagined evidence copy are displayed together."
+      }
     },
     {
       "id": "study-289-twenty-dollars-evidence-copy",
@@ -3450,7 +3675,12 @@
       "note": "Invented title and evidence-file presentation. Landry writes and signs the agreement, then Russell signs too. The individual letterforms, signature arrangement, damage pattern and selected historical currency series are illustrative choices. Companion to There it was.",
       "alt": "An off-white sheet labeled Evidence Copy shows the front and reverse of a creased twenty-dollar bill. Blue cursive crosses the White House; Landry’s flowing signature sits above Russell’s heavier upright signature.",
       "frame": "gallery",
-      "image": "assets/study-289-twenty-dollars-evidence-copy-718470f26e111521.png"
+      "image": "assets/study-289-twenty-dollars-evidence-copy-718470f26e111521.png",
+      "placement": {
+        "room": "afterwards",
+        "label": "Some of what comes after · The closing chapter · Later lives and consequences",
+        "note": "A reader interpretation associated with the closing chapter. The discovery scene and imagined evidence copy are displayed together."
+      }
     },
     {
       "id": "study-290-a-head-in-his-lap",
@@ -3463,7 +3693,12 @@
       "note": "Invented title. The image interprets the daughter’s reported sight at Kalin’s death. The horse remains unnamed in that passage; the painting does not identify her as Navidad. Clothes, facial likeness and light are illustrative choices.",
       "alt": "A white-haired man sits motionless against an elm with his legs stretched out. A large black horse lies beside him with her muzzle in his lap, surrounded by a snowy mountain meadow.",
       "frame": "gallery",
-      "image": "assets/study-290-a-head-in-his-lap-b38a2aac8a70e814.png"
+      "image": "assets/study-290-a-head-in-his-lap-b38a2aac8a70e814.png",
+      "placement": {
+        "room": "afterwards",
+        "label": "Some of what comes after · The closing chapter · Later lives and consequences",
+        "note": "A reader interpretation associated with the closing chapter. The discovery scene and imagined evidence copy are displayed together."
+      }
     },
     {
       "id": "study-291-son-of-a-gun-again",
@@ -3476,7 +3711,12 @@
       "note": "An imagined afterlife reunion, not an event narrated in the novel. Tom is shown as though he had grown old. The living-looking bodies, Kalin’s return to riding, white hat and choice of the unnamed black horse belong to this interpretation, which revisits the earlier canyon-mouth meeting image.",
       "alt": "Two elderly men on horseback greet each other beneath an elm. The nearer white-hatted rider sits on a black horse; the smiling black-hatted rider approaches on a pale-gold horse against snowy mountains.",
       "frame": "gallery",
-      "image": "assets/study-291-son-of-a-gun-again-38dc9f1ba134943d.png"
+      "image": "assets/study-291-son-of-a-gun-again-38dc9f1ba134943d.png",
+      "placement": {
+        "room": "afterwards",
+        "label": "Some of what comes after · The closing chapter · Later lives and consequences",
+        "note": "A reader interpretation associated with the closing chapter. The discovery scene and imagined evidence copy are displayed together."
+      }
     },
     {
       "id": "study-292-my-dear-jojo",
@@ -3489,7 +3729,12 @@
       "note": "The image interprets Landry’s account of being met by Jojo after her death. The embrace, tears, aged appearance and elm setting are visual choices. Both companions appear fully corporeal; the atmosphere conveys the imagined afterlife.",
       "alt": "An elderly brown-skinned woman with silver-streaked curls and tears on her cheeks hugs a large blue-gray horse. Their faces touch beneath a tree in warm, softly unreal mountain light.",
       "frame": "gallery",
-      "image": "assets/study-292-my-dear-jojo-987c4fc1ac431529.png"
+      "image": "assets/study-292-my-dear-jojo-987c4fc1ac431529.png",
+      "placement": {
+        "room": "afterwards",
+        "label": "Some of what comes after · The closing chapter · Later lives and consequences",
+        "note": "A reader interpretation associated with the closing chapter. The discovery scene and imagined evidence copy are displayed together."
+      }
     },
     {
       "id": "study-293-i-shall-not-unhand-it",
@@ -3502,7 +3747,12 @@
       "note": "The belt-carried revolver follows Landry’s closing declaration that she cannot empty its chambers and will not surrender it. The red stroke is symbolic paint across the image, marking an unresolved burden; it is not literal blood, emitted light or a narrated magical effect. The mounted figure and setting continue the afterlife interpretation.",
       "alt": "An elderly woman rides a blue-roan horse beneath a wintry elm. A revolver protrudes from her belt, crossed by one narrow diagonal red brushstroke; her hands hold the reins.",
       "frame": "gallery",
-      "image": "assets/study-293-i-shall-not-unhand-it-25c81ce851a41a41.png"
+      "image": "assets/study-293-i-shall-not-unhand-it-25c81ce851a41a41.png",
+      "placement": {
+        "room": "afterwards",
+        "label": "Some of what comes after · The closing chapter · Later lives and consequences",
+        "note": "A reader interpretation associated with the closing chapter. The discovery scene and imagined evidence copy are displayed together."
+      }
     },
     {
       "id": "study-294-no-way-out",
@@ -3515,7 +3765,12 @@
       "note": "Invented title and prison tableau, responding to Orwin’s life sentence for Cameron Eakins’s murder. The image’s defeated expression is an interpretation, not a claim that the narration establishes remorse or an inward surrender.",
       "alt": "A haggard gray-haired man in faded prison clothes sits on a bunk behind two vertical bars. His hands hang between his knees and his face is turned downward.",
       "frame": "gallery",
-      "image": "assets/study-294-no-way-out-c61e219919a66be7.png"
+      "image": "assets/study-294-no-way-out-c61e219919a66be7.png",
+      "placement": {
+        "room": "afterwards",
+        "label": "Some of what comes after · The closing chapter · Later lives and consequences",
+        "note": "A reader interpretation associated with the closing chapter. The discovery scene and imagined evidence copy are displayed together."
+      }
     },
     {
       "id": "study-295-a-pillar-of-the-community",
@@ -3528,7 +3783,12 @@
       "note": "The title echoes Enos’s character testimony. This imagined courtroom artist’s sheet combines his persuasive manner with Orwin’s performance of innocence. The survivors’ portraits are studies on paper, not assigned gallery seats. Receptive jurors interpret the persuasion at work; the image does not depict a verdict.",
       "alt": "A pastel-style courtroom sheet shows Enos at the witness box, Orwin at the defense table, a judge and several attentive jurors. Two separate head-and-shoulders studies of Kalin and Landry occupy the paper below.",
       "frame": "gallery",
-      "image": "assets/study-295-a-pillar-of-the-community-9487811936cab4bb.png"
+      "image": "assets/study-295-a-pillar-of-the-community-9487811936cab4bb.png",
+      "placement": {
+        "room": "afterwards",
+        "label": "Some of what comes after · The closing chapter · Later lives and consequences",
+        "note": "A reader interpretation associated with the closing chapter. The discovery scene and imagined evidence copy are displayed together."
+      }
     },
     {
       "id": "study-296-as-he-deserves",
@@ -3541,7 +3801,12 @@
       "note": "A satirical imagined scene responding to Enos’s assignment to the church’s Samoan mission. The veranda, hanging book and mixture of distress, disdain and defeat are interpretive staging. His isolation contrasts with a community carrying on its ordinary life. The title expresses the reader’s judgment.",
       "alt": "A frowning man in a wilted white shirt and loosened tie sits beneath a veranda roof with a black book hanging between his knees. Behind him, people continue their day among palms and bright foliage.",
       "frame": "gallery",
-      "image": "assets/study-296-as-he-deserves-be88578bdb655a21.png"
+      "image": "assets/study-296-as-he-deserves-be88578bdb655a21.png",
+      "placement": {
+        "room": "afterwards",
+        "label": "Some of what comes after · The closing chapter · Later lives and consequences",
+        "note": "A reader interpretation associated with the closing chapter. The discovery scene and imagined evidence copy are displayed together."
+      }
     }
   ]
 }

@@ -55,9 +55,12 @@ export function litWallMaterials(
 
 export function roomHeadingMounts(layout:Layout){
   return layout.rooms.map(room=>{
-    const north=layout.walls.filter(w=>w.room===room.id && !w.partition && Math.abs(w.a[1]-room.bounds[2])<.01 && Math.abs(w.b[1]-room.bounds[2])<.01)
-      .sort((a,b)=>Math.abs(b.b[0]-b.a[0])-Math.abs(a.b[0]-a.a[0]))[0];
-    if(!north)throw new Error(`No solid heading wall for ${room.id}`);
-    return {room,position:[(north.a[0]+north.b[0])/2,4.4,room.bounds[2]+.145] as Vector,width:Math.min(6,Math.abs(north.b[0]-north.a[0])-.8),height:.68};
+    const east=room.headingWall==="east", axis=east?0:1, edge=east?room.bounds[1]:room.bounds[2];
+    const length=(wall:Layout["walls"][number])=>Math.hypot(wall.b[0]-wall.a[0],wall.b[1]-wall.a[1]);
+    const wall=layout.walls.filter(w=>w.room===room.id && !w.partition && Math.abs(w.a[axis]-edge)<.01 && Math.abs(w.b[axis]-edge)<.01)
+      .sort((a,b)=>length(b)-length(a))[0];
+    if(!wall)throw new Error(`No solid heading wall for ${room.id}`);
+    return {room,position:[(wall.a[0]+wall.b[0])/2-(east ? .145 : 0),room.headingHeight ?? 4.4,(wall.a[1]+wall.b[1])/2+(east ? 0 : .145)] as Vector,
+      angle:east?-Math.PI/2:0,width:Math.min(6,length(wall)-.8),height:.68};
   });
 }

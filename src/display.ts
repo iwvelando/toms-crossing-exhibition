@@ -1,6 +1,27 @@
 import type { Layout, Reservation } from "./layout";
 import type { Work } from "./types";
 
+export function inscriptionLayout(text: string, width = 2.2) {
+  const lines: string[] = [];
+  let line = "";
+  for (const word of text.trim().split(/\s+/)) {
+    if (line && (line + " " + word).length > Math.round(20 * width / 2.2)) {
+      lines.push(line); line = word;
+    } else line += (line ? " " : "") + word;
+  }
+  if (line) lines.push(line);
+  return {lines, width, lineHeight: .32, height: Math.max(.7, lines.length * .32)};
+}
+
+export function montageLayout(count: number, variants = false) {
+  const columns = variants ? 2 : 4, pitch = variants ? 1.8 : .9, rowHeight = variants ? 1.8 : .7;
+  const rows = Math.ceil(count / columns), contentHeight = rows * rowHeight;
+  // Extend only the bottom: image positions and reading order remain unchanged.
+  const bottomMargin = .2;
+  return {columns, pitch, rowHeight, rows, width: 3.7, height: contentHeight + bottomMargin,
+    backingY: -bottomMargin / 2, titleY: -contentHeight / 2 - bottomMargin - .25};
+}
+
 export function frameMargin(work: Work) {
   return work.frame === "none" ? 0 : 2 * (work.frame === "fence-slats" ? .11 : .04) + .02;
 }

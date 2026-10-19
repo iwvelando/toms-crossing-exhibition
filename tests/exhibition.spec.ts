@@ -300,7 +300,8 @@ test("route reaches every chamber and planning placeholders can be inspected", a
 
 
 test("every installed image decodes in the collection and inspection panels", async ({page})=>{
-  test.setTimeout(180000);
+  // The complete tour grows with the catalog; hosted macOS needs more time per work.
+  test.setTimeout(Math.max(180000, illustrated.length * (process.env.CI ? 2000 : 500)));
   await page.goto("/");
   await page.getByRole("checkbox").check();
   await page.getByRole("button",{name:"Enter the exhibition"}).click();

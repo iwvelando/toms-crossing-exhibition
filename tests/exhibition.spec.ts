@@ -162,8 +162,8 @@ test("story filters preserve access and text can be enlarged on a narrow screen"
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await page.getByLabel("Browse by story grouping").selectOption("chamber-1");
   await expect(page.locator(".art-card")).toHaveCount(catalog.works.filter(w=>w.placement?.room==="chamber-1").length);
-  await page.getByLabel("Browse by story grouping").selectOption("across-moments");
-  await expect(page.locator(".art-card")).toHaveCount(catalog.works.filter(w=>w.placement?.room==="across-moments").length);
+  await page.getByLabel("Browse by story grouping").selectOption("chamber-5");
+  await expect(page.locator(".art-card")).toHaveCount(catalog.works.filter(w=>w.placement?.room==="chamber-5").length);
   await page.getByRole("button", { name: /Where the words were/ }).click();
   await expect(page.getByText(/Landry burns her diary/)).toBeVisible();
   const widths = await page.locator(".dialog, .work-copy").evaluateAll(els => els.map(el => ({
@@ -172,7 +172,7 @@ test("story filters preserve access and text can be enlarged on a narrow screen"
   for (const width of widths) expect(width.scroll).toBeLessThanOrEqual(width.client + 1);
   expect(await page.getByText(/Landry burns her diary/).evaluate(el => parseFloat(getComputedStyle(el).fontSize))).toBeGreaterThanOrEqual(28);
   await page.getByRole("button", { name: "Back to collection" }).click();
-  await expect(page.getByLabel("Browse by story grouping")).toHaveValue("across-moments");
+  await expect(page.getByLabel("Browse by story grouping")).toHaveValue("chamber-5");
   await page.getByLabel("Browse by story grouping").selectOption("all");
   await expect(page.locator(".art-card")).toHaveCount(catalog.works.length);
 });
@@ -411,7 +411,7 @@ test("wall-end sweep remains usable while moving and turning",async({page},info)
   }
   await page.screenshot({path:`test-results/montage-${info.project.name}.png`});
   await page.getByRole("button",{name:"View in the room"}).click();
-  await expect(page.locator("canvas")).toHaveAttribute("data-room","across-moments");
+  await expect(page.locator("canvas")).toHaveAttribute("data-room","chamber-5");
   await expect(page.locator(".inspect-hint")).toContainText(montage.title);
   await expect(page.locator("canvas")).toHaveAttribute("data-pending-images","0",{timeout:30000});
   await page.screenshot({path:`test-results/montage-wall-${info.project.name}.png`});
@@ -433,7 +433,7 @@ test("wall-end sweep remains usable while moving and turning",async({page},info)
     await expect.poll(()=>page.locator(".work-image img").evaluate(el=>(el as HTMLImageElement).naturalWidth)).toBeGreaterThan(0);
     await page.getByRole("button",{name:"View in the room"}).click();
     await expect(page.locator("canvas")).toHaveAttribute("data-room",work.placement!.room);
-    const roomName=work.placement!.room.startsWith("passage-") ? "Passage" : "Afterimages";
+    const roomName=work.placement!.room.startsWith("passage-") ? "Passage" : "Exhibition intermission";
     await expect(page.getByRole("heading",{name:roomName,exact:true})).toBeVisible();
     await expect(page.locator(".inspect-hint")).toContainText(work.title);
     await page.locator(".inspect-hint").click();
@@ -526,7 +526,8 @@ test("route map contains every room and the open mesh is inspectable from its vi
     const box=(svg as SVGSVGElement).viewBox.baseVal;
     return [...svg.querySelectorAll("rect")].every(rect=>rect.x.baseVal.value>=box.x && rect.y.baseVal.value>=box.y && rect.x.baseVal.value+rect.width.baseVal.value<=box.x+box.width && rect.y.baseVal.value+rect.height.baseVal.value<=box.y+box.height);
   })).toBe(true);
-  await expect(page.locator(".route-map title")).toHaveCount(10);
+  await expect(page.locator(".route-map title")).toHaveCount(8);
+  await expect(page.locator(".route-map title").filter({hasText:"Some of what comes after"})).toHaveCount(1);
   await page.getByRole("button",{name:"Close panel"}).click();
   await page.getByRole("button",{name:/Collection/}).click();
   await page.locator(".art-card").filter({has:page.getByRole("heading",{name:"Mesh",exact:true})}).click();

@@ -3,7 +3,7 @@ import { readFileSync } from "node:fs";
 import * as THREE from "three";
 import { OBB } from "three/addons/math/OBB.js";
 import { wallGeometry } from "../src/architecture";
-import { imageDimensions, frameMargin } from "../src/display";
+import { imageDimensions, frameMargin, inscriptionLayout, montageLayout } from "../src/display";
 import type { Work } from "../src/types";
 import { canStand, validateLayout, type Layout } from "../src/layout";
 const layout: Layout = JSON.parse(readFileSync(new URL("../public/collection/layout.json", import.meta.url), "utf8"));
@@ -53,7 +53,7 @@ test("installed wall works are visible across their width from their viewing poi
       const slot = layout.reservations.find(r => r.workId === work.id)!;
       const bytes = readFileSync(new URL(`../public/collection/${work.image}`, import.meta.url));
       const ratio = bytes.readUInt32BE(16) / bytes.readUInt32BE(20);
-      const width = work.panels ? 3.7 : work.wallText ? 2.2 : imageDimensions(work, ratio, slot, layout).width;
+      const width = work.panels ? 3.7 : work.wallText ? inscriptionLayout(work.wallText,slot.displaySize?.[0]).width : imageDimensions(work, ratio, slot, layout).width;
       const origin = new THREE.Vector3(...slot.camera);
       for (let sample = 0; sample <= 10; sample++) {
         const target = new THREE.Vector3(width * (sample / 10 - .5), 0, .08)
@@ -80,7 +80,7 @@ test("installed images and their frames do not intersect around corners", () => 
     const slot = layout.reservations.find(r => r.workId === work.id)!;
     const bytes = readFileSync(new URL(`../public/collection/${work.image}`, import.meta.url));
     const ratio = bytes.readUInt32BE(16) / bytes.readUInt32BE(20);
-    const size = work.panels ? {width:3.7,height:2.5} : imageDimensions(work,ratio,slot,layout);
+    const size = work.panels ? montageLayout(work.panels.length,work.presentation==='variants') : imageDimensions(work,ratio,slot,layout);
     const margin = work.panels ? 0 : frameMargin(work);
     const geometry = new THREE.BoxGeometry(size.width+margin,size.height+margin,margin ? .11 : .002);
     geometry.translate(0,0,margin ? .04 : .08);

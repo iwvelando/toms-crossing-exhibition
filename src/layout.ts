@@ -4,6 +4,8 @@ export type Bounds = [number, number, number, number];
 export type Room = {
   id: string; title: string; subtitle: string; bounds: Bounds;
   spawn: Vector; look: Vector; tone: string; number: string;
+  headingWall?: "north" | "east";
+  headingHeight?: number;
 };
 export type Reservation = {
   id: string; room: string; kind: "panel" | "object" | "installation";
@@ -35,8 +37,11 @@ export function locationLabel(layout: Layout, id: string) {
   const passage=/^passage-(\d)-(\d)$/.exec(id);
   return {title: id==="foyer" ? "Foyer" : "Passage", subtitle: passage
     ? `Between Chambers ${passage[1]} and ${passage[2]}`
-    : id==="passage-annex" ? "To the interpretation annex"
-    : id==="passage-side" ? "To the side gallery" : "The exhibition"};
+    : id==="passage-annex" ? "To Recollections"
+    : id==="passage-memory" ? "Sunday’s connected bays"
+    : id==="passage-return" ? "Sunday to Some of what comes after"
+    : id==="passage-response" ? "To the exhibition intermission"
+    : "The exhibition"};
 }
 export function locationAt(layout: Layout, x: number, z: number) {
   const room=roomAt(layout,x,z);

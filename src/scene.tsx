@@ -5,7 +5,7 @@ import { forwardRef, useEffect, useImperativeHandle, useRef } from "react";
 import * as THREE from "three";
 import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
 import { wallGeometry } from "./architecture";
-import { imageDimensions } from "./display";
+import { imageDimensions, inscriptionLayout, montageLayout } from "./display";
 import type { GalleryHandle, Work } from "./types";
 import { canStand, locationAt, roomAt, type Layout, type Reservation } from "./layout";
 
@@ -350,12 +350,13 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
       }
       for (const mount of roomHeadingMounts(layout)) {
         const heading=label([mount.room.title.toUpperCase(),mount.room.subtitle],mount.width,mount.height,52);
-        heading.position.fromArray(mount.position);scene.add(heading);
+        heading.position.fromArray(mount.position);heading.rotation.y=mount.angle;scene.add(heading);
       }
       // Separate wayfinding lettering indicates the suggested route without moving visitors automatically.
       for (const [x,z,angle,text] of [
-        [15.84,-6,-Math.PI/2,"02  →"], [33,-19.34,0,"03  →"],
-        [20.16,-39,Math.PI/2,"04  →"], [-11.84,-39,Math.PI/2,"05  →"],
+        [15.84,-6,-Math.PI/2,"02"], [33,-19.34,0,"03"],
+        [20.16,-39,Math.PI/2,"04"], [-11.84,-39,Math.PI/2,"05"],
+        [-63,-25.66,Math.PI,"06"],
       ] as [number,number,number,string][]) {
         const sign=label(text,2.8,.5,100,"#d9c291");
         sign.position.set(x,3.95,z);sign.rotation.y=angle;scene.add(sign);
@@ -410,7 +411,9 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
         const slot=layout.reservations.find(r=>r.workId===work.id)!;
         if(work.object)continue;
         const image=work.image?latest.current.media.get(work.image):undefined;
-        const size=work.panels?{width:3.7,height:2.2}:image?imageDimensions(work,image.width/image.height,slot,layout):{width:2.2,height:1.6};
+        const size=work.wallText?inscriptionLayout(work.wallText,slot.displaySize?.[0])
+          :work.panels?montageLayout(work.panels.length,work.presentation==="variants")
+          :image?imageDimensions(work,image.width/image.height,slot,layout):{width:2.2,height:1.6};
         displayLights.push({position:slot.position,angle:slot.angle,...size});
       }
       buildLayout(layout);
@@ -445,33 +448,27 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
         }
         if (work.wallText) {
           // Typeset on the actual wall; the generated gallery view is only a reference.
-          const words=work.wallText.trim().split(/\s+/), lines: string[]=[];
-          let line="";
-          for (const word of words) {
-            if (line && (line+" "+word).length>20) { lines.push(line); line=word; }
-            else line+=(line ? " " : "")+word;
-          }
-          if (line) lines.push(line);
+          const {lines,width,height,lineHeight}=inscriptionLayout(work.wallText,slot.displaySize?.[0]);
           const inscription=new THREE.Group(); group.add(inscription);
           lines.forEach((line,index)=>{
-            const lettering=label(line,2.2,.25,64);
-            lettering.position.set(0,(lines.length-1)/2*.32-index*.32,.08);
+            const lettering=label(line,width,.25,64);
+            lettering.position.set(0,(lines.length-1)/2*lineHeight-index*lineHeight,.08);
             inscription.add(lettering);
           });
           // Transparent hit target keeps gaps between letters easy to inspect.
-          const target=new THREE.Mesh(new THREE.PlaneGeometry(2.2,Math.max(.7,lines.length*.32)),
+          const target=new THREE.Mesh(new THREE.PlaneGeometry(width,height),
             new THREE.MeshBasicMaterial({transparent:true,opacity:0,depthWrite:false}));
           target.position.z=.085; target.userData.work=work;group.add(target);clickable.push(target);
+          target.userData.inspectDistance=Math.max(8,new THREE.Vector3(...slot.camera).distanceTo(group.position)+1);
           canvas.dataset.wallInscriptions=String(Number(canvas.dataset.wallInscriptions ?? 0)+1);
         } else if (work.image) {
           const panels=work.panels ?? [{image:work.image,title:work.title,alt:work.alt}];
           const montage=!!work.panels;
           const variants=work.presentation === "variants";
-          const columns=variants ? 2 : 4;
-          const pitch=variants ? 1.8 : .9;
-          const rowHeight=variants ? 1.8 : .7;
+          const montageSize=montageLayout(panels.length,variants);
+          const {columns,pitch,rowHeight}=montageSize;
           if (montage) {
-            const backing=box(3.7,Math.ceil(panels.length/columns)*rowHeight,.04,0,0,.01,dark,group);
+            const backing=box(montageSize.width,montageSize.height,.04,0,montageSize.backingY,.01,dark,group);
             backing.userData.work=work;clickable.push(backing);
           }
           panels.forEach((panel,index) => {
@@ -565,7 +562,7 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
           }});
           });
           if (montage) {
-            const title=label(work.title,3.5,.18,36);title.position.set(0,-Math.ceil(panels.length/columns)*rowHeight/2-.2,.085);group.add(title);
+            const title=label(work.title,3.5,.18,36);title.position.set(0,montageSize.titleY,.085);group.add(title);
           }
         } else if (work.object !== "syrup-glass") {
           canvas.dataset.modeledObjects=String(Number(canvas.dataset.modeledObjects ?? 0)+1);
@@ -580,7 +577,7 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
           const hitbox=box(.96,1.12,.96,0,1.65,0,new THREE.MeshBasicMaterial({transparent:true,opacity:0,depthWrite:false}),group);
           hitbox.userData.work=work;clickable.push(hitbox);
           const title=label(work.title,1.05,.16,70); title.position.set(0,.78,.507);group.add(title);
-          const tag=label("Object study · inspect",1.03,.11,30,"#bcae95");tag.position.set(0,.55,.508);group.add(tag);
+          const tag=label("Exhibition reconstruction",1.03,.11,30,"#bcae95");tag.position.set(0,.55,.508);group.add(tag);
           pedestal.userData.work=work;clickable.push(pedestal);
           study.traverse(child=>{ if(child instanceof THREE.Mesh){child.userData.work=work;clickable.push(child);} });
           if (work.object==="film-screen" && work.referenceImage) {

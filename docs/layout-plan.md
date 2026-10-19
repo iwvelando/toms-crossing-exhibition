@@ -1,7 +1,8 @@
 # Growing the exhibition
 
 The current scene contains 207 works from 219 supplied images, across five main
-chambers and five connected collection spaces. The main route runs counterclockwise.
+chambers and three connected collection spaces. The main route runs counterclockwise
+through the five days and directly into Some of what comes after.
 The Route panel shows the entire floor plan and offers direct room visits. Collection
 provides every work and its full label without requiring movement through the scene.
 
@@ -15,11 +16,9 @@ provides every work and its full label without requiring movement through the sc
 | Chamber 3 | Friday, October 29 | Return to lightness; projection alcove; incoming passage interrupts a wall |
 | Chamber 4 | Saturday, October 30 | Cirque Wall rises above the other displays; tiny woodcuts and a higher tapestry |
 | Chamber 5 | Sunday, October 31 | Dark interior; mothers, children, meadow and objects |
-| Across moments | Retrospectives and composites | Curatorial annex, including the ordered life montage |
-| Side collection | Ancillary material | Proposed curatorial space |
+| Some of what comes after | Closing chapter | Follows Sunday directly; discovery and evidence-copy images stay together |
 | Recollections | Remembered works and uncertainty | Separates Cal’s uncertain inventory from confirmed chamber works |
-| Afterimages | Later exhibition | Separate wing for digital returns and related works |
-| Reader responses | Personal interpretations | Scenes, metaphors and counterfactual possibilities |
+| Exhibition intermission | Later exhibition and gallery history | Keeps New Hampshire returns distinct from the closing chapter |
 
 Room dimensions, mounting positions, partitions and the annexes are design
 interpretations. Exact sculpture sizes and detailed physical effects are not
@@ -31,23 +30,31 @@ The espresso-bar display is ancillary, not automatically another main chamber.
 Chamber 1 uses angled bays around a generous center. Chamber 2 has an offset
 partition, allowing contrasting subjects to occupy adjacent but separated faces.
 Chamber 3 has clear paths around freestanding displays and its projection alcove.
-Chamber 4 combines perimeter displays, staggered interior walls, and the raised
-Cirque Wall. Its height is a spatial interpretation of the described verticality.
+Chamber 4 combines perimeter displays, staggered interior walls, and a two-tier
+Cirque Wall. The woodcuts and tapestry sit at first-tier viewing height; the
+roof is lower than the original tall arrangement. Its heading uses a clear east-wall span.
 The meadow painting occupies an unobstructed wall segment in Chamber 5, clear
-of the doorway. The newer annexes connect beyond Chamber 5. A short interior wall
-in Reader responses pairs the discovery scene with its companion evidence-sheet
-interpretation; its other face groups three interpretations of the trials and
-their aftermath.
-A second partition holds four interpretations of the ending and imagined reunions.
+of the doorway. Sunday extends into an adjoining western bay for the scene
+interpretations, including the intact life montage and its companion. The next
+room to the south is Some of what comes after. The room has no interior partitions. Its outer walls
+keep the discovery and evidence-sheet pair together, group the trials and their
+aftermath, and give the ending and imagined reunions a shared wall.
+The exhibition intermission continues beyond this room; Recollections occupies
+the former interpretation annex near Chamber 1. These connected collections have
+their own labels and remain distinct from the closing chapter.
 
 Preserve stable reservation IDs and explicit work-to-slot assignments. An import
 must not reshuffle installed works based on catalog order. When changing a display
 medium, review its footprint, camera location and circulation deliberately. Keep
 `assetStatus` separate from `placementStatus`: a finished image can retain a
-candidate chronological placement. Do not equate a chapter of disclosure with the
-day depicted, or treat a group template as a count of original works.
+candidate chronological placement. Scene interpretations follow narrative delivery:
+memories, forecasts and counterfactuals inherit the day of the chapter conveying
+them. A composite retains its primary narrative anchor and stays intact. In-book
+exhibition reconstructions retain the exhibition's explicit day/chamber grouping;
+their introduction during the intermission does not assign them all to Sunday.
+Do not treat a group template as a count of original works.
 
-There are 230 reservations: 207 ready and 23 planning bays. Eighty prompt-only
+There are 227 reservations: 207 ready and 20 planning bays. Eighty prompt-only
 candidates remain in the private inventory without supplied images. The planning
 bays do not individually represent every one of those candidates. Expand capacity
 through reviewed placements, rather than automatically producing a fictional
@@ -79,8 +86,12 @@ The build rejects missing previews or invalid preview checksums.
 Lighting is static. Precomputed spotlight washes illuminate each display wall,
 clipped to its solid face so they cannot spill across doorways. Warm floor pools
 mark object displays. Transparent unlit lettering has a fine contrast edge and
-soft shadow. Chamber titles and subtitles form one sign on a solid north-wall
-section, separate from route arrows and door openings.
+soft shadow. Chamber titles and subtitles form one sign on a solid wall
+section, clear of artworks, captions, fixtures and door openings. Chamber-number
+markers above doorways use numbers alone. Modeled objects share the same
+Exhibition reconstruction provenance label as other reconstructions. Montage
+backings include space beneath the final numbered row; wall inscriptions use
+their rendered text dimensions for lettering, lighting and inspection targets.
 Subtle procedural plaster and mineral floor textures use mipmaps to limit shimmer.
 The scene draws only when input, resizing or interface changes require it.
 

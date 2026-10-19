@@ -36,7 +36,7 @@ Open the printed local address. Accept the foyer warning to enter. Drag to look;
 use W A S D or arrow keys to walk. Press **M** to capture the mouse for unlimited turning around the centered crosshair;
 press **M** again or Escape to release it. Click a work or use the inspection action to open its label.
 The bottom navigation visits works directly; Collection works without walking or
-WebGL (Web Graphics Library). Phones have an analog movement joystick and tap-to-inspect labels. Use the right thumb to look. The desktop status beside How to explore reflects actual mouse capture and shows how to release it. Opening an inspection or navigation panel also releases the mouse. Open **Route** to jump between chambers. Enable **Show planning placeholders**
+WebGL (Web Graphics Library). Phones have an analog movement joystick and tap-to-inspect labels. Use the right thumb to look. The desktop status beside How to explore reflects actual mouse capture and shows how to release it. Artwork inspections pause movement and retain mouse capture: press **E** again to return to the room, **M** to release the mouse for panel controls, or Escape to close and release it. Navigation panels release the mouse. Open **Route** to jump between chambers. Enable **Show planning placeholders**
 to see the full spatial preview: neutral wall panels, object volumes, and installation
 areas. This toggle is off by default. It is a local planning view, not an access-controlled
 curator account.

@@ -13,6 +13,7 @@ type Props = {
   entered: boolean;
   works: Work[];
   paused: boolean;
+  retainMouseLook: boolean;
   layout?: Layout;
   planning: boolean;
   onMouseLook: (active: boolean) => void;
@@ -804,20 +805,25 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
     function pointerLockChanged() {
       capturePending = false;
       const locked = document.pointerLockElement === canvas;
-      if (locked && (latest.current.paused || !latest.current.entered)) {
+      if (locked && ((latest.current.paused && !latest.current.retainMouseLook) || !latest.current.entered)) {
         document.exitPointerLock();
         return;
       }
       clear();
       latest.current.onMouseLook(locked);
-      if (locked) { latest.current.onMouseLookError(""); canvas.focus(); }
+      if (locked) {
+        latest.current.onMouseLookError("");
+        if (!latest.current.paused) canvas.focus();
+      }
       invalidate();
     }
     function keydown(e: KeyboardEvent) {
       if (
         !latest.current.entered ||
         latest.current.paused ||
-        ["INPUT", "TEXTAREA"].includes((e.target as HTMLElement).tagName)
+        e.defaultPrevented ||
+        (e.target instanceof HTMLElement &&
+          (e.target.isContentEditable || e.target.closest("input, textarea, select")))
       )
         return;
       const mapping: Record<string, string> = {
@@ -835,9 +841,9 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
         invalidate();
         e.preventDefault();
       }
-      if (e.code === "KeyE") {
+      if (e.code === "KeyE" && !e.repeat && !e.ctrlKey && !e.altKey && !e.metaKey && !e.shiftKey) {
         const target=targetAt(new THREE.Vector2());
-        if (target) latest.current.onSelect(target);
+        if (target) { e.preventDefault(); latest.current.onSelect(target); }
       }
     }
     function keyup(e: KeyboardEvent) {
@@ -896,7 +902,7 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
       prev = now;
       if (latest.current.paused) {
         keys.clear();axes[0]=axes[1]=0;
-        if (document.pointerLockElement === canvas) document.exitPointerLock();
+        if (!latest.current.retainMouseLook && document.pointerLockElement === canvas) document.exitPointerLock();
       }
       if (latest.current.entered && !latest.current.paused) {
         let f = Number(keys.has("forward")) - Number(keys.has("back")) - axes[1],
@@ -968,7 +974,7 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
   useEffect(() => {
     if (props.paused) runtime.current?.keys.clear();
     runtime.current?.invalidate();
-  }, [props.paused]);
+  }, [props.paused, props.retainMouseLook]);
   return (
     <div
       ref={host}

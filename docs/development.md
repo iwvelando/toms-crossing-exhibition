@@ -65,7 +65,9 @@ EXHIBITION_NATIVE_POINTER_LOCK=1 EXHIBITION_BROWSER_CHANNEL=chrome npx playwrigh
 ```
 
 The test brings its page to the foreground. M captures relative movement and
-M/Escape releases it; panels also release capture. Never claim native capture was
+M/Escape releases it. Artwork inspections retain capture and pause camera input;
+E closes an inspection with capture retained, M releases capture for panel controls,
+and Escape closes and releases it. Navigation panels release capture. Never claim native capture was
 checked from the default headless test alone. Report actual checks and limitations.
 The current production build reports a large Three.js chunk warning; it does not
 prevent a static build. Optimize only with measured benefit and regression checks.

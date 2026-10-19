@@ -37,7 +37,8 @@ function App() {
   const gallery = useRef<GalleryHandle>(null);
   const priorFocus = useRef<HTMLElement | null>(null);
   const dialog = useRef<HTMLElement>(null);
-  const overlay = !!selected || !!reservation || route || browse || about || help;
+  const inspecting = !!selected || !!reservation;
+  const overlay = inspecting || route || browse || about || help;
   useEffect(() => {
     if (!overlay) return;
     priorFocus.current = document.activeElement as HTMLElement;
@@ -56,6 +57,7 @@ function App() {
     const key = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         e.preventDefault();
+        if (document.pointerLockElement) document.exitPointerLock();
         close();
       }
       if (e.key === "Tab") {
@@ -91,8 +93,23 @@ function App() {
       dialog.current?.querySelector<HTMLButtonElement>("button")?.focus();
   }, [selected?.id, reservation?.id, route, browse, about, help]);
   useEffect(() => {
+    if (!inspecting) return;
+    const closeInspection = (event: KeyboardEvent) => {
+      if (event.code !== "KeyE" || event.defaultPrevented || event.repeat ||
+          event.ctrlKey || event.altKey || event.metaKey || event.shiftKey) return;
+      const target = event.target;
+      if (target instanceof HTMLElement &&
+          (target.isContentEditable || target.closest("input, textarea, select"))) return;
+      event.preventDefault();
+      setSelected(undefined);
+      setReservation(undefined);
+    };
+    window.addEventListener("keydown", closeInspection);
+    return () => window.removeEventListener("keydown", closeInspection);
+  }, [inspecting]);
+  useEffect(() => {
     const toggleMouseLook = (event: KeyboardEvent) => {
-      if (!entered || !graphics || overlay || event.defaultPrevented || event.repeat ||
+      if (!entered || !graphics || (overlay && !mouseLook) || event.defaultPrevented || event.repeat ||
           event.ctrlKey || event.altKey || event.metaKey || event.shiftKey ||
           event.key.toLowerCase() !== "m" ||
           !window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
@@ -105,7 +122,7 @@ function App() {
     };
     window.addEventListener("keydown", toggleMouseLook);
     return () => window.removeEventListener("keydown", toggleMouseLook);
-  }, [entered, graphics, overlay]);
+  }, [entered, graphics, overlay, mouseLook]);
   async function enter() {
     if (!agreed || loading) return;
     setLoading(true);
@@ -171,6 +188,7 @@ function App() {
         onRoom={setRoomId}
         works={catalog?.works ?? []}
         paused={overlay}
+        retainMouseLook={inspecting}
         onNear={setNear}
         onSelect={view}
         onUnavailable={() => setGraphics(false)}
@@ -387,6 +405,7 @@ function App() {
                 <p>{reservation.group ? "A flexible bay for a group of works. Its eventual count, dimensions, and arrangement still need review." : "A neutral study reserving space for a possible work. Its dimensions and position are estimates."}</p>
                 <p>The artwork has not been installed in this preview. This marker makes no claim about its final appearance or attribution.</p>
                 <p className="quiet">Candidate placement · {reservation.footprint[0]} × {reservation.footprint[1]} × {reservation.footprint[2]} m planning envelope.</p>
+                <p className="quiet keyboard-inspect">Press E to return to the room. Press M to release the mouse for panel controls.</p>
                 <button className="text-action" onClick={() => { gallery.current?.visitReservation(reservation.id); close(); }}>View reserved position <span>↗</span></button>
                 <button className="text-action secondary" onClick={() => { setReservation(undefined); setRoute(true); }}>Back to route <span>←</span></button>
               </>
@@ -408,6 +427,7 @@ function App() {
                       : "A READER’S INTERPRETATION"}
                   </p>
                   <h2 id="dialog-title">{selected.title}</h2>
+                  <p className="quiet keyboard-inspect">Press E to return to the room. Press M to release the mouse for panel controls.</p>
                   <p className="medium">{selected.medium}</p>
                   {selected.wallText && <p className="reference-note">Image reference · The passage displays the wording directly on its wall. The architecture in this reference image is imagined.</p>}
                   {selected.referenceImage && <p className="reference-note">Image reference · The gallery displays this work as a 3D object. The model and reference are separate interpretations.</p>}
@@ -560,7 +580,7 @@ function App() {
                 <dl className="controls-list">
                   <dt>Look around</dt>
                   <dd>
-                    Drag with your mouse or right thumb. On desktop, press M to capture the mouse. The cursor disappears and mouse movement turns the camera freely around the centered crosshair, without screen-edge limits. Press M again or Escape to release it. Opening a panel also releases the mouse.
+                    Drag with your mouse or right thumb. On desktop, press M to capture the mouse. The cursor disappears and mouse movement turns the camera freely around the centered crosshair, without screen-edge limits. Press M again or Escape to release it. Navigation panels release the mouse; artwork inspections keep it captured.
                   </dd>
                   <dt>Walk</dt>
                   <dd>
@@ -568,7 +588,7 @@ function App() {
                   </dd>
                   <dt>Inspect</dt>
                   <dd>
-                    Tap a nearby artwork or its inspection label. On desktop, click it or look toward it and press E.
+                    Tap a nearby artwork or its inspection label. On desktop, click it or look toward it and press E. Press E again to return to the room with mouse capture retained. While inspecting, press M to release the mouse for panel controls, or Escape to close and release it.
                   </dd>
                   <dt>Move directly</dt>
                   <dd>Open Route to choose a room. Use the arrows at the bottom to visit each installed work.</dd>

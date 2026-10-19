@@ -107,6 +107,25 @@ test("panels trap focus, escape closes, and layout fits", async ({ page }) => {
   ).toBe(true);
 });
 
+test("E closes inspections from Collection and restores the original navigation focus", async ({ page }, info) => {
+  await page.goto("/");
+  await page.getByRole("checkbox").check();
+  await page.getByRole("button", { name: "Enter the exhibition" }).click();
+  const collection = page.getByRole("button", { name: /Collection/ });
+  await collection.click();
+  await page.keyboard.press("e");
+  await expect(page.getByRole("dialog")).toBeVisible();
+  await page.locator(".art-card").filter({has:page.getByRole("heading",{name:"Rear View",exact:true})}).click();
+  await expect(page.getByRole("heading", { name: "Rear View", exact: true })).toBeVisible();
+  const shortcut = page.getByText("Press E to return to the room. Press M to release the mouse for panel controls.", { exact: true });
+  if (info.project.name === "desktop") await expect(shortcut).toBeVisible();
+  else await expect(shortcut).toBeHidden();
+  await page.screenshot({ path: `.local/visual-review/inspection-${info.project.name}.png` });
+  await page.keyboard.press("e");
+  await expect(page.getByRole("dialog")).toHaveCount(0);
+  await expect(collection).toBeFocused();
+});
+
 test("collection remains usable without WebGL", async ({ page }) => {
   await page.addInitScript(() => {
     const original = HTMLCanvasElement.prototype.getContext;
@@ -501,10 +520,56 @@ test("M captures and releases the pointer with unlimited relative movement",asyn
   await page.getByRole("button",{name:"Next artwork"}).click();
   await expect(page.locator(".inspect-hint")).toContainText("Syrup glass");
   await page.keyboard.press("m");await expect(status).toContainText("Mouse look on");
+  await page.keyboard.down("e");
+  await expect(page.getByRole("dialog")).toBeVisible();
+  await expect(page.getByRole("button",{name:"Close panel"})).toBeFocused();
+  await expect.poll(()=>canvas.evaluate(el=>document.pointerLockElement===el)).toBe(true);
+  await page.keyboard.down("e"); // Holding E must not immediately close the inspection.
+  await page.keyboard.up("e");
+  await expect(page.getByRole("dialog")).toBeVisible();
+  const readingPosition=await canvas.getAttribute("data-position"),readingLook=await canvas.getAttribute("data-look");
+  await page.keyboard.down("w");
+  await canvas.dispatchEvent("pointermove",{pointerType:"mouse",movementX:100,movementY:100});
+  await page.waitForTimeout(200);
+  await page.keyboard.up("w");
+  await expect(canvas).toHaveAttribute("data-position",readingPosition!);
+  await expect(canvas).toHaveAttribute("data-look",readingLook!);
+  await expect.poll(()=>canvas.evaluate(el=>document.pointerLockElement===el)).toBe(true);
+  await page.keyboard.press("Control+e");
+  await expect(page.getByRole("dialog")).toBeVisible();
+  await page.keyboard.press("e");
+  await expect(page.getByRole("dialog")).toHaveCount(0);
+  await expect(canvas).toBeFocused();
+  await expect.poll(()=>canvas.evaluate(el=>document.pointerLockElement===el)).toBe(true);
+  await canvas.dispatchEvent("pointermove",{pointerType:"mouse",movementX:10,movementY:0});
+  await expect(canvas).not.toHaveAttribute("data-look",readingLook!);
   // Captured clicks inspect the crosshair target, not stale absolute cursor coordinates.
   await canvas.dispatchEvent("pointerdown",{pointerType:"mouse",pointerId:1,clientX:1,clientY:1});
   await canvas.dispatchEvent("pointerup",{pointerType:"mouse",pointerId:1,clientX:1,clientY:1});
   await expect(page.getByRole("heading",{name:"Syrup glass",exact:true})).toBeVisible();
+  await expect.poll(()=>canvas.evaluate(el=>document.pointerLockElement===el)).toBe(true);
+  await page.keyboard.press("m");await expect(status).toContainText("Mouse look off");
+  await expect(page.getByRole("dialog")).toBeVisible();
+  await page.getByRole("button",{name:"Close panel"}).click();
+  await page.keyboard.press("e");
+  await expect(page.getByRole("dialog")).toBeVisible();
+  await page.keyboard.press("e");
+  await expect(page.getByRole("dialog")).toHaveCount(0);
+  await expect(status).toContainText("Mouse look off");
+  await page.keyboard.press("m");
+  await page.keyboard.press("e");
+  await expect(page.getByRole("dialog")).toBeVisible();
+  // A panel transition must still release capture even though the scene stays paused.
+  await page.getByRole("button",{name:"Back to collection"}).evaluate(el=>(el as HTMLButtonElement).click());
+  await expect.poll(()=>page.evaluate(()=>document.pointerLockElement===null)).toBe(true);
+  await page.keyboard.press("e");
+  await expect(page.getByRole("dialog")).toBeVisible();
+  await page.keyboard.press("Escape");
+  await page.keyboard.press("m");
+  await page.keyboard.press("e");
+  await expect(page.getByRole("dialog")).toBeVisible();
+  await page.keyboard.press("Escape");
+  await expect(page.getByRole("dialog")).toHaveCount(0);
   await expect.poll(()=>page.evaluate(()=>document.pointerLockElement===null)).toBe(true);
 });
 

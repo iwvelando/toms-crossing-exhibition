@@ -1,5 +1,48 @@
-import { test, expect } from "@playwright/test";
+import { test as base, expect } from "@playwright/test";
 import { readFileSync } from "node:fs";
+
+// Keep entry failures actionable even when the gallery never leaves the foyer.
+const test = base.extend<{ launchDiagnostics: void }>({
+  launchDiagnostics: [async ({ page }, use, info) => {
+    const started = Date.now();
+    const pending = new Map<string, number>();
+    const failed: { url: string; error: string | null }[] = [];
+    const httpErrors: { url: string; status: number }[] = [];
+    const pageErrors: string[] = [];
+    let completed = 0;
+    page.on("request", request => {
+      if (new URL(request.url()).pathname.startsWith("/collection/")) pending.set(request.url(), Date.now());
+    });
+    page.on("requestfinished", request => {
+      if (pending.delete(request.url())) completed++;
+    });
+    page.on("requestfailed", request => {
+      pending.delete(request.url());
+      failed.push({ url: request.url(), error: request.failure()?.errorText ?? null });
+    });
+    page.on("response", response => {
+      if (response.status() >= 400) httpErrors.push({ url: response.url(), status: response.status() });
+    });
+    page.on("pageerror", error => pageErrors.push(error.message));
+    await use();
+    if (info.status === info.expectedStatus) return;
+    const state = await page.evaluate(() => ({
+      entry: document.querySelector(".enter-button")?.textContent,
+      alerts: [...document.querySelectorAll('[role="alert"]')].map(node => node.textContent),
+      canvas: { ...document.querySelector("canvas")?.dataset },
+      cspViolations: (window as unknown as { cspViolations?: string[] }).cspViolations,
+    })).catch(error => ({ unavailable: String(error) }));
+    await info.attach("launch-diagnostics", {
+      contentType: "application/json",
+      body: JSON.stringify({
+        elapsedMs: Date.now() - started, completedCollectionRequests: completed,
+        pendingCollectionRequests: [...pending].map(([url, start]) => ({ url, elapsedMs: Date.now() - start })),
+        failedRequests: failed, httpErrors, pageErrors, state,
+      }, null, 2),
+    });
+  }, { auto: true }],
+});
+test.use({ screenshot: "only-on-failure" });
 
 const canonical = "https://toms-crossing-exhibition.isaacvelando.com/";
 const workCount = JSON.parse(readFileSync(new URL("../public/collection/catalog.json", import.meta.url), "utf8")).works.length;
@@ -45,7 +88,10 @@ test("@smoke launch metadata and crawler files describe only the foyer", async (
   expect(parsed).toEqual({ errors: 0, namespace: "http://www.sitemaps.org/schemas/sitemap/0.9", locations: [canonical] });
 });
 
-test("@smoke production CSP preserves consent, entry and artwork inspection", async ({ page }) => {
+test("@smoke production CSP preserves consent, entry and artwork inspection", async ({ page }, info) => {
+  // Live entry fetches and decodes every compact texture over the network.
+  // Keep time for inspection after the entry allowance; local checks stay strict.
+  if (process.env.BASE_URL) info.setTimeout(120000);
   const violations: string[] = [];
   const requests: string[] = [];
   await page.addInitScript(() => {
@@ -61,7 +107,7 @@ test("@smoke production CSP preserves consent, entry and artwork inspection", as
   expect(requests.filter(url => url.includes("/collection/"))).toEqual([]);
   await page.getByRole("checkbox").check();
   await page.getByRole("button", { name: "Enter the exhibition" }).click();
-  await expect(page.getByRole("heading", { name: "Chamber 1", exact: true })).toBeVisible({ timeout: 30000 });
+  await expect(page.getByRole("heading", { name: "Chamber 1", exact: true })).toBeVisible({ timeout: process.env.BASE_URL ? 60000 : 30000 });
   await page.getByRole("button", { name: /Collection/ }).click();
   await expect(page.locator(".art-card")).toHaveCount(workCount);
   await page.getByLabel("Browse by story grouping").selectOption("chamber-1");

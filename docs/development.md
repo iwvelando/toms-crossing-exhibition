@@ -102,7 +102,9 @@ and `make test-webkit` on macOS, using native graphics. Linux checks the build,
 Node tests, and the complete non-WebGL Collection fallback. Linux software WebGL
 was observed to stall preparation and input beyond the interaction-test deadlines;
 it is not the graphics path used for the full gallery suite. The required `verify`
-job requires all three jobs to pass.
+job requires all three jobs to pass. CI browser tests use one worker because
+concurrent gallery preparation and initial rendering contend on hosted graphics.
+Local Chromium keeps two workers; WebKit runs sequentially in both environments.
 Main may reuse the exact build from a successful PR run of the same Git tree,
 repository, and workflow. In that case the main test jobs are skipped and `verify`
 requires the proven artifact; PR test jobs always run. Without a matching artifact,
@@ -128,7 +130,16 @@ stricter policy before this targeted allowance.
 `tests/launch.spec.ts` provides read-only `@smoke` checks for consent, entry,
 inspection, CSP violations, canonical/share metadata, PNG dimensions, robots and
 sitemap. `BASE_URL=https://… npx playwright test --grep @smoke --project=desktop`
-runs against a deployed site without starting a local server. The sitemap lists only
+runs against a deployed site without starting a local server. The post-deploy job
+runs these checks with one worker so gallery rendering and cold network transfers
+do not compete. Live gallery entry has a 60-second allowance inside a 120-second
+test budget; local entry retains its 30-second assertion. There are no automatic
+retries: a persistent entry failure still fails the job. On failure, the job retains
+`smoke-test-results` for seven days, including the browser trace, screenshot, and a
+`launch-diagnostics` JSON attachment with preparation progress, pending collection
+requests, HTTP/network errors, page errors, and CSP violations. Use those artifacts
+to distinguish slow loading from a broken preview or graphics failure before
+changing timing budgets again. The sitemap lists only
 the foyer, since panels and rooms have no independent URLs. Keep collection assets
 out of the sitemap and preserve the crawler restriction without treating it as access
 control. `make share-card` renders the committed share image and Apple icon with a

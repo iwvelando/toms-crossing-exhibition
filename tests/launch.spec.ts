@@ -75,6 +75,44 @@ test("@smoke production CSP preserves consent, entry and artwork inspection", as
   expect(await page.evaluate(() => (window as unknown as { cspViolations: string[] }).cspViolations)).toEqual([]);
 });
 
+test("entry reveals an already rendered chamber instead of the last foyer frame", async ({ page }, info) => {
+  await page.addInitScript(() => {
+    const entry = { frame: null as null | Record<string, string | undefined> };
+    (window as unknown as { entryTest: typeof entry }).entryTest = entry;
+    // Observe the entry commit before the next animation frame can hide a flash.
+    const observer = new MutationObserver(() => {
+      if (!document.querySelector(".gallery-ui")) return;
+      const canvas = document.querySelector("canvas");
+      entry.frame = canvas ? {
+        position: canvas.dataset.position,
+        look: canvas.dataset.look,
+        room: canvas.dataset.room,
+        pendingImages: canvas.dataset.pendingImages,
+        sceneImages: canvas.dataset.sceneImages,
+      } : {};
+      observer.disconnect();
+    });
+    observer.observe(document, { childList: true, subtree: true });
+  });
+  await page.goto("/");
+  // Start with a painted foyer, as a visitor reading the warning would.
+  await expect(page.locator("canvas")).toHaveAttribute("data-position", "-2.80,13.60");
+  await page.getByRole("checkbox").check();
+  await page.getByRole("button", { name: "Enter the exhibition" }).click();
+  await expect(page.locator(".gallery-ui")).toBeVisible({ timeout: 30000 });
+  const frame = await page.evaluate(() => (window as unknown as {
+    entryTest: { frame: Record<string, string> };
+  }).entryTest.frame);
+  expect(frame).toMatchObject({
+    position: "0.00,6.70",
+    look: "0.000,0.000",
+    room: "chamber-1",
+    pendingImages: "0",
+  });
+  expect(Number(frame.sceneImages)).toBeGreaterThan(0);
+  await page.screenshot({ path: `.local/visual-review/entry-${info.project.name}.png` });
+});
+
 test("every room remains reachable and fits the viewport under the production CSP", async ({ page }) => {
   await page.goto("/");
   await page.getByRole("checkbox").check();

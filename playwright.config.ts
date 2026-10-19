@@ -5,8 +5,9 @@ export default defineConfig({
   reporter: process.env.CI ? "list" : undefined,
   maxFailures: process.env.CI ? 3 : 0,
   // Hosted macOS renders this texture-heavy scene much more slowly than a local
-  // GPU. Keep WebKit galleries sequential and budget for the complete room tour.
-  workers: process.env.WEBKIT ? 1 : 2,
+  // GPU. Concurrent galleries contend during initial rendering, so serialize CI
+  // and WebKit while retaining local Chromium parallelism.
+  workers: process.env.CI || process.env.WEBKIT ? 1 : 2,
   timeout: process.env.CI || process.env.WEBKIT ? 90000 : 30000,
   use: {
     baseURL: process.env.BASE_URL || "http://127.0.0.1:4187",

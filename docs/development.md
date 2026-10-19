@@ -102,7 +102,9 @@ and `make test-webkit` on macOS, using native graphics. Linux checks the build,
 Node tests, and the complete non-WebGL Collection fallback. Linux software WebGL
 was observed to stall preparation and input beyond the interaction-test deadlines;
 it is not the graphics path used for the full gallery suite. The required `verify`
-job requires all three jobs to pass.
+job requires all three jobs to pass. CI browser tests use one worker because
+concurrent gallery preparation and initial rendering contend on hosted graphics.
+Local Chromium keeps two workers; WebKit runs sequentially in both environments.
 Main may reuse the exact build from a successful PR run of the same Git tree,
 repository, and workflow. In that case the main test jobs are skipped and `verify`
 requires the proven artifact; PR test jobs always run. Without a matching artifact,

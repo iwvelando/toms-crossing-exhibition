@@ -34,7 +34,7 @@ test("foyer requires consent and does not request collection content beforehand"
   await page.keyboard.press("Tab");
   await expect(page.getByRole("button", { name: "Close panel" })).toBeFocused();
   await expect(
-    page.getByText("Thane Moon (name as transcribed)"),
+    page.getByText(catalog.works.find(work => work.id === "rear-view")!.attribution, { exact: true }),
   ).toBeVisible();
   await page.getByRole("button", { name: "Close panel" }).click();
   await expect(page.getByRole("dialog")).toHaveCount(0);
@@ -165,12 +165,13 @@ test("story filters preserve access and text can be enlarged on a narrow screen"
   await page.getByLabel("Browse by story grouping").selectOption("chamber-5");
   await expect(page.locator(".art-card")).toHaveCount(catalog.works.filter(w=>w.placement?.room==="chamber-5").length);
   await page.getByRole("button", { name: /Where the words were/ }).click();
-  await expect(page.getByText(/Landry burns her diary/)).toBeVisible();
+  const description = page.getByText(catalog.works.find(work => work.id === "where-the-words-were")!.description, { exact: true });
+  await expect(description).toBeVisible();
   const widths = await page.locator(".dialog, .work-copy").evaluateAll(els => els.map(el => ({
     scroll: el.scrollWidth, client: el.clientWidth,
   })));
   for (const width of widths) expect(width.scroll).toBeLessThanOrEqual(width.client + 1);
-  expect(await page.getByText(/Landry burns her diary/).evaluate(el => parseFloat(getComputedStyle(el).fontSize))).toBeGreaterThanOrEqual(28);
+  expect(await description.evaluate(el => parseFloat(getComputedStyle(el).fontSize))).toBeGreaterThanOrEqual(28);
   await page.getByRole("button", { name: "Back to collection" }).click();
   await expect(page.getByLabel("Browse by story grouping")).toHaveValue("chamber-5");
   await page.getByLabel("Browse by story grouping").selectOption("all");

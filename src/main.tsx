@@ -222,6 +222,11 @@ function App() {
               <p className="author">
                 Inspired by the novel by Mark Z. Danielewski
               </p>
+              <p className="listening-note">
+                This fan exhibition is based exclusively on the curator’s
+                audiobook listening. Names and other spellings are rendered as
+                heard and interpreted, and may differ from the printed text.
+              </p>
             </div>
             <section className="entry-sign" aria-labelledby="entry-title">
               <div className="sign-top">
@@ -422,7 +427,9 @@ function App() {
                     <dd>{selected.credit}</dd>
                   </dl>
                   <div className="curator-note">
-                    <h3>About this interpretation</h3>
+                    <h3>{selected.collection === "exhibition"
+                      ? "About this reconstruction"
+                      : "About this interpretation"}</h3>
                     <p>{selected.note}</p>
                   </div>
                   <p className="source-credit">
@@ -530,10 +537,10 @@ function App() {
                   </p>
                 )}
                 <p>
-                  This local spatial preview tests the experience of moving between
-                  art and objects. Room dimensions, partitions, and the interpretation
-                  annex are original design choices. The collection will grow as the reading
-                  continues.
+                  Room dimensions, partitions, and the connected annexes are
+                  original design choices. The exhibition brings in-book artworks
+                  and reader-directed images together across the five-day journey
+                  and what follows.
                 </p>
                 <p>
                   Selected reflections may accompany individual artworks. This

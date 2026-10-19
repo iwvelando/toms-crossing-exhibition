@@ -199,6 +199,13 @@ header nav {
   color: var(--muted);
   margin-top: 25px;
 }
+.listening-note {
+  max-width: 46ch;
+  margin-top: 18px;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
 .entry-sign {
   pointer-events: auto;
   padding: 29px 35px 25px;

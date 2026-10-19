@@ -1,7 +1,7 @@
 import { litWallMaterials, roomHeadingMounts, type DisplayLight } from "./gallery-lighting";
 import type { SceneMedia } from "./scene-media";
 import { createObjectStudy } from "./objects";
-import { forwardRef, useEffect, useImperativeHandle, useRef } from "react";
+import { forwardRef, useEffect, useImperativeHandle, useLayoutEffect, useRef } from "react";
 import * as THREE from "three";
 import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
 import { wallGeometry } from "./architecture";
@@ -715,6 +715,10 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
       doors.visible = false;
       renderer.shadowMap.needsUpdate = true;
       reset();
+      // Replace the foyer canvas before the entered interface can be painted.
+      // A deferred camera reset alone leaves its old pixels visible until RAF.
+      cancelAnimationFrame(frame);
+      tick(performance.now());
     }
     runtime.current = { visit, visitRoom, visitReservation, setPlanning, reset, toggleMouseLook, keys, axes, install, enter, invalidate };
     if (latest.current.entered) {
@@ -964,7 +968,7 @@ export const Gallery = forwardRef<GalleryHandle, Props>((props, ref) => {
       runtime.current = undefined;
     };
   }, []);
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (props.entered) {
       runtime.current?.install(props.works);
       runtime.current?.enter();

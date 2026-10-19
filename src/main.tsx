@@ -372,7 +372,7 @@ function App() {
             </div>
           ) : (
             <span className="footer-right">
-              LOCAL PREVIEW <span className="status-dot" />
+              UNOFFICIAL EXHIBITION <span className="status-dot" />
             </span>
           )}
         </footer>

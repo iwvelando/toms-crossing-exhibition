@@ -206,6 +206,21 @@ header nav {
   line-height: 1.7;
   color: var(--muted);
 }
+.site-source {
+  margin-top: 6px;
+  font-size: 0.875rem;
+}
+.site-source a {
+  pointer-events: auto;
+  display: inline-block;
+  padding-block: 12px;
+  color: #d2b58a;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.site-source a:hover {
+  color: #ead4b2;
+}
 .entry-sign {
   pointer-events: auto;
   padding: 29px 35px 25px;

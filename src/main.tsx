@@ -245,6 +245,11 @@ function App() {
                 audiobook listening. Names and other spellings are rendered as
                 heard and interpreted, and may differ from the printed text.
               </p>
+              <p className="site-source">
+                <a href="https://github.com/iwvelando/toms-crossing-exhibition">
+                  About this site
+                </a>
+              </p>
             </div>
             <section className="entry-sign" aria-labelledby="entry-title">
               <div className="sign-top">

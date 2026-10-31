@@ -44,6 +44,23 @@ test("foyer requires consent and does not request collection content beforehand"
   ).toBeDisabled();
 });
 
+test("foyer links to the public source repository, and the gallery does not", async ({ page }) => {
+  await page.goto("/");
+  const about = page.getByRole("link", { name: "About this site" });
+  await expect(about).toBeVisible();
+  await expect(about).toHaveAttribute("href", "https://github.com/iwvelando/toms-crossing-exhibition");
+  // The foyer copy passes pointer input to the scene; the link must still take clicks.
+  expect(await about.evaluate((a) => getComputedStyle(a).pointerEvents)).not.toBe("none");
+  const box = (await about.boundingBox())!;
+  expect(
+    await page.evaluate(([x, y]) => document.elementFromPoint(x, y)?.closest("a")?.textContent, [box.x + box.width / 2, box.y + box.height / 2]),
+  ).toBe("About this site");
+  await page.getByRole("checkbox").check();
+  await page.getByRole("button", { name: "Enter the exhibition" }).click();
+  await expect(page.getByRole("heading", { name: "Chamber 1", exact: true })).toBeVisible({ timeout: process.env.CI ? 45000 : 15000 });
+  await expect(page.getByRole("link", { name: "About this site" })).toHaveCount(0);
+});
+
 test("walking, direct visits, and inspection work without pointer lock", async ({
   page,
 }, testInfo) => {
